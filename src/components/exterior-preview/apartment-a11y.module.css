@@ -1,0 +1,16 @@
+.planWindow:not([tabindex]) {
+  touch-action: auto;
+}
+
+.controls button[aria-disabled="true"] {
+  cursor: default;
+}
+
+.controls button[aria-disabled="true"] svg {
+  opacity: 0.45;
+}
+
+.controls button[aria-disabled="true"]:hover:not(:disabled) {
+  background: transparent;
+  border-color: var(--line);
+}

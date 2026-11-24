@@ -1,0 +1,16 @@
+import ifcopenshell, ifcopenshell.api, sys
+f = ifcopenshell.api.run("project.create_file", version="IFC4")
+proj = ifcopenshell.api.run("root.create_entity", f, ifc_class="IfcProject", name="RealEstate2 test")
+ifcopenshell.api.run("unit.assign_unit", f)
+site = ifcopenshell.api.run("root.create_entity", f, ifc_class="IfcSite", name="Site")
+bld = ifcopenshell.api.run("root.create_entity", f, ifc_class="IfcBuilding", name="B01")
+st = ifcopenshell.api.run("root.create_entity", f, ifc_class="IfcBuildingStorey", name="L00")
+ifcopenshell.api.run("aggregate.assign_object", f, products=[site], relating_object=proj)
+ifcopenshell.api.run("aggregate.assign_object", f, products=[bld], relating_object=site)
+ifcopenshell.api.run("aggregate.assign_object", f, products=[st], relating_object=bld)
+wall = ifcopenshell.api.run("root.create_entity", f, ifc_class="IfcWall", name="B01__L00__NONE__wall__001")
+ifcopenshell.api.run("spatial.assign_container", f, products=[wall], relating_structure=st)
+out = sys.argv[-1]
+f.write(out)
+g = ifcopenshell.open(out)
+print("IFC_OK", g.schema, "walls", len(g.by_type("IfcWall")), "storeys", len(g.by_type("IfcBuildingStorey")), out)

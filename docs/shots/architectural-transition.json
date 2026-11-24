@@ -1,0 +1,78 @@
+{
+  "id": "architectural-transition",
+  "purpose": "Wipe from the floor-plan/exterior plate to the apartment plate, linking the site to the unit.",
+  "source": {
+    "kind": "ai_image_to_video",
+    "blender_scene": null,
+    "reference_image": "public/media/images/placeholder/transition-reference.png",
+    "model_candidate": null
+  },
+  "duration_s": 4,
+  "fps": 30,
+  "camera": {
+    "path": "static",
+    "focal_mm": 35,
+    "keyframes": [
+      {
+        "t": 0,
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "look_at_m": [
+          0,
+          1,
+          0
+        ],
+        "fov_deg": 54.43
+      },
+      {
+        "t": 4,
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "look_at_m": [
+          0,
+          1,
+          0
+        ],
+        "fov_deg": 54.43
+      }
+    ]
+  },
+  "easing": "power2.inOut",
+  "framing": {
+    "safe_margin_pct": 0,
+    "horizon_rule": "none",
+    "subject": "two plates share identical framing; wipe is a clip-path linear reveal in HyperFrames, not AI motion"
+  },
+  "continuity": {
+    "entry_from": "apartment-walkthrough",
+    "exit_to": null,
+    "constraints": [
+      "both plates same resolution and frame count",
+      "wipe performed in HyperFrames (deterministic), not generated"
+    ]
+  },
+  "reference_constraints": {
+    "reference_image": "public/media/images/placeholder/transition-reference.png",
+    "locked_geometry": [
+      "plate framing",
+      "horizon line"
+    ],
+    "negative": [
+      "added or removed building elements",
+      "text or logos",
+      "camera drift"
+    ]
+  },
+  "validation": [
+    "ffprobe both plates identical resolution and fps",
+    "architectural-transition template lint: 0 errors, 0 warnings",
+    "wipe midpoint frame is visually split at the expected x-fraction"
+  ],
+  "geometry_status": "UNKNOWN"
+}

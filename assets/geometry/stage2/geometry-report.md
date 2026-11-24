@@ -1,0 +1,12 @@
+# Stage 2 private floor geometry
+
+The six local SVGs are in `private/overlays/`: `L00.svg`, `L01.svg`, `L02.svg`, `L03.svg`, `L04.svg` and `L04-gallery.svg`. Use the matching drawing hash and native `viewBox` from [`src/data/floors.json`](../../../src/data/floors.json). They carry exact `data-level`, `data-plan-sha256` and `data-unit-id` joins. Each unit is one polygon; shared walls are represented by their centreline. Door openings close at their corridor threshold. Terraces, balconies and unit-specific gardens follow the source plans; common corridors, entrances, stairs and lifts are excluded. These outlines are image-space demo selections, not land or measured floor-area boundaries.
+
+## How the identities were established
+
+1. Inspect the real floor raster, read the corridor labels and trace the party walls. Measure perimeter/terrace breaks on the actual image. Use the alpha outline for upper-floor exterior edges and distinct lawn-fill regions for the four ground-floor gardens. On the gallery, trace its own walls and lift/stair enclosure.
+2. Fit features from the individually linked unit PNG to the corresponding image, retaining uniform scale, translation and any quarter turn. The labelled room position disambiguates repeated layouts. Separate the two L04 plans within each duplex PNG. Save transforms, inliers and residuals in `private/*-fits.json`.
+3. Assign each traced region to the best-fitting unit image by footprint overlap, rejecting ambiguous or duplicated matches. The unit PNG often includes a strip of common corridor or part of a neighbour; its raw alpha contour is **not** the final polygon. `private/*-review.json` gives the score and source hash per unit. Shared coordinates between L04 main and gallery are never assumed.
+4. Check the SVG geometry and independent entrance/common-area witnesses. For L00, also compare every polygon to the red-hatched key in the matching PDF, separately from the PNG fit. See the [reviewer's per-unit visual notes](L00-sheet-review.md) and the [acceptance results](../../../reports/qa/stage2/verification.md). The measured PNG → whole-plan transform for H 0.4 and H 0.14 is a quarter-turn counterclockwise on screen; neither drawing is mirrored.
+
+**Result:** 94 primary polygons plus 21 gallery polygons verified for private review. No exterior bands were requested or produced. No public clearance or whole-selector gate pass is claimed.

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="../vendor/gsap.min.js"></script>
+    <style>
+      :root { --ink: #ffffff; --font-display: sans-serif; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      #root { width: 1920px; height: 1080px; position: relative; overflow: hidden; font-family: var(--font-display); }
+      .plate { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+      #plateB { clip-path: inset(0 100% 0 0); }
+      #label { position: absolute; left: 0; right: 0; bottom: 120px; text-align: center; color: var(--ink); font-size: 36px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0; text-shadow: 0 2px 16px rgba(0,0,0,0.5); }
+    </style>
+  </head>
+  <body>
+    <!-- Template: architectural-transition. Plate A (exterior or floor plan) is revealed by plate B (floor level or apartment) with a horizontal clip-path wipe. Both plates must share framing; the wipe is linear. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1920" data-height="1080">
+      <video id="plateA" class="plate clip" data-start="0" data-duration="6" data-track-index="0" src="assets/placeholder/aerial-placeholder-landscape.mp4" muted playsinline></video>
+      <video id="plateB" class="plate clip" data-start="0" data-duration="6" data-track-index="1" data-media-start="0" src="assets/placeholder/interior-placeholder-landscape.mp4" muted playsinline></video>
+      <div id="label" class="clip" data-start="0" data-duration="6" data-track-index="2">Floor 03 · Unit 07</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#plateB", { clipPath: "inset(0 0% 0 0)", duration: 2, ease: "power2.inOut" }, 2);
+      tl.to("#label", { opacity: 1, duration: 0.8, ease: "power2.out" }, 2 + 2 * 0.6);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

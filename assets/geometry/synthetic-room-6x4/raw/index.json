@@ -1,0 +1,13 @@
+{
+  "source_pdf": "tests/fixtures/synthetic_room_6x4.pdf",
+  "page_count": 1,
+  "pages": [
+    {
+      "page": 1,
+      "file": "page-001.json",
+      "paths": 2,
+      "texts": 4,
+      "images": 0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="../vendor/gsap.min.js"></script>
+    <style>
+      :root { --ground: #000; --ink: #ffffff; --font-display: sans-serif; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { width: 1920px; height: 1080px; position: relative; font-family: var(--font-display); }
+      #plate { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
+      #title {
+        position: absolute; left: 0; right: 0; top: 440px; text-align: center;
+        color: var(--ink); font-size: 96px; font-weight: 600; letter-spacing: -0.03em;
+        text-shadow: 0 4px 24px rgba(0,0,0,0.45);
+      }
+      #sub {
+        position: absolute; left: 0; right: 0; top: 570px; text-align: center;
+        color: var(--ink); font-size: 36px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1920" data-height="1080">
+      <video id="plate" class="clip" data-start="0" data-duration="6" data-track-index="0"
+        src="../assets/placeholder/aerial-placeholder-landscape.mp4" muted playsinline></video>
+      <h1 id="title" class="clip" data-start="0" data-duration="6" data-track-index="1">PROJECT TITLE</h1>
+      <div id="sub" class="clip" data-start="0" data-duration="6" data-track-index="2">Placeholder · smoke test</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#title", { opacity: 0, y: 40, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.2, ease: "power3.out" }, 0.3);
+      tl.to("#sub", { opacity: 1, duration: 0.9, ease: "power2.out" }, 1.2);
+      tl.to("#title", { opacity: 0, duration: 0.6, ease: "power2.in" }, 5.2);
+      tl.to("#sub", { opacity: 0, duration: 0.6, ease: "power2.in" }, 5.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

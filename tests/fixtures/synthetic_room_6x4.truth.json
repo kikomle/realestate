@@ -1,0 +1,34 @@
+{
+  "synthetic": true,
+  "description": "SYNTHETIC: 6.00 m x 4.00 m clear room, 0.20 m walls, drawn at 1:100",
+  "scale_denominator": 100,
+  "wall_thickness_m": 0.2,
+  "room_clear_m": [
+    6.0,
+    4.0
+  ],
+  "room_polygon_m": [
+    [
+      0.2,
+      0.2
+    ],
+    [
+      6.2,
+      0.2
+    ],
+    [
+      6.2,
+      4.2
+    ],
+    [
+      0.2,
+      4.2
+    ]
+  ],
+  "room_area_m2": 24.0,
+  "envelope_m": [
+    6.4,
+    4.4
+  ],
+  "origin": "SW outer corner of wall envelope"
+}

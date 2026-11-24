@@ -1,0 +1,12 @@
+{
+  "name": "realestate2-blender-node-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "glTF optimization tools for the Blender pipeline (scripts/blender/node_tools)",
+  "dependencies": {
+    "@gltf-transform/cli": "4.5.1",
+    "@gltf-transform/extensions": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "meshoptimizer": "1.3.0"
+  }
+}

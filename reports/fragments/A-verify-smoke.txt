@@ -1,0 +1,14 @@
+PASS: glTF 2.0 binary container valid
+PASS: 105 nodes, no duplicate names
+PASS: manifest and GLB node names match exactly (105)
+PASS: all node names match {B}__{L}__{U}__{TYPE}__{IDX} contract
+PASS: hierarchy: every manifest parent is the GLB parent node
+PASS: bounding boxes finite, metres, non-zero
+PASS: every mesh object has triangles > 0
+PASS: POSITION accessors present with sane min/max
+PASS: semantic_id == name, source_ref is string, confidence in [0,1] on every object
+PASS: buildings: ['B01', 'B02']
+PASS: levels per building: 2 each
+PASS: apartment units: ['U001', 'U002', 'U101', 'U102']
+
+VERIFY_OK: 105 manifest objects, 105 GLB nodes

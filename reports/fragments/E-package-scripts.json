@@ -1,0 +1,13 @@
+{
+  "_comment": "For agent C / orchestrator to merge into package.json. Agent E does not edit package.json. Required by tests/visual and CI.",
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "prettier": "^3"
+  },
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:visual": "playwright test tests/visual",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  }
+}

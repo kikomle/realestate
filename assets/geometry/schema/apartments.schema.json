@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://realestate2.local/schema/apartments.schema.json",
+  "title": "Apartment inventory (sourced fields only)",
+  "description": "One record per unit. Every value is either sourced (source_ref set) or null with a flag. Estimates are never allowed. Price fields are intentionally absent unless a source provides them.",
+  "type": "object",
+  "required": ["project", "retrieved_at", "units"],
+  "additionalProperties": false,
+  "properties": {
+    "project": {"type": "string"},
+    "retrieved_at": {"type": "string"},
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "building", "level", "unit_type", "net_area_m2", "gross_area_m2", "orientation", "source_ref", "status", "flags"],
+        "additionalProperties": false,
+        "properties": {
+          "unit_id": {"type": "string", "description": "Source label, e.g. 'H 0.1'"},
+          "building": {"type": ["string", "null"], "pattern": "^B[0-9]{2}$"},
+          "level": {"type": ["string", "null"], "pattern": "^(L[0-9]{2}|LM[0-9]{2})$"},
+          "unit_type": {"type": ["string", "null"], "enum": ["1-room", "2-room", "3-room", "4-room", "5-room", null]},
+          "unit_type_source_label": {"type": ["string", "null"]},
+          "net_area_m2": {"type": ["number", "null"], "minimum": 0},
+          "gross_area_m2": {"type": ["number", "null"], "minimum": 0},
+          "orientation": {"type": ["string", "null"]},
+          "status": {"type": ["string", "null"], "enum": ["Slobodno", "Prodano", null]},
+          "property_type": {"type": ["string", "null"]},
+          "source_ref": {"type": "string", "description": "URL or file#page that supports the record"},
+          "flags": {"type": "array", "items": {"type": "string", "enum": ["MISSING_SOURCE", "UNKNOWN", "AREA_NET_UNVERIFIED", "AREA_GROSS_UNVERIFIED", "AREA_BASIS_NOT_CONFIRMED", "ORIENTATION_UNKNOWN", "PLAN_NOT_VECTOR"]}}
+        }
+      }
+    }
+  }
+}

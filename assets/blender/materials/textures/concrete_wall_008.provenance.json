@@ -1,0 +1,39 @@
+{
+  "asset_id": "concrete_wall_008",
+  "license": "CC0",
+  "license_url": "https://polyhaven.com/license",
+  "api": "https://api.polyhaven.com/files/concrete_wall_008",
+  "page": "https://polyhaven.com/a/concrete_wall_008",
+  "retrieved": "2026-11-23",
+  "resolution": "1k",
+  "files": [
+    {
+      "map": "Diffuse",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_diff_1k.jpg",
+      "path": "assets/blender/materials/textures/concrete_wall_008_Diffuse_1k.jpg",
+      "bytes": 623051,
+      "sha256": "a203166d280d3cfc6a91bbc9ffdae406eb9555b4a4f658cd92619063eb17c147"
+    },
+    {
+      "map": "Rough",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_rough_1k.jpg",
+      "path": "assets/blender/materials/textures/concrete_wall_008_Rough_1k.jpg",
+      "bytes": 322313,
+      "sha256": "2344fe72c4dc2fb9e4ce9b47079524ee8969f22c4af4bee85667511073fbf14a"
+    },
+    {
+      "map": "nor_gl",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_nor_gl_1k.jpg",
+      "path": "assets/blender/materials/textures/concrete_wall_008_nor_gl_1k.jpg",
+      "bytes": 511519,
+      "sha256": "83cd3fa2c7cbf4c81402386065daf8fa6f72e1f1f77e02ccb1eedb28496909ae"
+    },
+    {
+      "map": "AO",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_ao_1k.jpg",
+      "path": "assets/blender/materials/textures/concrete_wall_008_AO_1k.jpg",
+      "bytes": 742397,
+      "sha256": "01be9c7c9618135a59c5722eee7c26d5f0c1139a55ead1b03abc51fcc7532a00"
+    }
+  ]
+}

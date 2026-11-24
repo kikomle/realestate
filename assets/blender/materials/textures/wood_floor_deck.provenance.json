@@ -1,0 +1,39 @@
+{
+  "asset_id": "wood_floor_deck",
+  "license": "CC0",
+  "license_url": "https://polyhaven.com/license",
+  "api": "https://api.polyhaven.com/files/wood_floor_deck",
+  "page": "https://polyhaven.com/a/wood_floor_deck",
+  "retrieved": "2026-11-23",
+  "resolution": "1k",
+  "files": [
+    {
+      "map": "Diffuse",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor_deck/wood_floor_deck_diff_1k.jpg",
+      "path": "assets/blender/materials/textures/wood_floor_deck_Diffuse_1k.jpg",
+      "bytes": 925789,
+      "sha256": "1f2c623e87b0ee905f6f4ec8664dd19b4b135207c96e86198ff2919770b47166"
+    },
+    {
+      "map": "Rough",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor_deck/wood_floor_deck_rough_1k.jpg",
+      "path": "assets/blender/materials/textures/wood_floor_deck_Rough_1k.jpg",
+      "bytes": 658448,
+      "sha256": "5754d2c2a91a288bb257e0fa8c697d97b48472c9fb77c4c7f0ffcc302f3f60a2"
+    },
+    {
+      "map": "nor_gl",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor_deck/wood_floor_deck_nor_gl_1k.jpg",
+      "path": "assets/blender/materials/textures/wood_floor_deck_nor_gl_1k.jpg",
+      "bytes": 665094,
+      "sha256": "2fa427b9196099c0ff72d1a1ab472e2a79ca2a76906a5c46d134f8a86e086d23"
+    },
+    {
+      "map": "AO",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor_deck/wood_floor_deck_ao_1k.jpg",
+      "path": "assets/blender/materials/textures/wood_floor_deck_AO_1k.jpg",
+      "bytes": 611114,
+      "sha256": "7b94640a2bca0f482ae10693ff1082de5f245dbdf3df1ea8f0f2dc8effcc92c1"
+    }
+  ]
+}

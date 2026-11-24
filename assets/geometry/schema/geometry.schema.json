@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://realestate2.local/schema/geometry.schema.json",
+  "title": "Architectural geometry (calibrated, metres)",
+  "description": "Calibrated 2D plan geometry derived from a source drawing. Units are metres. Coordinates: origin = south-west ground corner, X east, Y north, Z up. Any null value must be accompanied by a flag in `missing` or `flags`.",
+  "type": "object",
+  "required": ["project", "source", "units", "coordinate_system", "calibration", "buildings", "missing"],
+  "additionalProperties": false,
+  "$defs": {
+    "point": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {"type": "number"}
+    },
+    "ring": {
+      "type": "array", "minItems": 4,
+      "items": {"$ref": "#/$defs/point"}
+    },
+    "naming": {
+      "type": "string",
+      "pattern": "^B[0-9]{2}__(L[0-9]{2}|LM[0-9]{2})__(U[0-9]{3}|NONE)__(wall|slab|window|door|balcony|stair|column|roof|site)__[0-9]{3}$"
+    },
+    "flag": {
+      "type": "string",
+      "enum": ["MISSING_SOURCE", "UNKNOWN", "UNCALIBRATED", "HEIGHT_UNKNOWN", "ROOM_NAME_UNKNOWN", "OPENINGS_UNKNOWN", "AMBIGUOUS", "SYNTHETIC", "RESIDUAL_OVER_2PCT", "SCALE_MISMATCH", "NO_DIMENSIONS", "DIM_NO_SEGMENT", "NORTH_UNKNOWN"]
+    },
+    "wall": {
+      "type": "object",
+      "required": ["id", "semantic_id", "start_m", "end_m", "thickness_m", "height_m", "confidence", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/naming"},
+        "semantic_id": {"type": "string"},
+        "start_m": {"$ref": "#/$defs/point"},
+        "end_m": {"$ref": "#/$defs/point"},
+        "thickness_m": {"type": "number", "exclusiveMinimum": 0},
+        "height_m": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "flags": {"type": "array", "items": {"$ref": "#/$defs/flag"}}
+      }
+    },
+    "opening": {
+      "type": "object",
+      "required": ["id", "type", "wall_id", "width_m", "sill_height_m", "height_m", "confidence", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/naming"},
+        "type": {"type": "string", "enum": ["window", "door"]},
+        "wall_id": {"$ref": "#/$defs/naming"},
+        "width_m": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "sill_height_m": {"type": ["number", "null"], "minimum": 0},
+        "height_m": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "flags": {"type": "array", "items": {"$ref": "#/$defs/flag"}}
+      }
+    },
+    "room": {
+      "type": "object",
+      "required": ["name", "polygon_m", "area_m2", "confidence", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string"},
+        "polygon_m": {"$ref": "#/$defs/ring"},
+        "area_m2": {"type": "number", "minimum": 0},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "flags": {"type": "array", "items": {"$ref": "#/$defs/flag"}}
+      }
+    },
+    "unit": {
+      "type": "object",
+      "required": ["id", "label", "polygon_m", "area_m2", "rooms", "walls", "openings", "confidence", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^B[0-9]{2}__(L[0-9]{2}|LM[0-9]{2})__(U[0-9]{3}|NONE)$"},
+        "label": {"type": "string"},
+        "polygon_m": {"oneOf": [{"$ref": "#/$defs/ring"}, {"type": "null"}]},
+        "area_m2": {"type": ["number", "null"], "minimum": 0},
+        "rooms": {"type": "array", "items": {"$ref": "#/$defs/room"}},
+        "walls": {"type": "array", "items": {"$ref": "#/$defs/wall"}},
+        "openings": {"type": "array", "items": {"$ref": "#/$defs/opening"}},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "flags": {"type": "array", "items": {"$ref": "#/$defs/flag"}}
+      }
+    },
+    "level": {
+      "type": "object",
+      "required": ["id", "elevation_m", "units"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^(L[0-9]{2}|LM[0-9]{2})$"},
+        "elevation_m": {"type": ["number", "null"]},
+        "units": {"type": "array", "items": {"$ref": "#/$defs/unit"}}
+      }
+    },
+    "building": {
+      "type": "object",
+      "required": ["id", "levels"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^B[0-9]{2}$"},
+        "levels": {"type": "array", "items": {"$ref": "#/$defs/level"}}
+      }
+    }
+  },
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["name", "id", "is_real_project"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string"},
+        "id": {"type": "string"},
+        "is_real_project": {"type": "boolean"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["file", "sha256", "page", "provenance"],
+      "additionalProperties": false,
+      "properties": {
+        "file": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$|^SET_BY_RUNNER$"},
+        "page": {"type": "integer", "minimum": 1},
+        "provenance": {"type": "string"},
+        "source_url": {"type": "string"},
+        "retrieved_at": {"type": "string"}
+      }
+    },
+    "units": {"const": "m"},
+    "coordinate_system": {
+      "type": "object",
+      "required": ["origin", "x", "y", "z", "north_arrow_deg", "north_arrow_source"],
+      "additionalProperties": false,
+      "properties": {
+        "origin": {"type": "string"},
+        "x": {"const": "east"},
+        "y": {"const": "north"},
+        "z": {"const": "up"},
+        "north_arrow_deg": {"type": ["number", "null"]},
+        "north_arrow_source": {"type": "string"}
+      }
+    },
+    "calibration": {
+      "type": "object",
+      "required": ["method", "scale_denominator", "metres_per_pt", "residual", "uncalibrated"],
+      "additionalProperties": false,
+      "properties": {
+        "method": {"type": "string", "enum": ["none", "dimensions", "dimensions+scale_text"]},
+        "scale_denominator": {"type": ["integer", "null"]},
+        "metres_per_pt": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "residual": {"type": ["number", "null"], "minimum": 0},
+        "uncalibrated": {"type": "boolean"}
+      },
+      "if": {"properties": {"uncalibrated": {"const": true}}},
+      "then": {"properties": {"metres_per_pt": {"type": "null"}}}
+    },
+    "buildings": {"type": "array", "items": {"$ref": "#/$defs/building"}},
+    "missing": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "aerial-reveal",
+  "purpose": "Establish the complex in its site context from high altitude before descending to the facade.",
+  "source": {
+    "kind": "blender_deterministic",
+    "blender_scene": "assets/blender/scenes/site_master.blend",
+    "reference_image": null,
+    "model_candidate": null
+  },
+  "duration_s": 6,
+  "fps": 30,
+  "camera": {
+    "path": "crane",
+    "focal_mm": 24,
+    "keyframes": [
+      {
+        "t": 0,
+        "position_m": [
+          -120,
+          -140,
+          140
+        ],
+        "look_at_m": [
+          0,
+          0,
+          0
+        ],
+        "fov_deg": 73.74
+      },
+      {
+        "t": 6,
+        "position_m": [
+          -40,
+          -60,
+          70
+        ],
+        "look_at_m": [
+          0,
+          0,
+          8
+        ],
+        "fov_deg": 73.74
+      }
+    ]
+  },
+  "easing": "power2.inOut",
+  "framing": {
+    "safe_margin_pct": 6,
+    "horizon_rule": "level",
+    "subject": "complex footprint centred, roofline in upper third"
+  },
+  "continuity": {
+    "entry_from": null,
+    "exit_to": "facade-flyby",
+    "constraints": [
+      "camera heading at exit matches facade-flyby entry heading within 5 degrees",
+      "same site origin and axis convention"
+    ]
+  },
+  "reference_constraints": null,
+  "validation": [
+    "ffprobe: 1920x1080, 30 fps, 6.0 s",
+    "hyperframes lint passes with 0 errors",
+    "building silhouette in frame at t=0 and t=6 matches the Blender scene render (masked silhouette pixel diff under agreed threshold)",
+    "no geometry object outside site bounds (assets/geometry check)"
+  ],
+  "geometry_status": "UNKNOWN"
+}

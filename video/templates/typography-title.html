@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{WIDTH}}, height={{HEIGHT}}" />
+    <script src="../vendor/gsap.min.js"></script>
+    <style>
+      :root { --ground: {{BG_COLOR}}; --ink: {{INK}}; --font-display: {{FONT}}; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: {{WIDTH}}px; height: {{HEIGHT}}px; overflow: hidden; background: var(--ground); }
+      #root { width: {{WIDTH}}px; height: {{HEIGHT}}px; position: relative; overflow: hidden; font-family: var(--font-display); background: var(--ground); }
+      #title { position: absolute; left: 0; right: 0; top: {{TITLE_TOP}}px; text-align: center; color: var(--ink); font-size: {{TITLE_SIZE}}px; font-weight: 600; letter-spacing: -0.03em; white-space: nowrap; }
+      #title .ch { display: inline-block; opacity: 0; }
+      #sub { position: absolute; left: 0; right: 0; top: {{SUB_TOP}}px; text-align: center; color: var(--ink); font-size: {{SUB_SIZE}}px; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0; }
+      #rule { position: absolute; left: 50%; top: {{RULE_TOP}}px; width: 0; height: 2px; background: var(--ink); transform: translateX(-50%); }
+    </style>
+  </head>
+  <body>
+    <!-- Template: typography-title. Per-character reveal of TITLE on a solid ground (no media, no network). Fill via scripts/video/build-composition.mjs. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DURATION}}" data-width="{{WIDTH}}" data-height="{{HEIGHT}}">
+      <h1 id="title" class="clip" data-start="0" data-duration="{{DURATION}}" data-track-index="0">{{TITLE}}</h1>
+      <div id="rule" class="clip" data-start="0" data-duration="{{DURATION}}" data-track-index="1"></div>
+      <div id="sub" class="clip" data-start="0" data-duration="{{DURATION}}" data-track-index="2">{{SUBTITLE}}</div>
+    </div>
+    <script>
+      const title = document.getElementById("title");
+      const text = title.textContent;
+      title.textContent = "";
+      [...text].forEach((c) => {
+        const s = document.createElement("span");
+        s.className = "ch";
+        s.textContent = c === " " ? "\u00a0" : c;
+        title.appendChild(s);
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#title .ch", { opacity: 0, y: 30, filter: "blur(6px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out", stagger: 0.04 }, 0.2);
+      tl.to("#rule", { width: {{RULE_WIDTH}}, duration: 0.9, ease: "power2.inOut" }, 1.0);
+      tl.to("#sub", { opacity: 1, duration: 0.8, ease: "power2.out" }, 1.4);
+      tl.to(["#title", "#rule", "#sub"], { opacity: 0, duration: 0.6, ease: "power2.in" }, {{DURATION}} - 0.9);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

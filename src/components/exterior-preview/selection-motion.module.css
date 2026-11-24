@@ -1,0 +1,22 @@
+/* A deep link or browser history change may cut directly to the addressed view. */
+.motion [data-apartment-detail]:not([hidden]) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion[data-motion-reveal="true"] [data-apartment-detail]:not([hidden]) {
+    animation: plan-reveal 300ms ease-out;
+  }
+}
+
+@keyframes plan-reveal {
+  from { opacity: 0.48; }
+  to { opacity: 1; }
+}
+
+/* A return shot remembers its starting footprint without selecting it in the URL or AT. */
+.motion[data-phase="return"] [data-flight="true"] [data-unit-map] [data-motion-highlight] polygon {
+  fill-opacity: 0.28;
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}

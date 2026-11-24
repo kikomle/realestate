@@ -1,0 +1,40 @@
+{
+  "_comment": "Fragment for the orchestrator to merge into opencode.jsonc under \"agent\". Every model ID was verified against `opencode models anonrouter --verbose` (253 IDs, 2026-11-23). Provider prefix is required: anonrouter/<id>. Do not add model IDs to .opencode/agents/*.md.",
+  "agents": {
+    "orchestrator-architect": {
+      "model": "anonrouter/openai/gpt-5.6-sol-pro",
+      "mode": "primary",
+      "description": "Coordinator: strongest verified reasoning model for gate decisions and delegation."
+    },
+    "geometry-extractor": {
+      "model": "anonrouter/anthropic/claude-sonnet-5.5",
+      "mode": "subagent",
+      "description": "PDF/drawing extraction to calibrated geometry JSON. Strong long-context reasoning; image input not verified on anonrouter (see docs/model-routing.md)."
+    },
+    "blender-builder": {
+      "model": "anonrouter/openai/gpt-6-luna",
+      "mode": "subagent",
+      "description": "Blender generator scripts (Python bpy). Closest verified coding-capable frontier route."
+    },
+    "web-3d-builder": {
+      "model": "anonrouter/openai/gpt-6.1-sol",
+      "mode": "subagent",
+      "description": "Next.js + Three.js viewer implementation. Complex web/3D work."
+    },
+    "cinematic-director": {
+      "model": "anonrouter/anthropic/claude-sonnet-5.5",
+      "mode": "subagent",
+      "description": "Shot lists and HyperFrames composition planning. Video generation is NOT an LLM route; see docs/video-model-selection.md."
+    },
+    "visual-qa-reviewer": {
+      "model": "anonrouter/google/gemini-3.8-flash",
+      "mode": "subagent",
+      "description": "Read-only visual and performance review of Playwright artifacts. Image input NOT verified; route to a multimodal model once verified."
+    },
+    "doc-scribe": {
+      "model": "anonrouter/deepseek/deepseek-v4.1-flash",
+      "mode": "subagent",
+      "description": "Repetitive documentation and boilerplate under docs/. Low cost tier."
+    }
+  }
+}

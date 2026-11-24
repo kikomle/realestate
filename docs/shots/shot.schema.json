@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://realestate2.local/docs/shots/shot.schema.json",
+  "title": "Architectural shot spec",
+  "type": "object",
+  "required": [
+    "id",
+    "purpose",
+    "source",
+    "duration_s",
+    "camera",
+    "easing",
+    "framing",
+    "continuity",
+    "validation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "blender_deterministic",
+            "ai_image_to_video"
+          ]
+        },
+        "blender_scene": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_image": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_candidate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Only a verified model ID from docs/video-model-selection.md, else null."
+        }
+      },
+      "additionalProperties": false
+    },
+    "duration_s": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 30
+    },
+    "fps": {
+      "type": "integer",
+      "enum": [
+        24,
+        25,
+        30,
+        60
+      ],
+      "default": 30
+    },
+    "camera": {
+      "type": "object",
+      "required": [
+        "path",
+        "focal_mm",
+        "keyframes"
+      ],
+      "properties": {
+        "path": {
+          "enum": [
+            "orbit",
+            "dolly",
+            "crane",
+            "push_in",
+            "pan",
+            "static",
+            "tracking"
+          ]
+        },
+        "focal_mm": {
+          "type": "number",
+          "minimum": 14,
+          "maximum": 135,
+          "description": "Full-frame equivalent focal length."
+        },
+        "keyframes": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "t",
+              "position_m",
+              "look_at_m",
+              "fov_deg"
+            ],
+            "properties": {
+              "t": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Seconds from shot start."
+              },
+              "position_m": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "look_at_m": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "fov_deg": {
+                "type": "number",
+                "minimum": 5,
+                "maximum": 120
+              }
+            }
+          }
+        }
+      }
+    },
+    "easing": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "power1.inOut",
+        "power2.inOut",
+        "power3.inOut",
+        "sine.inOut"
+      ]
+    },
+    "framing": {
+      "type": "object",
+      "required": [
+        "safe_margin_pct",
+        "horizon_rule",
+        "subject"
+      ],
+      "properties": {
+        "safe_margin_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "horizon_rule": {
+          "enum": [
+            "level",
+            "slight_tilt_allowed",
+            "none"
+          ]
+        },
+        "subject": {
+          "type": "string"
+        }
+      }
+    },
+    "continuity": {
+      "type": "object",
+      "required": [
+        "entry_from",
+        "exit_to",
+        "constraints"
+      ],
+      "properties": {
+        "entry_from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "exit_to": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "reference_constraints": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Required when source.kind is ai_image_to_video.",
+      "properties": {
+        "reference_image": {
+          "type": "string"
+        },
+        "locked_geometry": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "negative": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "validation": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "string"
+      },
+      "description": "Concrete checks: ffprobe values, lint, frame diffs, geometry comparison."
+    },
+    "geometry_status": {
+      "enum": [
+        "UNKNOWN",
+        "MISSING_SOURCE",
+        "CALIBRATED"
+      ],
+      "default": "UNKNOWN"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "geometry_status": {
+            "const": "UNKNOWN"
+          }
+        },
+        "required": [
+          "geometry_status"
+        ]
+      },
+      "then": {}
+    },
+    {
+      "description": "Any null coordinate requires geometry_status MISSING_SOURCE or UNKNOWN.",
+      "if": {
+        "properties": {
+          "camera": {
+            "properties": {
+              "keyframes": {
+                "contains": {
+                  "properties": {
+                    "position_m": {
+                      "type": "array",
+                      "contains": {
+                        "type": "null"
+                      }
+                    }
+                  },
+                  "required": [
+                    "position_m"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "geometry_status": {
+            "enum": [
+              "MISSING_SOURCE",
+              "UNKNOWN"
+            ]
+          }
+        },
+        "required": [
+          "geometry_status"
+        ]
+      }
+    }
+  ]
+}

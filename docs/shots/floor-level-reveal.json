@@ -1,0 +1,67 @@
+{
+  "id": "floor-level-reveal",
+  "purpose": "Ascend one floor and frame a single level's balcony run as the bridge to the unit.",
+  "source": {
+    "kind": "blender_deterministic",
+    "blender_scene": "assets/blender/scenes/site_master.blend",
+    "reference_image": null,
+    "model_candidate": null
+  },
+  "duration_s": 5,
+  "fps": 30,
+  "camera": {
+    "path": "crane",
+    "focal_mm": 35,
+    "keyframes": [
+      {
+        "t": 0,
+        "position_m": [
+          24,
+          -22,
+          1.6
+        ],
+        "look_at_m": [
+          0,
+          10,
+          8
+        ],
+        "fov_deg": 54.43
+      },
+      {
+        "t": 5,
+        "position_m": [
+          24,
+          -22,
+          null
+        ],
+        "look_at_m": [
+          0,
+          10,
+          null
+        ],
+        "fov_deg": 54.43
+      }
+    ]
+  },
+  "easing": "power2.inOut",
+  "framing": {
+    "safe_margin_pct": 5,
+    "horizon_rule": "level",
+    "subject": "one level's balcony run centred; floors above and below partly visible"
+  },
+  "continuity": {
+    "entry_from": "facade-flyby",
+    "exit_to": "apartment-walkthrough",
+    "constraints": [
+      "vertical ascent only (x and y constant)",
+      "target level height taken from calibrated geometry, not assumed"
+    ]
+  },
+  "reference_constraints": null,
+  "validation": [
+    "target level Z read from assets/geometry JSON; null until calibrated",
+    "ffprobe duration 5.0 s, 30 fps",
+    "balcony edges stay level within 0.5 degree"
+  ],
+  "geometry_status": "MISSING_SOURCE"
+}

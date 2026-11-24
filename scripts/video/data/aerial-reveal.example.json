@@ -1,0 +1,10 @@
+{
+  "template": "aerial-reveal",
+  "values": {
+    "WIDTH": 1920, "HEIGHT": 1080, "DURATION": 6,
+    "INK": "#ffffff", "FONT": "sans-serif",
+    "PLATE_SRC": "assets/placeholder/aerial-placeholder-landscape.mp4",
+    "TITLE": "PROJECT TITLE", "TITLE_SIZE": 96, "TITLE_TOP": 440,
+    "SUBTITLE": "Placeholder", "SUB_SIZE": 36, "SUB_TOP": 570
+  }
+}

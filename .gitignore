@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.venv/
+.venv-bim/
+__pycache__/
+*.pyc
+
+# Next.js / build output
+.next/
+.next-exterior-preview/
+out/
+dist/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Test & QA artifacts
+playwright-report/
+test-results/
+coverage/
+.playwright-cli/
+.playwright/
+reports/qa/*.webm
+reports/qa/*.zip
+
+# Blender
+*.blend1
+*.blend2
+assets/blender/renders/
+
+# Private Močire source snapshots, artwork, and registrations
+assets/source/**/raw/
+assets/source/mocire-zadar-h/inventory.json
+assets/source/mocire-zadar-h/stage2-manifest.json
+assets/geometry/apartments.json
+assets/geometry/stage2/private/
+assets/geometry/stage2/L00-sheet-review.md
+assets/geometry/stage3/exterior-audit.md
+src/data/apartments.json
+src/data/floors.json
+reports/qa/stage2/private/
+reports/qa/stage2/verification.md
+reports/qa/stage3-exterior-review.md
+scripts/source/trace_mocire_boundaries.py
+scripts/validate/check_ground_sheet_locators.py
+scripts/validate/stage2-plan-witnesses.mjs
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# playwright / vitest output
+test-results/
+playwright-report/

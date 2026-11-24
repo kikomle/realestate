@@ -1,0 +1,811 @@
+.shell {
+  --shell-gutter: clamp(1.25rem, 3vw, 3.5rem);
+  --shell-panel-width: clamp(13.5rem, 17vw, 16rem);
+  --shell-ink: #183735;
+  --shell-paper: #f3f5f2;
+  --shell-muted: #4d615b;
+  --shell-line: #cdd8d1;
+  --shell-focus: #08634d;
+  --shell-brass: #c8b58b;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100svh;
+  min-height: 43rem;
+  overflow: clip;
+  background: var(--shell-ink);
+  color: var(--shell-ink);
+}
+
+.canvas {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+}
+
+@media (scripting: none) {
+  .shell .viewNav,
+  .shell .focusButton,
+  .shell .viewTools,
+  .shell .recoveryButton,
+  .canvas [data-image-message] {
+    display: none;
+  }
+}
+
+.scrim {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--shell-paper) 94%, transparent),
+      transparent 21%
+    ),
+    linear-gradient(
+      to top,
+      #122824f5,
+      #12282458 20%,
+      transparent 44%
+    );
+}
+
+.header {
+  position: absolute;
+  z-index: 3;
+  inset: 0 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: clamp(0.875rem, 2vw, 2rem);
+  padding: max(1.375rem, env(safe-area-inset-top))
+    max(var(--shell-gutter), env(safe-area-inset-right)) 0
+    max(var(--shell-gutter), env(safe-area-inset-left));
+  pointer-events: none;
+}
+
+.identity {
+  justify-self: start;
+  min-width: 0;
+  padding: 0.5rem 0.7rem;
+  border-left: 2px solid var(--shell-brass);
+  background: var(--shell-paper);
+}
+
+.identity h1 {
+  font-size: clamp(1.875rem, 3.1vw, 2.875rem);
+  letter-spacing: -0.045em;
+}
+
+.identity p {
+  margin-top: 0.35rem;
+  color: var(--shell-ink);
+  font-weight: 525;
+}
+
+.viewNav {
+  display: flex;
+  padding: 0.25rem;
+  border: 1px solid var(--shell-line);
+  border-radius: 0.45rem;
+  background: var(--shell-paper);
+  pointer-events: auto;
+}
+
+.shell .viewButton {
+  min-width: 6.5rem;
+  min-height: 2.75rem;
+  padding-inline: 1.25rem;
+  border-radius: 0.25rem;
+  color: var(--shell-ink);
+}
+
+.shell .viewButton[aria-pressed="true"] {
+  background: var(--shell-ink);
+  color: var(--shell-paper);
+}
+
+.privacy {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 0.4rem;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--shell-line);
+  border-radius: 0.3rem;
+  background: var(--shell-paper);
+  white-space: nowrap;
+}
+
+.hud {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--shell-panel-width);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0.75rem 3rem;
+  padding: 6.5rem max(var(--shell-gutter), env(safe-area-inset-right))
+    max(2rem, env(safe-area-inset-bottom))
+    max(var(--shell-gutter), env(safe-area-inset-left));
+  pointer-events: none;
+}
+
+.floorPanel {
+  grid-area: 1 / 2;
+  align-self: start;
+  min-width: 0;
+  padding: clamp(0.875rem, 1.25vw, 1.25rem);
+  border: 1px solid var(--shell-line);
+  border-top: 3px solid var(--shell-brass);
+  border-radius: 0.45rem;
+  background: var(--shell-paper);
+  box-shadow: 0 0.5rem 1.5rem #142f2b25;
+  pointer-events: auto;
+}
+
+.floorIntro {
+  min-width: 0;
+}
+
+.floorIntro > p {
+  color: var(--shell-muted);
+  font-weight: 525;
+}
+
+.floorHeading {
+  overflow-wrap: anywhere;
+  font-size: clamp(1.5rem, 1.9vw, 1.75rem);
+  line-height: 1.09;
+}
+
+.floorNav {
+  margin-top: 1rem;
+  scroll-margin-block: 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.floorNav:focus {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 4px;
+}
+
+.floorList {
+  display: grid;
+  gap: 0.125rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.floorItem {
+  min-width: 0;
+}
+
+.shell .floorButton {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto;
+  align-content: center;
+  justify-items: start;
+  column-gap: 0.5rem;
+  row-gap: 0.125rem;
+  width: 100%;
+  height: auto;
+  min-height: 2.75rem;
+  padding: 0.375rem 0.625rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: var(--shell-ink);
+  text-align: left;
+  white-space: normal;
+}
+
+.shell .floorButton[aria-pressed="true"] {
+  border-color: var(--shell-ink);
+  background: var(--shell-ink);
+  color: var(--shell-paper);
+}
+
+.floorName {
+  grid-area: 1 / 1;
+  min-width: 0;
+  font-size: 0.875rem;
+  font-weight: 560;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.floorMark {
+  grid-area: 1 / 2;
+  align-self: center;
+}
+
+.panelNotice {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--shell-line);
+}
+
+.geometryNotice,
+.invalidNotice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.15rem 0.5rem;
+}
+
+.geometryNotice > svg {
+  color: var(--shell-focus);
+}
+
+.geometryNotice > div > p + p {
+  color: var(--shell-muted);
+}
+
+.invalidNotice > svg {
+  color: var(--destructive);
+}
+
+.planProofLink {
+  display: inline-flex;
+  grid-column: 2;
+  justify-self: start;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-block: 0.25rem;
+  color: var(--shell-focus);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.shell .recoveryButton {
+  justify-content: start;
+  width: auto;
+  height: auto;
+  min-height: 2.75rem;
+  margin-top: 0.25rem;
+  padding: 0;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  white-space: normal;
+}
+
+.story {
+  grid-area: 2 / 1;
+  align-self: end;
+  max-width: 34rem;
+  min-width: 0;
+  width: fit-content;
+  padding: clamp(0.75rem, 1.6vw, 1.25rem);
+  border-left: 2px solid var(--shell-brass);
+  border-radius: 0 0.35rem 0.35rem 0;
+  background: #183735f5;
+  color: var(--shell-paper);
+  pointer-events: none;
+}
+
+.shell[data-view="facade"] .story {
+  max-width: min(100%, 31rem);
+}
+
+.story h2 {
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 5vw, 4.85rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.story p {
+  max-width: 23rem;
+  margin-top: 0.65rem;
+}
+
+.shell .focusButton {
+  min-height: 3rem;
+  margin-top: 1.1rem;
+  padding-inline: 1rem;
+  border: 1px solid var(--shell-line);
+  border-radius: 0.35rem;
+  gap: 0.75rem;
+  background: var(--shell-paper);
+  color: var(--shell-ink);
+  text-shadow: none;
+  pointer-events: auto;
+}
+
+.viewTools {
+  grid-area: 2 / 2;
+  align-self: end;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  padding: 0.125rem;
+  border: 1px solid var(--shell-line);
+  border-radius: 0.45rem;
+  background: var(--shell-paper);
+  pointer-events: auto;
+}
+
+.shell .toolButton {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.25rem;
+  color: var(--shell-ink);
+}
+
+.shell button,
+.shell .floorLink {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-standard);
+}
+
+.shell button:focus-visible,
+.shell .floorLink:focus-visible,
+.planProofLink:focus-visible,
+.skipLink:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--shell-paper);
+}
+
+.skipLink {
+  position: absolute;
+  z-index: 5;
+  top: max(0.75rem, env(safe-area-inset-top));
+  left: max(0.75rem, env(safe-area-inset-left));
+  max-width: calc(100% - 1.5rem);
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--shell-ink);
+  color: var(--shell-paper);
+  font-size: 0.875rem;
+  transform: translateY(calc(-100% - 2rem));
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+@media (hover: hover) {
+  .shell .viewButton:not([aria-pressed="true"]):hover,
+  .shell .floorButton:not([aria-pressed="true"]):hover,
+  .shell .toolButton:hover,
+  .shell .focusButton:hover {
+    border-color: var(--shell-line);
+    background: #dfeae3;
+    color: var(--shell-ink);
+  }
+
+  .planProofLink:hover {
+    text-decoration-thickness: 0.12em;
+  }
+}
+
+@media (max-width: 700px), (max-height: 620px) and (max-width: 980px) {
+  .shell {
+    --shell-gutter: clamp(0.75rem, 3.6vw, 1rem);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .header {
+    position: relative;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.6rem 0.75rem;
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  .canvas {
+    bottom: 9rem;
+  }
+
+  .scrim {
+    background:
+      linear-gradient(to bottom, #f4f7f3ed, transparent 22%),
+      linear-gradient(to top, var(--shell-ink) 17%, transparent 44%);
+  }
+
+  .identity {
+    grid-area: 1 / 1;
+  }
+
+  .privacy {
+    grid-area: 1 / 2;
+    gap: 0.375rem;
+    padding: 0.5rem 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  .viewNav {
+    grid-area: 2 / 1 / 3 / 3;
+    justify-self: start;
+  }
+
+  .shell .viewButton {
+    min-width: 5.5rem;
+  }
+
+  .hud {
+    position: relative;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: minmax(10rem, 1fr) auto auto;
+    gap: 0.65rem;
+    padding-top: 0.5rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .floorPanel {
+    grid-area: 3 / 1 / 4 / 3;
+    align-self: end;
+    padding: 0.75rem;
+  }
+
+  .floorIntro {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .floorIntro > p {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+  }
+
+  .floorHeading {
+    margin-top: 0;
+    font-size: 1.25rem;
+    text-align: right;
+  }
+
+  .floorNav {
+    margin-top: 0.625rem;
+  }
+
+  .floorList {
+    grid-template-columns: minmax(3.8rem, 1.18fr) repeat(4, minmax(0, 1fr));
+    gap: 0.1875rem;
+  }
+
+  .shell .floorButton {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    min-height: 2.75rem;
+    padding: 0.3rem 0.125rem;
+    text-align: center;
+  }
+
+  .floorName {
+    font-size: 0.75rem;
+  }
+
+  .floorMark {
+    display: none;
+  }
+
+  .shell .floorButton[aria-pressed="true"] {
+    box-shadow: inset 0 -2px var(--shell-brass);
+  }
+
+  .shell .floorButton[aria-pressed="true"]:focus-visible {
+    box-shadow: inset 0 -2px var(--shell-brass), 0 0 0 2px var(--shell-paper);
+  }
+
+  .panelNotice {
+    margin-top: 0.625rem;
+    padding-top: 0.625rem;
+  }
+
+  .geometryNotice > div > p,
+  .invalidNotice > div > p {
+    font-size: 0.75rem;
+  }
+
+  .story {
+    grid-area: 2 / 1;
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .story h2,
+  .story p {
+    display: none;
+  }
+
+  .shell .focusButton {
+    max-width: 100%;
+    min-height: 3rem;
+    margin-top: 0;
+    padding-inline: 0.65rem;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    white-space: normal;
+  }
+
+  .viewTools {
+    grid-area: 2 / 2;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 364px) {
+  .hud {
+    grid-template-rows: minmax(7rem, 1fr) auto auto;
+  }
+}
+
+@media (min-width: 365px) and (max-width: 700px) and (min-height: 740px) {
+  .story h2 {
+    display: block;
+    max-width: 10ch;
+    padding: 0.375rem 0.5rem 0.5rem;
+    border-left: 2px solid var(--shell-brass);
+    background: var(--shell-ink);
+    font-size: clamp(1.6rem, 6vw, 2.75rem);
+    text-wrap: balance;
+  }
+
+  .shell .focusButton {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 365px) and (max-width: 700px) {
+  .geometryNotice:has(.planProofLink) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .planProofLink {
+    grid-column: 3;
+    align-self: center;
+    padding-inline: 0.25rem;
+  }
+}
+
+@media (min-width: 701px) and (max-height: 800px) {
+  .viewTools {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 981px) and (max-height: 620px) {
+  .shell {
+    min-height: 34rem;
+  }
+
+  .header {
+    padding-top: max(0.875rem, env(safe-area-inset-top));
+  }
+
+  .hud {
+    padding-top: 5.25rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .floorPanel {
+    padding-block: 0.75rem;
+  }
+
+  .floorNav {
+    margin-top: 0.65rem;
+  }
+
+  .floorList {
+    gap: 0;
+  }
+
+  .panelNotice {
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+  }
+
+  .story h2 {
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+  }
+
+  .viewTools {
+    grid-area: 2 / 1;
+  }
+}
+
+/* Keep the art visible and every control reachable on a phone held sideways. */
+@media (max-height: 620px) and (min-width: 640px) and (max-width: 980px) {
+  .shell {
+    --shell-gutter: 1.125rem;
+    min-height: max(24rem, 100svh);
+  }
+
+  .header {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 1rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+  }
+
+  .canvas {
+    bottom: 0;
+  }
+
+  .identity {
+    grid-area: 1 / 1;
+  }
+
+  .identity h1 {
+    font-size: 1.75rem;
+  }
+
+  .identity p {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .viewNav {
+    grid-area: 1 / 2;
+  }
+
+  .privacy {
+    grid-area: 1 / 3;
+    font-size: 0.75rem;
+  }
+
+  .hud {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: minmax(5rem, 1fr) auto;
+    gap: 0.625rem 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .floorPanel {
+    grid-area: 2 / 1 / 3 / 3;
+    align-self: end;
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.38fr) minmax(0, 1fr);
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .floorIntro {
+    display: block;
+    grid-area: 1 / 1;
+    align-self: center;
+  }
+
+  .floorIntro > p {
+    font-size: 0.75rem;
+  }
+
+  .floorHeading {
+    margin-top: 0.25rem;
+    font-size: 1.375rem;
+    text-align: left;
+  }
+
+  .floorNav {
+    grid-area: 1 / 2;
+    margin-top: 0;
+  }
+
+  .floorList {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.25rem;
+  }
+
+  .shell .floorButton {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    min-height: 3rem;
+    padding: 0.375rem 0.125rem;
+    row-gap: 0.25rem;
+    text-align: center;
+  }
+
+  .floorName {
+    font-size: 0.75rem;
+  }
+
+  .panelNotice {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-top: 0;
+    padding-top: 0.5rem;
+  }
+
+  .geometryNotice,
+  .invalidNotice {
+    align-items: center;
+  }
+
+  .geometryNotice:has(.planProofLink) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .planProofLink {
+    grid-column: 3;
+  }
+
+  .geometryNotice > svg,
+  .invalidNotice > svg {
+    margin-top: 0;
+  }
+
+  .geometryNotice > div {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.625rem;
+  }
+
+  .geometryNotice > div > p {
+    margin-top: 0;
+    font-size: 0.75rem;
+  }
+
+  .story {
+    grid-area: 1 / 1;
+  }
+
+  .story h2,
+  .story p {
+    display: none;
+  }
+
+  .shell .focusButton {
+    min-height: 2.75rem;
+    margin-top: 0;
+    font-size: 0.75rem;
+  }
+
+  .viewTools {
+    grid-area: 1 / 2;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell button,
+  .shell .floorLink {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .identity,
+  .story,
+  .floorPanel,
+  .viewNav,
+  .viewTools,
+  .privacy {
+    border: 1px solid CanvasText;
+    background: Canvas;
+  }
+
+  .shell .floorButton[aria-pressed="true"],
+  .shell .viewButton[aria-pressed="true"] {
+    outline: 2px solid Highlight;
+    outline-offset: -3px;
+  }
+
+  .shell button:focus-visible,
+  .shell .floorLink:focus-visible,
+  .floorNav:focus,
+  .planProofLink:focus-visible,
+  .skipLink:focus-visible {
+    outline-color: Highlight;
+  }
+}

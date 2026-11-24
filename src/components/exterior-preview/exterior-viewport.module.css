@@ -1,0 +1,179 @@
+.viewport {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  min-height: var(--exterior-min-height, 320px);
+  overflow: hidden;
+  background: var(--exterior-background, #5e6862);
+  color: var(--exterior-foreground, #f4f2eb);
+  touch-action: pan-y pinch-zoom;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.viewport:focus-visible {
+  outline: 3px solid var(--exterior-focus, #fff);
+  outline-offset: -5px;
+}
+
+.viewport[data-dragging="true"] {
+  cursor: grabbing;
+}
+
+.layer,
+.stage,
+.picture,
+.image,
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layer {
+  pointer-events: none;
+}
+
+.stage {
+  transform-origin: 0 0;
+}
+
+.stage[data-moving="true"] {
+  will-change: transform;
+}
+
+.picture,
+.image {
+  display: block;
+  pointer-events: none;
+}
+
+.image {
+  /* Art is visible before hydration; the measured camera then owns the crop. */
+  object-fit: cover;
+  object-position: 53% 36%;
+}
+
+.stage[data-camera-ready="true"] .image {
+  /* This stage is now exactly the intrinsic image frame, uniformly scaled. */
+  object-fit: fill;
+}
+
+.picture[data-image-state="error"] .image {
+  visibility: hidden;
+}
+
+.overlay {
+  overflow: visible;
+  pointer-events: none;
+}
+
+.overlay[data-ready="false"] {
+  visibility: hidden;
+}
+
+.band {
+  cursor: pointer;
+  outline: none;
+}
+
+.polygon {
+  pointer-events: all;
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  transition: fill 150ms ease, stroke 150ms ease;
+}
+
+.band[data-hovered="true"] .polygon,
+.band:hover .polygon {
+  fill: var(--exterior-band-hover, #d5dba848);
+  stroke: var(--exterior-foreground, #f4f2eb);
+}
+
+.band[data-selected="true"] .polygon {
+  fill: var(--exterior-band-selected, #d5dba86e);
+  stroke: var(--exterior-accent, #d5dba8);
+}
+
+.band:focus-visible .polygon {
+  fill: var(--exterior-band-hover, #d5dba848);
+  stroke: var(--exterior-focus, #fff);
+  stroke-width: 4;
+  stroke-dasharray: 7 3;
+  paint-order: stroke fill;
+}
+
+.viewport[data-dragging="true"] .band {
+  cursor: grabbing;
+}
+
+.message {
+  position: absolute;
+  z-index: 1;
+  top: var(--exterior-message-top, 50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0;
+  padding: 9px 12px;
+  background: var(--exterior-message-background, #f4f2eb);
+  color: var(--exterior-message-foreground, #171d1b);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-align: center;
+  pointer-events: none;
+}
+
+@media (max-width: 679px) and (orientation: portrait) {
+  .stage[data-camera-stage="arrival"] .image {
+    /* Cover-fit equivalent of the arrival corner at normalized x≈.675. */
+    object-position: 75% 36%;
+  }
+
+  .stage[data-camera-stage="facade"] .image {
+    object-position: 52% 36%;
+  }
+}
+
+.message[hidden] {
+  display: none;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polygon {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .viewport:focus-visible {
+    outline-color: Highlight;
+  }
+
+  .band:focus-visible .polygon,
+  .band[data-selected="true"] .polygon {
+    fill: transparent;
+    stroke: Highlight;
+  }
+}

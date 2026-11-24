@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="../vendor/gsap.min.js"></script>
+    <style>
+      :root { --ground: #0b0d10; --ink: #ffffff; --font-display: sans-serif; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { width: 1920px; height: 1080px; position: relative; overflow: hidden; font-family: var(--font-display); background: var(--ground); }
+      #title { position: absolute; left: 0; right: 0; top: 400px; text-align: center; color: var(--ink); font-size: 120px; font-weight: 600; letter-spacing: -0.03em; white-space: nowrap; }
+      #title .ch { display: inline-block; opacity: 0; }
+      #sub { position: absolute; left: 0; right: 0; top: 600px; text-align: center; color: var(--ink); font-size: 32px; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0; }
+      #rule { position: absolute; left: 50%; top: 560px; width: 0; height: 2px; background: var(--ink); transform: translateX(-50%); }
+    </style>
+  </head>
+  <body>
+    <!-- Template: typography-title. Per-character reveal of TITLE on a solid ground (no media, no network). Fill via scripts/video/build-composition.mjs. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1920" data-height="1080">
+      <h1 id="title" class="clip" data-start="0" data-duration="6" data-track-index="0">MOCIRE ZADAR</h1>
+      <div id="rule" class="clip" data-start="0" data-duration="6" data-track-index="1"></div>
+      <div id="sub" class="clip" data-start="0" data-duration="6" data-track-index="2">Placeholder title card</div>
+    </div>
+    <script>
+      const title = document.getElementById("title");
+      const text = title.textContent;
+      title.textContent = "";
+      [...text].forEach((c) => {
+        const s = document.createElement("span");
+        s.className = "ch";
+        s.textContent = c === " " ? "\u00a0" : c;
+        title.appendChild(s);
+      });
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#title .ch", { opacity: 0, y: 30, filter: "blur(6px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out", stagger: 0.04 }, 0.2);
+      tl.to("#rule", { width: 320, duration: 0.9, ease: "power2.inOut" }, 1.0);
+      tl.to("#sub", { opacity: 1, duration: 0.8, ease: "power2.out" }, 1.4);
+      tl.to(["#title", "#rule", "#sub"], { opacity: 0, duration: 0.6, ease: "power2.in" }, 6 - 0.9);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

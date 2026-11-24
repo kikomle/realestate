@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={{WIDTH}}, height={{HEIGHT}}" />
+    <script src="../vendor/gsap.min.js"></script>
+    <style>
+      :root { --ink: {{INK}}; --font-display: {{FONT}}; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: {{WIDTH}}px; height: {{HEIGHT}}px; overflow: hidden; background: #000; }
+      #root { width: {{WIDTH}}px; height: {{HEIGHT}}px; position: relative; overflow: hidden; font-family: var(--font-display); }
+      #plate { position: absolute; left: 0; top: 0; width: {{WIDTH}}px; height: {{HEIGHT}}px; object-fit: cover; transform-origin: 50% 50%; }
+      #title { position: absolute; left: 0; right: 0; top: {{TITLE_TOP}}px; text-align: center; color: var(--ink); font-size: {{TITLE_SIZE}}px; font-weight: 600; letter-spacing: -0.03em; text-shadow: 0 4px 24px rgba(0,0,0,0.45); }
+      #sub { position: absolute; left: 0; right: 0; top: {{SUB_TOP}}px; text-align: center; color: var(--ink); font-size: {{SUB_SIZE}}px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <!-- Template: aerial-reveal. Camera: slow push-in from 1.12x to 1.0x over the full duration (deterministic GSAP). Fill via scripts/video/build-composition.mjs. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DURATION}}" data-width="{{WIDTH}}" data-height="{{HEIGHT}}">
+      <video id="plate" class="clip" data-start="0" data-duration="{{DURATION}}" data-track-index="0" src="{{PLATE_SRC}}" muted playsinline></video>
+      <h1 id="title" class="clip" data-start="0" data-duration="{{DURATION}}" data-track-index="1">{{TITLE}}</h1>
+      <div id="sub" class="clip" data-start="0" data-duration="{{DURATION}}" data-track-index="2">{{SUBTITLE}}</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#plate", { scale: 1.12 }, { scale: 1.0, duration: {{DURATION}}, ease: "none" }, 0);
+      tl.fromTo("#title", { opacity: 0, y: 40, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.2, ease: "power3.out" }, 0.3);
+      tl.to("#sub", { opacity: 1, duration: 0.9, ease: "power2.out" }, 1.2);
+      tl.to(["#title", "#sub"], { opacity: 0, duration: 0.6, ease: "power2.in" }, {{DURATION}} - 0.9);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

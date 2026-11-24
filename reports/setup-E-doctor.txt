@@ -1,0 +1,26 @@
+== realestate2 doctor (ci=0) ==
+PASS  node v23.11.0 (>= 22)
+PASS  npm 10.9.2
+PASS  ffmpeg/ffprobe present (9.0.2)
+PASS  poppler pdfinfo present
+PASS  python3.12 present (Python 3.12.8)
+PASS  .venv present (Python 3.12.8)
+PASS  .venv-bim present (Python 3.12.8)
+PASS  OpenCode 1.19.5
+PASS  Blender at /Applications/Blender.app (Blender 5.3.0)
+WARN  opencode.jsonc not yet created (orchestrator owns it)
+PASS  7 project agents with frontmatter
+FAIL  2 skill(s) missing SKILL.md or name/description
+PASS  package.json script: dev
+PASS  package.json script: build
+PASS  package.json script: lint
+PASS  package.json script: test
+PASS  node_modules present
+PASS  GLB test assets in public/models/test
+PASS  HyperFrames CLI reachable
+PASS  Playwright Chromium present in ~/Library/Caches/ms-playwright
+PASS  playwright.config.ts present
+WARN  geometry schema not yet present (GATE 2/3 pending)
+WARN  assets/source exists but no inventory yet (GATE 2 pending)
+
+== summary: 19 PASS, 3 WARN, 1 FAIL ==

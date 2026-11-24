@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "historyId": "f2c450d8-7a87-4646-b7c0-53b086de1b5f",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "assets/placeholder/aerial-placeholder-landscape.mp4": {
+      "hash": "0a09a05fd57319a65840b8702f10f15891b1f501b1de49b8048983134c5b638f",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/0a/0a09a05fd57319a65840b8702f10f15891b1f501b1de49b8048983134c5b638f"
+    },
+    "assets/placeholder/facade-placeholder-portrait.mp4": {
+      "hash": "73642c365cbb0a5f26dc4d310f7fed9ac5b9053102292d2cbee9ce89439f2e90",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/73/73642c365cbb0a5f26dc4d310f7fed9ac5b9053102292d2cbee9ce89439f2e90"
+    },
+    "compositions/smoke-landscape.html": {
+      "hash": "1deaefbd5baa7b244bc20e6f33ecc38c8a8cf99a071dd4d98433460bfb11a461",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/1d/1deaefbd5baa7b244bc20e6f33ecc38c8a8cf99a071dd4d98433460bfb11a461"
+    },
+    "compositions/smoke-portrait.html": {
+      "hash": "a63bdf585da30e0bcb69260fa7ba2fe782a390a745454f2ba84e20f1486d4381",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/a6/a63bdf585da30e0bcb69260fa7ba2fe782a390a745454f2ba84e20f1486d4381"
+    },
+    "index.html": {
+      "hash": "d19e9dbb0dab7f1e71a8164e54b13751245a2672740222cd6bac85077d6e6745",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/d1/d19e9dbb0dab7f1e71a8164e54b13751245a2672740222cd6bac85077d6e6745"
+    },
+    "package-lock.json": {
+      "hash": "9828843d5092c2081688fd5d3d25a6e2d3e6fcd2fc4851970da025d2670aa898",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/98/9828843d5092c2081688fd5d3d25a6e2d3e6fcd2fc4851970da025d2670aa898"
+    },
+    "package.json": {
+      "hash": "b4cd62cf39331709fc969857a61412198819249e02513fa40a0dbb980767b31f",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/b4/b4cd62cf39331709fc969857a61412198819249e02513fa40a0dbb980767b31f"
+    },
+    "vendor/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "/Users/enzokutic/.cache/hyperframes/history/f2c450d8-7a87-4646-b7c0-53b086de1b5f/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "fb8a2fdb-e15e-46c1-a3c7-1f40d2ae4b04",
+      "completedAt": 1795447469974,
+      "output": "/Users/enzokutic/realestate2/video/renders/smoke-landscape.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

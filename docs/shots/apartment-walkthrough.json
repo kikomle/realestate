@@ -1,0 +1,67 @@
+{
+  "id": "apartment-walkthrough",
+  "purpose": "Interior dolly through one unit's main room, from entrance to window, to show layout and daylight.",
+  "source": {
+    "kind": "blender_deterministic",
+    "blender_scene": "assets/blender/scenes/unit_interior.blend",
+    "reference_image": null,
+    "model_candidate": null
+  },
+  "duration_s": 8,
+  "fps": 30,
+  "camera": {
+    "path": "dolly",
+    "focal_mm": 24,
+    "keyframes": [
+      {
+        "t": 0,
+        "position_m": [
+          null,
+          null,
+          1.5
+        ],
+        "look_at_m": [
+          null,
+          null,
+          1.2
+        ],
+        "fov_deg": 73.74
+      },
+      {
+        "t": 8,
+        "position_m": [
+          null,
+          null,
+          1.5
+        ],
+        "look_at_m": [
+          null,
+          null,
+          1.2
+        ],
+        "fov_deg": 73.74
+      }
+    ]
+  },
+  "easing": "power1.inOut",
+  "framing": {
+    "safe_margin_pct": 3,
+    "horizon_rule": "level",
+    "subject": "room depth with window wall at frame centre"
+  },
+  "continuity": {
+    "entry_from": "floor-level-reveal",
+    "exit_to": null,
+    "constraints": [
+      "camera height 1.5 m (eye level, not invented from plans)",
+      "wall positions from the unit inventory only"
+    ]
+  },
+  "reference_constraints": null,
+  "validation": [
+    "all keyframe coordinates resolved from assets/geometry unit inventory (no null remaining)",
+    "no camera position inside a wall solid (geometry check)",
+    "ffprobe 1920x1080, 8.0 s"
+  ],
+  "geometry_status": "MISSING_SOURCE"
+}

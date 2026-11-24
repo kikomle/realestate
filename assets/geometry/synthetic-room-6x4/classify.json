@@ -1,0 +1,16 @@
+{
+  "source": "tests/fixtures/synthetic_room_6x4.pdf",
+  "page_count": 1,
+  "pages": [
+    {
+      "class": "VECTOR",
+      "vector_paths": 2,
+      "vector_items": 7,
+      "text_words": 17,
+      "image_blocks": 0,
+      "image_coverage": 0.0,
+      "reasons": [],
+      "page": 1
+    }
+  ]
+}

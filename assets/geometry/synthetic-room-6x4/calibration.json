@@ -1,0 +1,31 @@
+{
+  "method": "dimensions+scale_text",
+  "scale_denominator": 100,
+  "metres_per_pt": 0.035277783522096706,
+  "metres_per_pt_from_scale_text": 0.035277777777777776,
+  "residual": 0.0,
+  "uncalibrated": false,
+  "dimension_pairs": [
+    {
+      "text": "6.00 m",
+      "value_m": 6.0,
+      "unit": "m",
+      "segment_pt": 170.0787,
+      "metres_per_pt": 0.03527778193960514,
+      "relative_error_vs_median": 0.0
+    },
+    {
+      "text": "4.00 m",
+      "value_m": 4.0,
+      "unit": "m",
+      "segment_pt": 113.3858,
+      "metres_per_pt": 0.035277785104588275,
+      "relative_error_vs_median": 0.0
+    }
+  ],
+  "dimension_units_seen": [
+    "m"
+  ],
+  "flags": [],
+  "source_page_file": "raw/page-001.json"
+}

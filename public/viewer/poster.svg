@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-label="Placeholder building poster">
+  <rect width="1600" height="1200" fill="#e9e4da"/>
+  <rect x="0" y="820" width="1600" height="380" fill="#d6cfc2"/>
+  <polygon points="420,760 800,520 1180,760" fill="#c9c1b2"/>
+  <rect x="470" y="760" width="660" height="260" fill="#f4efe6" stroke="#6b655c" stroke-width="4"/>
+  <rect x="520" y="820" width="140" height="120" fill="#9fb3bd"/>
+  <rect x="740" y="820" width="140" height="120" fill="#9fb3bd"/>
+  <rect x="960" y="820" width="140" height="120" fill="#9fb3bd"/>
+  <text x="800" y="1100" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" fill="#2b2a27">Placeholder building</text>
+</svg>

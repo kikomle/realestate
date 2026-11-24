@@ -1,0 +1,67 @@
+{
+  "id": "facade-flyby",
+  "purpose": "Lateral pass along the facade showing window rhythm and balconies at street-to-eye height.",
+  "source": {
+    "kind": "blender_deterministic",
+    "blender_scene": "assets/blender/scenes/site_master.blend",
+    "reference_image": null,
+    "model_candidate": null
+  },
+  "duration_s": 6,
+  "fps": 30,
+  "camera": {
+    "path": "dolly",
+    "focal_mm": 35,
+    "keyframes": [
+      {
+        "t": 0,
+        "position_m": [
+          -30,
+          -18,
+          1.6
+        ],
+        "look_at_m": [
+          0,
+          10,
+          8
+        ],
+        "fov_deg": 54.43
+      },
+      {
+        "t": 6,
+        "position_m": [
+          30,
+          -18,
+          1.6
+        ],
+        "look_at_m": [
+          0,
+          10,
+          8
+        ],
+        "fov_deg": 54.43
+      }
+    ]
+  },
+  "easing": "sine.inOut",
+  "framing": {
+    "safe_margin_pct": 4,
+    "horizon_rule": "level",
+    "subject": "facade plane, window grid parallel to frame edges"
+  },
+  "continuity": {
+    "entry_from": "aerial-reveal",
+    "exit_to": "floor-level-reveal",
+    "constraints": [
+      "camera stays at eye height 1.6 m",
+      "no camera roll"
+    ]
+  },
+  "reference_constraints": null,
+  "validation": [
+    "ffprobe: 1080x1920 portrait variant and 1920x1080 landscape variant both validate",
+    "window grid lines remain vertical/horizontal within 0.5 degree in frame",
+    "camera path stays >= 3 m from any facade plane (geometry check)"
+  ],
+  "geometry_status": "UNKNOWN"
+}

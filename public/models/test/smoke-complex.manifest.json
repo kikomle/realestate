@@ -1,0 +1,3335 @@
+{
+  "schema": "realestate2.blender-manifest/1",
+  "units": "meters",
+  "frame": "Blender Z-up; glTF file is Y-up (exporter converts)",
+  "origin": "south-west ground corner of complex",
+  "assumption": "ASSUMPTION_TEST_GEOMETRY: all dimensions are pipeline test values, not source-verified",
+  "glb": "test_complex.glb",
+  "object_count": 105,
+  "objects": [
+    {
+      "id": "B00__L00__NONE__site__001",
+      "name": "B00__L00__NONE__site__001",
+      "parent": null,
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "bbox_m": {
+        "min": [
+          -6.0,
+          -6.0,
+          -0.3
+        ],
+        "max": [
+          36.0,
+          14.0,
+          0.0
+        ],
+        "size": [
+          42.0,
+          20.0,
+          0.3
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GROUND_SITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.2
+    },
+    {
+      "id": "B01__L00__NONE__column__001",
+      "name": "B01__L00__NONE__column__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "column",
+      "bbox_m": {
+        "min": [
+          11.6,
+          7.6,
+          -0.25
+        ],
+        "max": [
+          12.0,
+          8.0,
+          5.85
+        ],
+        "size": [
+          0.4,
+          0.4,
+          6.1
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__door__001",
+      "name": "B01__L00__NONE__door__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "door",
+      "bbox_m": {
+        "min": [
+          2.0,
+          0.05,
+          0.0
+        ],
+        "max": [
+          2.9,
+          0.15,
+          2.1
+        ],
+        "size": [
+          0.9,
+          0.1,
+          2.1
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "WOOD_OAK_FLOOR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__roof__000",
+      "name": "B01__L00__NONE__roof__000",
+      "parent": null,
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "root",
+      "bbox_m": null,
+      "triangles": 0,
+      "materials": [],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.2
+    },
+    {
+      "id": "B01__L00__NONE__slab__001",
+      "name": "B01__L00__NONE__slab__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "slab",
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "max": [
+          12.0,
+          8.0,
+          0.0
+        ],
+        "size": [
+          12.0,
+          8.0,
+          0.25
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L00__NONE__stair__001",
+      "name": "B01__L00__NONE__stair__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          0.4,
+          0.0
+        ],
+        "max": [
+          1.6,
+          0.5875,
+          0.1906
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__002",
+      "name": "B01__L00__NONE__stair__002",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          0.5875,
+          0.1906
+        ],
+        "max": [
+          1.6,
+          0.775,
+          0.3812
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__003",
+      "name": "B01__L00__NONE__stair__003",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          0.775,
+          0.3812
+        ],
+        "max": [
+          1.6,
+          0.9625,
+          0.5719
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__004",
+      "name": "B01__L00__NONE__stair__004",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          0.9625,
+          0.5719
+        ],
+        "max": [
+          1.6,
+          1.15,
+          0.7625
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__005",
+      "name": "B01__L00__NONE__stair__005",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          1.15,
+          0.7625
+        ],
+        "max": [
+          1.6,
+          1.3375,
+          0.9531
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__006",
+      "name": "B01__L00__NONE__stair__006",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          1.3375,
+          0.9531
+        ],
+        "max": [
+          1.6,
+          1.525,
+          1.1437
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__007",
+      "name": "B01__L00__NONE__stair__007",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          1.525,
+          1.1437
+        ],
+        "max": [
+          1.6,
+          1.7125,
+          1.3344
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__008",
+      "name": "B01__L00__NONE__stair__008",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          1.7125,
+          1.3344
+        ],
+        "max": [
+          1.6,
+          1.9,
+          1.525
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__009",
+      "name": "B01__L00__NONE__stair__009",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          1.9,
+          1.525
+        ],
+        "max": [
+          1.6,
+          2.0875,
+          1.7156
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__010",
+      "name": "B01__L00__NONE__stair__010",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          2.0875,
+          1.7156
+        ],
+        "max": [
+          1.6,
+          2.275,
+          1.9062
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__011",
+      "name": "B01__L00__NONE__stair__011",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          2.275,
+          1.9062
+        ],
+        "max": [
+          1.6,
+          2.4625,
+          2.0969
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__012",
+      "name": "B01__L00__NONE__stair__012",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          2.4625,
+          2.0969
+        ],
+        "max": [
+          1.6,
+          2.65,
+          2.2875
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__013",
+      "name": "B01__L00__NONE__stair__013",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          2.65,
+          2.2875
+        ],
+        "max": [
+          1.6,
+          2.8375,
+          2.4781
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__014",
+      "name": "B01__L00__NONE__stair__014",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          2.8375,
+          2.4781
+        ],
+        "max": [
+          1.6,
+          3.025,
+          2.6688
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__015",
+      "name": "B01__L00__NONE__stair__015",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          3.025,
+          2.6688
+        ],
+        "max": [
+          1.6,
+          3.2125,
+          2.8594
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__stair__016",
+      "name": "B01__L00__NONE__stair__016",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          0.4,
+          3.2125,
+          2.8594
+        ],
+        "max": [
+          1.6,
+          3.4,
+          3.05
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__wall__001",
+      "name": "B01__L00__NONE__wall__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          12.0,
+          0.2,
+          2.8
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L00__NONE__wall__002",
+      "name": "B01__L00__NONE__wall__002",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.0,
+          7.8,
+          0.0
+        ],
+        "max": [
+          12.0,
+          8.0,
+          2.8
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 56,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L00__NONE__wall__003",
+      "name": "B01__L00__NONE__wall__003",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          0.2,
+          8.0,
+          2.8
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L00__NONE__wall__004",
+      "name": "B01__L00__NONE__wall__004",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          11.8,
+          0.0,
+          0.0
+        ],
+        "max": [
+          12.0,
+          8.0,
+          2.8
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L00__NONE__wall__005",
+      "name": "B01__L00__NONE__wall__005",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          5.9,
+          0.2,
+          0.0
+        ],
+        "max": [
+          6.1,
+          7.8,
+          2.8
+        ],
+        "size": [
+          0.2,
+          7.6,
+          2.8
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L00__NONE__window__001",
+      "name": "B01__L00__NONE__window__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          2.52,
+          7.75,
+          0.9
+        ],
+        "max": [
+          3.68,
+          8.05,
+          2.1
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__window__002",
+      "name": "B01__L00__NONE__window__002",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          6.52,
+          7.75,
+          0.9
+        ],
+        "max": [
+          7.68,
+          8.05,
+          2.1
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__window__003",
+      "name": "B01__L00__NONE__window__003",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          -0.05,
+          2.52,
+          0.9
+        ],
+        "max": [
+          0.25,
+          3.68,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__window__004",
+      "name": "B01__L00__NONE__window__004",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          -0.05,
+          6.02,
+          0.9
+        ],
+        "max": [
+          0.25,
+          7.18,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__window__005",
+      "name": "B01__L00__NONE__window__005",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          11.75,
+          2.52,
+          0.9
+        ],
+        "max": [
+          12.05,
+          3.68,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__NONE__window__006",
+      "name": "B01__L00__NONE__window__006",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          11.75,
+          6.02,
+          0.9
+        ],
+        "max": [
+          12.05,
+          7.18,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__U001__balcony__001",
+      "name": "B01__L00__U001__balcony__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "U001",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          1.0,
+          8.0,
+          -0.25
+        ],
+        "max": [
+          5.0,
+          9.8,
+          -0.1
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__U001__wall__001",
+      "name": "B01__L00__U001__wall__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "U001",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.1,
+          3.9,
+          0.0
+        ],
+        "max": [
+          5.9,
+          4.1,
+          2.8
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L00__U002__balcony__001",
+      "name": "B01__L00__U002__balcony__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "U002",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          7.0,
+          8.0,
+          -0.25
+        ],
+        "max": [
+          11.0,
+          9.8,
+          -0.1
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L00__U002__wall__001",
+      "name": "B01__L00__U002__wall__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L00",
+      "unit": "U002",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          6.1,
+          3.9,
+          0.0
+        ],
+        "max": [
+          11.9,
+          4.1,
+          2.8
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__roof__001",
+      "name": "B01__L01__NONE__roof__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "roof",
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          5.85
+        ],
+        "max": [
+          12.0,
+          8.0,
+          6.15
+        ],
+        "size": [
+          12.0,
+          8.0,
+          0.3
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__slab__001",
+      "name": "B01__L01__NONE__slab__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "slab",
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          2.8
+        ],
+        "max": [
+          12.0,
+          8.0,
+          3.05
+        ],
+        "size": [
+          12.0,
+          8.0,
+          0.25
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__wall__001",
+      "name": "B01__L01__NONE__wall__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          3.05
+        ],
+        "max": [
+          12.0,
+          0.2,
+          5.85
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__wall__002",
+      "name": "B01__L01__NONE__wall__002",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.0,
+          7.8,
+          3.05
+        ],
+        "max": [
+          12.0,
+          8.0,
+          5.85
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 56,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__wall__003",
+      "name": "B01__L01__NONE__wall__003",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          3.05
+        ],
+        "max": [
+          0.2,
+          8.0,
+          5.85
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__wall__004",
+      "name": "B01__L01__NONE__wall__004",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          11.8,
+          0.0,
+          3.05
+        ],
+        "max": [
+          12.0,
+          8.0,
+          5.85
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__wall__005",
+      "name": "B01__L01__NONE__wall__005",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          5.9,
+          0.2,
+          3.05
+        ],
+        "max": [
+          6.1,
+          7.8,
+          5.85
+        ],
+        "size": [
+          0.2,
+          7.6,
+          2.8
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__NONE__window__001",
+      "name": "B01__L01__NONE__window__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          2.52,
+          7.75,
+          3.95
+        ],
+        "max": [
+          3.68,
+          8.05,
+          5.15
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__NONE__window__002",
+      "name": "B01__L01__NONE__window__002",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          6.52,
+          7.75,
+          3.95
+        ],
+        "max": [
+          7.68,
+          8.05,
+          5.15
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__NONE__window__003",
+      "name": "B01__L01__NONE__window__003",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          -0.05,
+          2.52,
+          3.95
+        ],
+        "max": [
+          0.25,
+          3.68,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__NONE__window__004",
+      "name": "B01__L01__NONE__window__004",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          -0.05,
+          6.02,
+          3.95
+        ],
+        "max": [
+          0.25,
+          7.18,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__NONE__window__005",
+      "name": "B01__L01__NONE__window__005",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          11.75,
+          2.52,
+          3.95
+        ],
+        "max": [
+          12.05,
+          3.68,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__NONE__window__006",
+      "name": "B01__L01__NONE__window__006",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          11.75,
+          6.02,
+          3.95
+        ],
+        "max": [
+          12.05,
+          7.18,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__U101__balcony__001",
+      "name": "B01__L01__U101__balcony__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "U101",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          1.0,
+          8.0,
+          2.8
+        ],
+        "max": [
+          5.0,
+          9.8,
+          2.95
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__U101__wall__001",
+      "name": "B01__L01__U101__wall__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "U101",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          0.1,
+          3.9,
+          3.05
+        ],
+        "max": [
+          5.9,
+          4.1,
+          5.85
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B01__L01__U102__balcony__001",
+      "name": "B01__L01__U102__balcony__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "U102",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          7.0,
+          8.0,
+          2.8
+        ],
+        "max": [
+          11.0,
+          9.8,
+          2.95
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B01__L01__U102__wall__001",
+      "name": "B01__L01__U102__wall__001",
+      "parent": "B01__L00__NONE__roof__000",
+      "building": "B01",
+      "level": "L01",
+      "unit": "U102",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          6.1,
+          3.9,
+          3.05
+        ],
+        "max": [
+          11.9,
+          4.1,
+          5.85
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__NONE__column__001",
+      "name": "B02__L00__NONE__column__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "column",
+      "bbox_m": {
+        "min": [
+          29.6,
+          7.6,
+          -0.25
+        ],
+        "max": [
+          30.0,
+          8.0,
+          5.85
+        ],
+        "size": [
+          0.4,
+          0.4,
+          6.1
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__door__001",
+      "name": "B02__L00__NONE__door__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "door",
+      "bbox_m": {
+        "min": [
+          20.0,
+          0.05,
+          0.0
+        ],
+        "max": [
+          20.9,
+          0.15,
+          2.1
+        ],
+        "size": [
+          0.9,
+          0.1,
+          2.1
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "WOOD_OAK_FLOOR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__roof__000",
+      "name": "B02__L00__NONE__roof__000",
+      "parent": null,
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "root",
+      "bbox_m": null,
+      "triangles": 0,
+      "materials": [],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.2
+    },
+    {
+      "id": "B02__L00__NONE__slab__001",
+      "name": "B02__L00__NONE__slab__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "slab",
+      "bbox_m": {
+        "min": [
+          18.0,
+          0.0,
+          -0.25
+        ],
+        "max": [
+          30.0,
+          8.0,
+          0.0
+        ],
+        "size": [
+          12.0,
+          8.0,
+          0.25
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__NONE__stair__001",
+      "name": "B02__L00__NONE__stair__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          0.4,
+          0.0
+        ],
+        "max": [
+          19.6,
+          0.5875,
+          0.1906
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__002",
+      "name": "B02__L00__NONE__stair__002",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          0.5875,
+          0.1906
+        ],
+        "max": [
+          19.6,
+          0.775,
+          0.3812
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__003",
+      "name": "B02__L00__NONE__stair__003",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          0.775,
+          0.3812
+        ],
+        "max": [
+          19.6,
+          0.9625,
+          0.5719
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__004",
+      "name": "B02__L00__NONE__stair__004",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          0.9625,
+          0.5719
+        ],
+        "max": [
+          19.6,
+          1.15,
+          0.7625
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__005",
+      "name": "B02__L00__NONE__stair__005",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          1.15,
+          0.7625
+        ],
+        "max": [
+          19.6,
+          1.3375,
+          0.9531
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__006",
+      "name": "B02__L00__NONE__stair__006",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          1.3375,
+          0.9531
+        ],
+        "max": [
+          19.6,
+          1.525,
+          1.1437
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__007",
+      "name": "B02__L00__NONE__stair__007",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          1.525,
+          1.1437
+        ],
+        "max": [
+          19.6,
+          1.7125,
+          1.3344
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__008",
+      "name": "B02__L00__NONE__stair__008",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          1.7125,
+          1.3344
+        ],
+        "max": [
+          19.6,
+          1.9,
+          1.525
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__009",
+      "name": "B02__L00__NONE__stair__009",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          1.9,
+          1.525
+        ],
+        "max": [
+          19.6,
+          2.0875,
+          1.7156
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__010",
+      "name": "B02__L00__NONE__stair__010",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          2.0875,
+          1.7156
+        ],
+        "max": [
+          19.6,
+          2.275,
+          1.9062
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__011",
+      "name": "B02__L00__NONE__stair__011",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          2.275,
+          1.9062
+        ],
+        "max": [
+          19.6,
+          2.4625,
+          2.0969
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__012",
+      "name": "B02__L00__NONE__stair__012",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          2.4625,
+          2.0969
+        ],
+        "max": [
+          19.6,
+          2.65,
+          2.2875
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__013",
+      "name": "B02__L00__NONE__stair__013",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          2.65,
+          2.2875
+        ],
+        "max": [
+          19.6,
+          2.8375,
+          2.4781
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__014",
+      "name": "B02__L00__NONE__stair__014",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          2.8375,
+          2.4781
+        ],
+        "max": [
+          19.6,
+          3.025,
+          2.6688
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1907
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__015",
+      "name": "B02__L00__NONE__stair__015",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          3.025,
+          2.6688
+        ],
+        "max": [
+          19.6,
+          3.2125,
+          2.8594
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__stair__016",
+      "name": "B02__L00__NONE__stair__016",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "bbox_m": {
+        "min": [
+          18.4,
+          3.2125,
+          2.8594
+        ],
+        "max": [
+          19.6,
+          3.4,
+          3.05
+        ],
+        "size": [
+          1.2,
+          0.1875,
+          0.1906
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__wall__001",
+      "name": "B02__L00__NONE__wall__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          30.0,
+          0.2,
+          2.8
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__NONE__wall__002",
+      "name": "B02__L00__NONE__wall__002",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.0,
+          7.8,
+          0.0
+        ],
+        "max": [
+          30.0,
+          8.0,
+          2.8
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 56,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__NONE__wall__003",
+      "name": "B02__L00__NONE__wall__003",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          18.2,
+          8.0,
+          2.8
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__NONE__wall__004",
+      "name": "B02__L00__NONE__wall__004",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          29.8,
+          0.0,
+          0.0
+        ],
+        "max": [
+          30.0,
+          8.0,
+          2.8
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__NONE__wall__005",
+      "name": "B02__L00__NONE__wall__005",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          23.9,
+          0.2,
+          0.0
+        ],
+        "max": [
+          24.1,
+          7.8,
+          2.8
+        ],
+        "size": [
+          0.2,
+          7.6,
+          2.8
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__NONE__window__001",
+      "name": "B02__L00__NONE__window__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          20.52,
+          7.75,
+          0.9
+        ],
+        "max": [
+          21.68,
+          8.05,
+          2.1
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__window__002",
+      "name": "B02__L00__NONE__window__002",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          24.52,
+          7.75,
+          0.9
+        ],
+        "max": [
+          25.68,
+          8.05,
+          2.1
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__window__003",
+      "name": "B02__L00__NONE__window__003",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          17.95,
+          2.52,
+          0.9
+        ],
+        "max": [
+          18.25,
+          3.68,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__window__004",
+      "name": "B02__L00__NONE__window__004",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          17.95,
+          6.02,
+          0.9
+        ],
+        "max": [
+          18.25,
+          7.18,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__window__005",
+      "name": "B02__L00__NONE__window__005",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          29.75,
+          2.52,
+          0.9
+        ],
+        "max": [
+          30.05,
+          3.68,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__NONE__window__006",
+      "name": "B02__L00__NONE__window__006",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          29.75,
+          6.02,
+          0.9
+        ],
+        "max": [
+          30.05,
+          7.18,
+          2.1
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__U001__balcony__001",
+      "name": "B02__L00__U001__balcony__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "U001",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          19.0,
+          8.0,
+          -0.25
+        ],
+        "max": [
+          23.0,
+          9.8,
+          -0.1
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__U001__wall__001",
+      "name": "B02__L00__U001__wall__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "U001",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.1,
+          3.9,
+          0.0
+        ],
+        "max": [
+          23.9,
+          4.1,
+          2.8
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L00__U002__balcony__001",
+      "name": "B02__L00__U002__balcony__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "U002",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          25.0,
+          8.0,
+          -0.25
+        ],
+        "max": [
+          29.0,
+          9.8,
+          -0.1
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L00__U002__wall__001",
+      "name": "B02__L00__U002__wall__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L00",
+      "unit": "U002",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          24.1,
+          3.9,
+          0.0
+        ],
+        "max": [
+          29.9,
+          4.1,
+          2.8
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__roof__001",
+      "name": "B02__L01__NONE__roof__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "roof",
+      "bbox_m": {
+        "min": [
+          18.0,
+          0.0,
+          5.85
+        ],
+        "max": [
+          30.0,
+          8.0,
+          6.15
+        ],
+        "size": [
+          12.0,
+          8.0,
+          0.3
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__slab__001",
+      "name": "B02__L01__NONE__slab__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "slab",
+      "bbox_m": {
+        "min": [
+          18.0,
+          0.0,
+          2.8
+        ],
+        "max": [
+          30.0,
+          8.0,
+          3.05
+        ],
+        "size": [
+          12.0,
+          8.0,
+          0.25
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__wall__001",
+      "name": "B02__L01__NONE__wall__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.0,
+          0.0,
+          3.05
+        ],
+        "max": [
+          30.0,
+          0.2,
+          5.85
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__wall__002",
+      "name": "B02__L01__NONE__wall__002",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.0,
+          7.8,
+          3.05
+        ],
+        "max": [
+          30.0,
+          8.0,
+          5.85
+        ],
+        "size": [
+          12.0,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 56,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__wall__003",
+      "name": "B02__L01__NONE__wall__003",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.0,
+          0.0,
+          3.05
+        ],
+        "max": [
+          18.2,
+          8.0,
+          5.85
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__wall__004",
+      "name": "B02__L01__NONE__wall__004",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          29.8,
+          0.0,
+          3.05
+        ],
+        "max": [
+          30.0,
+          8.0,
+          5.85
+        ],
+        "size": [
+          0.2,
+          8.0,
+          2.8
+        ]
+      },
+      "triangles": 52,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__wall__005",
+      "name": "B02__L01__NONE__wall__005",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          23.9,
+          0.2,
+          3.05
+        ],
+        "max": [
+          24.1,
+          7.8,
+          5.85
+        ],
+        "size": [
+          0.2,
+          7.6,
+          2.8
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__NONE__window__001",
+      "name": "B02__L01__NONE__window__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          20.52,
+          7.75,
+          3.95
+        ],
+        "max": [
+          21.68,
+          8.05,
+          5.15
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__NONE__window__002",
+      "name": "B02__L01__NONE__window__002",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          24.52,
+          7.75,
+          3.95
+        ],
+        "max": [
+          25.68,
+          8.05,
+          5.15
+        ],
+        "size": [
+          1.16,
+          0.3,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__NONE__window__003",
+      "name": "B02__L01__NONE__window__003",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          17.95,
+          2.52,
+          3.95
+        ],
+        "max": [
+          18.25,
+          3.68,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__NONE__window__004",
+      "name": "B02__L01__NONE__window__004",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          17.95,
+          6.02,
+          3.95
+        ],
+        "max": [
+          18.25,
+          7.18,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__NONE__window__005",
+      "name": "B02__L01__NONE__window__005",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          29.75,
+          2.52,
+          3.95
+        ],
+        "max": [
+          30.05,
+          3.68,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__NONE__window__006",
+      "name": "B02__L01__NONE__window__006",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "bbox_m": {
+        "min": [
+          29.75,
+          6.02,
+          3.95
+        ],
+        "max": [
+          30.05,
+          7.18,
+          5.15
+        ],
+        "size": [
+          0.3,
+          1.16,
+          1.2
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "GLASS_CLEAR"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__U101__balcony__001",
+      "name": "B02__L01__U101__balcony__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "U101",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          19.0,
+          8.0,
+          2.8
+        ],
+        "max": [
+          23.0,
+          9.8,
+          2.95
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__U101__wall__001",
+      "name": "B02__L01__U101__wall__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "U101",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          18.1,
+          3.9,
+          3.05
+        ],
+        "max": [
+          23.9,
+          4.1,
+          5.85
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    },
+    {
+      "id": "B02__L01__U102__balcony__001",
+      "name": "B02__L01__U102__balcony__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "U102",
+      "type": "balcony",
+      "bbox_m": {
+        "min": [
+          25.0,
+          8.0,
+          2.8
+        ],
+        "max": [
+          29.0,
+          9.8,
+          2.95
+        ],
+        "size": [
+          4.0,
+          1.8,
+          0.15
+        ]
+      },
+      "triangles": 12,
+      "materials": [
+        "CONCRETE_POLYHAVEN"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.25
+    },
+    {
+      "id": "B02__L01__U102__wall__001",
+      "name": "B02__L01__U102__wall__001",
+      "parent": "B02__L00__NONE__roof__000",
+      "building": "B02",
+      "level": "L01",
+      "unit": "U102",
+      "type": "wall",
+      "bbox_m": {
+        "min": [
+          24.1,
+          3.9,
+          3.05
+        ],
+        "max": [
+          29.9,
+          4.1,
+          5.85
+        ],
+        "size": [
+          5.8,
+          0.2,
+          2.8
+        ]
+      },
+      "triangles": 28,
+      "materials": [
+        "PLASTER_WHITE"
+      ],
+      "source_ref": "UNKNOWN",
+      "confidence": 0.3
+    }
+  ]
+}
