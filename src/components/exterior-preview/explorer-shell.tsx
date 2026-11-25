@@ -13,7 +13,7 @@ import {
   TriangleAlert,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { exteriorPreviewPath, planProofHref } from "@/lib/exterior-preview/plan-proof-address"
+import { exteriorPreviewPath, planProofHref, privatePlanReviewUrl } from "@/lib/exterior-preview/plan-proof-address"
 import { cn } from "@/lib/utils"
 import styles from "./explorer-shell.module.css"
 
@@ -70,7 +70,7 @@ export function ExplorerShell({
         return (
           <li className={styles.floorItem} key={floor.id}>
             {isArrival ? (
-              <a className={cn(styles.floorButton, styles.floorLink)} href={planProofHref(floor.id)}>
+              <a className={cn(styles.floorButton, styles.floorLink)} href={planProofHref(floor.id, "main", undefined, "overview")}>
                 <span className={styles.floorName}>{floor.label}</span>
                 <ChevronRight className={cn(styles.floorMark, "size-3.5")} aria-hidden="true" />
               </a>
@@ -146,7 +146,7 @@ export function ExplorerShell({
             aria-controls={canvasId}
             onClick={onOverview}
           >
-            Pregled
+            Prilaz
           </Button>
           <Button
             type="button"
@@ -203,7 +203,7 @@ export function ExplorerShell({
                 <div className="min-w-0">
                   <p className="text-xs leading-relaxed">
                     Etaža iz poveznice nije pronađena. Odaberite je s popisa ili se vratite na
-                    pregled.
+                    prilaz.
                   </p>
                   <Button
                     type="button"
@@ -211,7 +211,7 @@ export function ExplorerShell({
                     className={styles.recoveryButton}
                     onClick={onOverview}
                   >
-                    Vrati se na pregled
+                    Vrati se na prilaz
                   </Button>
                 </div>
               </div>
@@ -226,7 +226,8 @@ export function ExplorerShell({
                     {selectionDescription}
                   </p>
                 </div>
-                {planProofUrl && <a className={styles.planProofLink} href={planProofUrl}>Provjeri tlocrt</a>}
+                {planProofUrl ? <a className={styles.planProofLink} href={planProofUrl}>Provjeri tlocrt</a> :
+                  <a className={styles.planProofLink} href={privatePlanReviewUrl}>Zumiraj etaže</a>}
               </div>
             )}
           </div>
@@ -297,7 +298,7 @@ export function ExplorerShell({
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
         {isArrival ? "Pregled prilaza zgradi H." : "Pregled pročelja zgrade H."}{" "}
         {hasInvalidFloor
-          ? "Etaža iz poveznice nije pronađena. Odaberite etažu s popisa ili se vratite na pregled."
+          ? "Etaža iz poveznice nije pronađena. Odaberite etažu s popisa ili se vratite na prilaz."
           : selectedFloor
             ? `Odabrano: ${selectedFloor.label}. ${selectionDescription}`
             : "Nije odabrana etaža. Sve etaže dostupne su putem popisa."}{" "}

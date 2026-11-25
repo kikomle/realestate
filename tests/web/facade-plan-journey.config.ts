@@ -1,7 +1,8 @@
 import { defineConfig } from "@playwright/test";
 import exteriorReview from "./stage3-preview.config";
 
-const port = Number(process.env.STAGE3_PREVIEW_PORT ?? "4174");
+// The Next plan links return to this dedicated local review address.
+const port = 4175;
 const baseURL = `http://127.0.0.1:${port}`;
 
 export default defineConfig({

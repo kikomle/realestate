@@ -162,18 +162,25 @@ route exists. Any anchor/`?floor=L02` behaviour is a draft contract to review, n
 
 ## Follow-up: open the interactive floor plan
 
-Run `node scripts/web/serve-stage3-preview.mjs 4174` and open
-[the private façade review](http://127.0.0.1:4174/plan-review?view=facade) with
+Run `node scripts/web/serve-stage3-preview.mjs 4175` and open
+[the private floor review](http://127.0.0.1:4175/plan-review) with
 `npm run dev:exterior` running on port 3103. Click a provisional band or choose a floor from
-the list to go straight to its existing interactive floor plan, where apartment outlines
-and text alternatives work as before. The obscured ground floor stays list-only. Browser Back
-returns to this review after returning from the apartment to its floor. The review does not
-copy its geometry into the selector or grant any release approval.
+the list. **Prilaz** is the default; its **Odaberite etažu** panel sits over the angled photo
+and opens any of the five main plans with a zoom-in reveal. **Pročelje** keeps the registered
+front still and its provisional bands; a band click zooms toward that region before revealing
+the exact, hash-pinned plan. The obscured ground floor stays on the list, and the angled photo
+has no floor hitboxes.
+Reduced motion and unavailable transition art keep the direct plan navigation.
+Browser Back and the in-page return link return to the
+view that opened the plan, including after switching floors, opening the gallery, or viewing an
+apartment. Use port 4175 for this linked review. The estimated bands remain isolated here; the
+transition does not register them in the Next.js selector or grant release approval.
 
-The [Pregled view](http://127.0.0.1:4174/plan-review) also exposes the direct floor links.
-Only the front view has image hotspots; the angled preview uses the list.
+Both views open any floor from **Popis etaža**. In the Next.js preview,
+**Zumiraj etaže** opens this separate review at **Prilaz**. Older plan links from **Pregled**
+also return to **Prilaz**.
 
-`npx --no-install playwright test -c tests/web/facade-plan-journey.config.ts` passed **12 checks**.
-The tests cover the overview links and all five exact interactive plans on desktop and mobile;
-on L03 they also click an apartment outline, verify the decoded individual plan and navigate
-back to the façade.
+`npx --no-install playwright test -c tests/web/facade-plan-journey.config.ts --workers=2`
+passed **28 checks**. It covers the two-tab switch, all five floor buttons on **Prilaz**, the
+available front bands, the moving camera, exact decoded plans, reduced motion, unavailable
+transition art and returning to select another floor on desktop and mobile.

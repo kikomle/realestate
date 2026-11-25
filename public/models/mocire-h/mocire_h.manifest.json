@@ -1,0 +1,2029 @@
+{
+  "schema": "mocire-h.blender-manifest/4",
+  "units": "meters",
+  "frame": "Blender Z-up; glTF Y-up",
+  "estimation_flag": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+  "building_m": {
+    "width_x": 64.827,
+    "depth_y": 18.86,
+    "balcony_proj_y": 0.879,
+    "total_height_z": 17.7,
+    "hood_top_z": 18.6,
+    "corridor_y": [
+      8.551,
+      10.241
+    ],
+    "core_x": [
+      28.561,
+      35.151
+    ]
+  },
+  "glb": "mocire_h.glb",
+  "glb_bytes": 5685964,
+  "object_count": 91,
+  "total_triangles": 67040,
+  "objects": [
+    {
+      "name": "B00__L00__NONE__site__001",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 12,
+      "bbox_m": {
+        "min": [
+          -420.0,
+          -360.0,
+          -0.6
+        ],
+        "max": [
+          464.827,
+          378.86,
+          -0.2
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__002",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 96,
+      "bbox_m": {
+        "min": [
+          -260.0,
+          -104.0,
+          -0.2
+        ],
+        "max": [
+          304.827,
+          83.86,
+          -0.02
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.5
+    },
+    {
+      "name": "B00__L00__NONE__site__003",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          -4.0,
+          -15.8,
+          -0.025
+        ],
+        "max": [
+          68.827,
+          -10.4,
+          0.002
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.55
+    },
+    {
+      "name": "B00__L00__NONE__site__004",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 612,
+      "bbox_m": {
+        "min": [
+          -90.0,
+          -29.6,
+          -0.025
+        ],
+        "max": [
+          157.0,
+          -10.4,
+          0.012
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__005",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 72,
+      "bbox_m": {
+        "min": [
+          44.0,
+          -21.2,
+          -0.015
+        ],
+        "max": [
+          54.6,
+          -18.2,
+          -0.004
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.35
+    },
+    {
+      "name": "B00__L00__NONE__site__006",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 48,
+      "bbox_m": {
+        "min": [
+          -32.0,
+          -23.0,
+          -0.05
+        ],
+        "max": [
+          98.827,
+          26.66,
+          0.1
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.45
+    },
+    {
+      "name": "B00__L00__NONE__site__007",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          0.0,
+          -4.85,
+          -0.05
+        ],
+        "max": [
+          64.827,
+          22.46,
+          0.04
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.7
+    },
+    {
+      "name": "B00__L00__NONE__site__008",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 36,
+      "bbox_m": {
+        "min": [
+          -5.2,
+          -4.85,
+          -0.05
+        ],
+        "max": [
+          71.227,
+          23.61,
+          0.05
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.65
+    },
+    {
+      "name": "B00__L00__NONE__site__009",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 36,
+      "bbox_m": {
+        "min": [
+          2.2,
+          -18.5,
+          0.02
+        ],
+        "max": [
+          78.327,
+          -6.9,
+          0.5
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.45
+    },
+    {
+      "name": "B00__L00__NONE__site__010",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 144,
+      "bbox_m": {
+        "min": [
+          -16.5,
+          -19.0,
+          -0.18
+        ],
+        "max": [
+          78.627,
+          24.06,
+          1.38
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.65
+    },
+    {
+      "name": "B00__L00__NONE__site__011",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 144,
+      "bbox_m": {
+        "min": [
+          -16.54,
+          -19.04,
+          0.54
+        ],
+        "max": [
+          78.667,
+          24.1,
+          1.46
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.55
+    },
+    {
+      "name": "B00__L00__NONE__site__012",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 2016,
+      "bbox_m": {
+        "min": [
+          -5.22,
+          -5.085,
+          1.13
+        ],
+        "max": [
+          71.227,
+          23.865,
+          1.93
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.5
+    },
+    {
+      "name": "B00__L00__NONE__site__013",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 132,
+      "bbox_m": {
+        "min": [
+          9.94,
+          -21.86,
+          0.0
+        ],
+        "max": [
+          54.06,
+          25.42,
+          4.2
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__014",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 132,
+      "bbox_m": {
+        "min": [
+          9.89,
+          -21.91,
+          1.05
+        ],
+        "max": [
+          54.11,
+          25.47,
+          4.48
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__015",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 216,
+      "bbox_m": {
+        "min": [
+          -106.136,
+          -18.126,
+          -0.0
+        ],
+        "max": [
+          102.963,
+          67.0,
+          1.6
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.35
+    },
+    {
+      "name": "B00__L00__NONE__site__016",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 2880,
+      "bbox_m": {
+        "min": [
+          -106.875,
+          -18.92,
+          1.076
+        ],
+        "max": [
+          103.702,
+          67.78,
+          9.41
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.35
+    },
+    {
+      "name": "B00__L00__NONE__site__017",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 144,
+      "bbox_m": {
+        "min": [
+          -80.492,
+          -148.928,
+          -0.1
+        ],
+        "max": [
+          109.474,
+          107.994,
+          7.9
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__018",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 192,
+      "bbox_m": {
+        "min": [
+          -84.685,
+          -147.266,
+          -0.1
+        ],
+        "max": [
+          146.827,
+          109.846,
+          17.5
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__019",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 20,
+      "bbox_m": {
+        "min": [
+          -57.103,
+          -96.0,
+          -0.1
+        ],
+        "max": [
+          138.0,
+          -64.0,
+          10.7
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__020",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 192,
+      "bbox_m": {
+        "min": [
+          -85.152,
+          -149.391,
+          6.7
+        ],
+        "max": [
+          135.73,
+          110.314,
+          10.1
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__site__021",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 12,
+      "bbox_m": {
+        "min": [
+          -56.627,
+          -94.06,
+          -0.1
+        ],
+        "max": [
+          -19.373,
+          -69.94,
+          8.1
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.4
+    },
+    {
+      "name": "B00__L00__NONE__stair__001",
+      "building": "B00",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "stair",
+      "triangles": 120,
+      "bbox_m": {
+        "min": [
+          28.311,
+          -4.9,
+          -0.05
+        ],
+        "max": [
+          35.401,
+          0.0,
+          0.27
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.6
+    },
+    {
+      "name": "B01__L00__NONE__slab__001",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 12,
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          64.827,
+          18.86,
+          0.24
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L00__NONE__slab__002",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          4.2,
+          0.3,
+          0.24
+        ],
+        "max": [
+          60.627,
+          10.241,
+          0.265
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L00__NONE__wall__001",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 216,
+      "bbox_m": {
+        "min": [
+          0.22,
+          -2.75,
+          0.0
+        ],
+        "max": [
+          64.607,
+          21.26,
+          3.1
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L00__NONE__wall__002",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 240,
+      "bbox_m": {
+        "min": [
+          4.5,
+          0.28,
+          0.24
+        ],
+        "max": [
+          60.327,
+          18.58,
+          2.35
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L00__NONE__window__001",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 456,
+      "bbox_m": {
+        "min": [
+          0.195,
+          0.195,
+          0.12
+        ],
+        "max": [
+          64.632,
+          18.665,
+          2.74
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L00__NONE__window__002",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 120,
+      "bbox_m": {
+        "min": [
+          4.1,
+          0.195,
+          0.1
+        ],
+        "max": [
+          60.98,
+          18.665,
+          2.85
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.7
+    },
+    {
+      "name": "B01__L00__NONE__window__003",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 576,
+      "bbox_m": {
+        "min": [
+          0.165,
+          0.165,
+          0.13
+        ],
+        "max": [
+          64.662,
+          18.695,
+          2.82
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L00__NONE__window__004",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 4116,
+      "bbox_m": {
+        "min": [
+          -0.43,
+          -2.75,
+          0.0
+        ],
+        "max": [
+          65.227,
+          18.735,
+          3.07
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L00__NONE__window__005",
+      "building": "B01",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 840,
+      "bbox_m": {
+        "min": [
+          -5.2,
+          -4.85,
+          0.0
+        ],
+        "max": [
+          71.227,
+          22.46,
+          2.62
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L01__NONE__balcony__001",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "balcony",
+      "triangles": 204,
+      "bbox_m": {
+        "min": [
+          3.81,
+          -0.99,
+          3.32
+        ],
+        "max": [
+          61.22,
+          18.86,
+          3.35
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L01__NONE__balcony__002",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "balcony",
+      "triangles": 312,
+      "bbox_m": {
+        "min": [
+          3.65,
+          -1.15,
+          3.1
+        ],
+        "max": [
+          61.38,
+          1.05,
+          6.08
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L01__NONE__slab__001",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 12,
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          3.1
+        ],
+        "max": [
+          64.827,
+          18.86,
+          3.34
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L01__NONE__slab__002",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          4.2,
+          0.3,
+          3.34
+        ],
+        "max": [
+          60.627,
+          10.241,
+          3.365
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L01__NONE__wall__001",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 1080,
+      "bbox_m": {
+        "min": [
+          -0.04,
+          -0.04,
+          3.1
+        ],
+        "max": [
+          64.867,
+          18.9,
+          6.1
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L01__NONE__wall__002",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 276,
+      "bbox_m": {
+        "min": [
+          4.5,
+          0.28,
+          3.34
+        ],
+        "max": [
+          60.327,
+          18.58,
+          5.45
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L01__NONE__window__001",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 456,
+      "bbox_m": {
+        "min": [
+          -0.025,
+          -0.025,
+          3.34
+        ],
+        "max": [
+          64.852,
+          18.885,
+          5.82
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L01__NONE__window__002",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 168,
+      "bbox_m": {
+        "min": [
+          -0.025,
+          -0.025,
+          3.34
+        ],
+        "max": [
+          64.852,
+          18.885,
+          5.82
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.7
+    },
+    {
+      "name": "B01__L01__NONE__window__003",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 624,
+      "bbox_m": {
+        "min": [
+          -0.055,
+          -0.055,
+          3.38
+        ],
+        "max": [
+          64.882,
+          18.915,
+          5.78
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L01__NONE__window__004",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 3756,
+      "bbox_m": {
+        "min": [
+          -0.095,
+          -1.09,
+          3.32
+        ],
+        "max": [
+          64.922,
+          18.955,
+          6.0
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L01__NONE__window__005",
+      "building": "B01",
+      "level": "L01",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 396,
+      "bbox_m": {
+        "min": [
+          -0.135,
+          -0.14,
+          3.66
+        ],
+        "max": [
+          64.962,
+          19.0,
+          3.97
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L02__NONE__balcony__001",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "balcony",
+      "triangles": 204,
+      "bbox_m": {
+        "min": [
+          3.81,
+          -0.99,
+          6.32
+        ],
+        "max": [
+          61.22,
+          18.86,
+          6.35
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L02__NONE__balcony__002",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "balcony",
+      "triangles": 312,
+      "bbox_m": {
+        "min": [
+          3.65,
+          -1.15,
+          6.1
+        ],
+        "max": [
+          61.38,
+          1.05,
+          9.08
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L02__NONE__slab__001",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 12,
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          6.1
+        ],
+        "max": [
+          64.827,
+          18.86,
+          6.34
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L02__NONE__slab__002",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          4.2,
+          0.3,
+          6.34
+        ],
+        "max": [
+          60.627,
+          10.241,
+          6.365
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L02__NONE__wall__001",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 1080,
+      "bbox_m": {
+        "min": [
+          -0.04,
+          -0.04,
+          6.1
+        ],
+        "max": [
+          64.867,
+          18.9,
+          9.1
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L02__NONE__wall__002",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 264,
+      "bbox_m": {
+        "min": [
+          4.5,
+          0.28,
+          6.34
+        ],
+        "max": [
+          60.327,
+          18.58,
+          8.45
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L02__NONE__window__001",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 468,
+      "bbox_m": {
+        "min": [
+          -0.025,
+          -0.025,
+          6.34
+        ],
+        "max": [
+          64.852,
+          18.885,
+          8.82
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L02__NONE__window__002",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 156,
+      "bbox_m": {
+        "min": [
+          -0.025,
+          -0.025,
+          6.34
+        ],
+        "max": [
+          64.852,
+          18.885,
+          8.82
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.7
+    },
+    {
+      "name": "B01__L02__NONE__window__003",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 624,
+      "bbox_m": {
+        "min": [
+          -0.055,
+          -0.055,
+          6.38
+        ],
+        "max": [
+          64.882,
+          18.915,
+          8.78
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L02__NONE__window__004",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 3756,
+      "bbox_m": {
+        "min": [
+          -0.095,
+          -1.09,
+          6.32
+        ],
+        "max": [
+          64.922,
+          18.955,
+          9.0
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L02__NONE__window__005",
+      "building": "B01",
+      "level": "L02",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 396,
+      "bbox_m": {
+        "min": [
+          -0.135,
+          -0.14,
+          6.66
+        ],
+        "max": [
+          64.962,
+          19.0,
+          6.97
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L03__NONE__balcony__001",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "balcony",
+      "triangles": 204,
+      "bbox_m": {
+        "min": [
+          3.81,
+          -0.99,
+          9.32
+        ],
+        "max": [
+          61.22,
+          18.86,
+          9.35
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L03__NONE__balcony__002",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "balcony",
+      "triangles": 312,
+      "bbox_m": {
+        "min": [
+          3.65,
+          -1.15,
+          9.1
+        ],
+        "max": [
+          61.38,
+          1.05,
+          12.08
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L03__NONE__slab__001",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 12,
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          9.1
+        ],
+        "max": [
+          64.827,
+          18.86,
+          9.34
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L03__NONE__slab__002",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          4.2,
+          0.3,
+          9.34
+        ],
+        "max": [
+          60.627,
+          10.241,
+          9.365
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L03__NONE__wall__001",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 1080,
+      "bbox_m": {
+        "min": [
+          -0.04,
+          -0.04,
+          9.1
+        ],
+        "max": [
+          64.867,
+          18.9,
+          12.1
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L03__NONE__wall__002",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 264,
+      "bbox_m": {
+        "min": [
+          4.5,
+          0.28,
+          9.34
+        ],
+        "max": [
+          60.327,
+          18.58,
+          11.45
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L03__NONE__window__001",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 432,
+      "bbox_m": {
+        "min": [
+          -0.025,
+          -0.025,
+          9.34
+        ],
+        "max": [
+          64.852,
+          18.885,
+          11.82
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L03__NONE__window__002",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 192,
+      "bbox_m": {
+        "min": [
+          -0.025,
+          -0.025,
+          9.34
+        ],
+        "max": [
+          64.852,
+          18.885,
+          11.82
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.7
+    },
+    {
+      "name": "B01__L03__NONE__window__003",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 624,
+      "bbox_m": {
+        "min": [
+          -0.055,
+          -0.055,
+          9.38
+        ],
+        "max": [
+          64.882,
+          18.915,
+          11.78
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L03__NONE__window__004",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 3756,
+      "bbox_m": {
+        "min": [
+          -0.095,
+          -1.09,
+          9.32
+        ],
+        "max": [
+          64.922,
+          18.955,
+          12.0
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L03__NONE__window__005",
+      "building": "B01",
+      "level": "L03",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 396,
+      "bbox_m": {
+        "min": [
+          -0.135,
+          -0.14,
+          9.66
+        ],
+        "max": [
+          64.962,
+          19.0,
+          9.97
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__balcony__001",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "balcony",
+      "triangles": 144,
+      "bbox_m": {
+        "min": [
+          3.84,
+          -0.91,
+          12.32
+        ],
+        "max": [
+          61.15,
+          18.86,
+          12.35
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__roof__001",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "roof",
+      "triangles": 48,
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          17.7
+        ],
+        "max": [
+          64.827,
+          18.86,
+          19.25
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__roof__002",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "roof",
+      "triangles": 504,
+      "bbox_m": {
+        "min": [
+          -0.24,
+          -0.46,
+          12.1
+        ],
+        "max": [
+          65.07,
+          19.32,
+          18.55
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L04__NONE__roof__003",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "roof",
+      "triangles": 288,
+      "bbox_m": {
+        "min": [
+          -0.06,
+          -0.06,
+          12.24
+        ],
+        "max": [
+          64.887,
+          18.92,
+          17.66
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__roof__004",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "roof",
+      "triangles": 564,
+      "bbox_m": {
+        "min": [
+          -0.13,
+          -0.13,
+          12.25
+        ],
+        "max": [
+          64.957,
+          18.99,
+          17.65
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__roof__005",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "roof",
+      "triangles": 3396,
+      "bbox_m": {
+        "min": [
+          -0.27,
+          -0.48,
+          12.205
+        ],
+        "max": [
+          65.1,
+          19.34,
+          18.61
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__slab__001",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 12,
+      "bbox_m": {
+        "min": [
+          0.0,
+          0.0,
+          12.1
+        ],
+        "max": [
+          64.827,
+          18.86,
+          12.34
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L04__NONE__slab__002",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "slab",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          4.2,
+          0.3,
+          12.34
+        ],
+        "max": [
+          60.627,
+          10.241,
+          12.365
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L04__NONE__wall__001",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 1056,
+      "bbox_m": {
+        "min": [
+          -0.04,
+          -1.05,
+          12.1
+        ],
+        "max": [
+          64.867,
+          18.9,
+          17.7
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B01__L04__NONE__wall__002",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 288,
+      "bbox_m": {
+        "min": [
+          4.5,
+          0.28,
+          12.34
+        ],
+        "max": [
+          60.327,
+          18.58,
+          14.45
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__window__001",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 444,
+      "bbox_m": {
+        "min": [
+          -0.025,
+          -0.06,
+          12.24
+        ],
+        "max": [
+          60.83,
+          18.92,
+          17.66
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__window__002",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 108,
+      "bbox_m": {
+        "min": [
+          4.0,
+          1.07,
+          12.34
+        ],
+        "max": [
+          60.99,
+          17.14,
+          14.67
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.7
+    },
+    {
+      "name": "B01__L04__NONE__window__003",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 276,
+      "bbox_m": {
+        "min": [
+          -0.055,
+          1.04,
+          12.38
+        ],
+        "max": [
+          60.95,
+          17.17,
+          14.63
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__window__004",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 1584,
+      "bbox_m": {
+        "min": [
+          -0.095,
+          -0.99,
+          12.34
+        ],
+        "max": [
+          61.25,
+          18.81,
+          14.85
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B01__L04__NONE__window__005",
+      "building": "B01",
+      "level": "L04",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 372,
+      "bbox_m": {
+        "min": [
+          -0.135,
+          -0.14,
+          12.91
+        ],
+        "max": [
+          64.962,
+          19.0,
+          15.77
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.75
+    },
+    {
+      "name": "B02__L00__NONE__roof__001",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "roof",
+      "triangles": 936,
+      "bbox_m": {
+        "min": [
+          0.56,
+          -90.44,
+          8.8
+        ],
+        "max": [
+          61.44,
+          -35.56,
+          15.38
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__roof__002",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "roof",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          1.0,
+          -90.0,
+          14.6
+        ],
+        "max": [
+          61.0,
+          -36.0,
+          14.92
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__site__001",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 192,
+      "bbox_m": {
+        "min": [
+          39.95,
+          -96.5,
+          -0.035
+        ],
+        "max": [
+          61.05,
+          -81.0,
+          -0.024
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.7
+    },
+    {
+      "name": "B02__L00__NONE__site__002",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "site",
+      "triangles": 84,
+      "bbox_m": {
+        "min": [
+          -2.5,
+          -93.5,
+          -0.18
+        ],
+        "max": [
+          64.5,
+          -34.5,
+          1.15
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__wall__001",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 240,
+      "bbox_m": {
+        "min": [
+          -1.4,
+          -89.7,
+          0.0
+        ],
+        "max": [
+          63.4,
+          -36.3,
+          3.0
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__wall__002",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 24,
+      "bbox_m": {
+        "min": [
+          1.0,
+          -90.0,
+          3.0
+        ],
+        "max": [
+          61.0,
+          -36.0,
+          8.8
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__wall__003",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "wall",
+      "triangles": 204,
+      "bbox_m": {
+        "min": [
+          1.0,
+          -90.0,
+          8.8
+        ],
+        "max": [
+          61.0,
+          -36.0,
+          15.72
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__window__001",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 2064,
+      "bbox_m": {
+        "min": [
+          0.965,
+          -90.035,
+          0.15
+        ],
+        "max": [
+          61.035,
+          -35.965,
+          14.54
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__window__002",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 528,
+      "bbox_m": {
+        "min": [
+          0.965,
+          -90.035,
+          0.16
+        ],
+        "max": [
+          61.035,
+          -35.965,
+          14.54
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__window__003",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 2592,
+      "bbox_m": {
+        "min": [
+          0.928,
+          -90.072,
+          0.18
+        ],
+        "max": [
+          61.072,
+          -35.928,
+          14.52
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__window__004",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 12960,
+      "bbox_m": {
+        "min": [
+          0.8,
+          -90.105,
+          0.1
+        ],
+        "max": [
+          61.2,
+          -35.895,
+          14.58
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    },
+    {
+      "name": "B02__L00__NONE__window__005",
+      "building": "B02",
+      "level": "L00",
+      "unit": "NONE",
+      "type": "window",
+      "triangles": 2280,
+      "bbox_m": {
+        "min": [
+          0.865,
+          -90.14,
+          0.06
+        ],
+        "max": [
+          61.135,
+          -35.86,
+          12.47
+        ]
+      },
+      "source_ref": "FLOORPLAN_1_TO_1_CALIBRATED_WITH_EXTERIOR_RENDERS",
+      "confidence": 0.8
+    }
+  ]
+}

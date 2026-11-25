@@ -5,8 +5,9 @@ import { ArrowLeft, ArrowUpRight, LockKeyhole } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useLayoutEffect, useRef, useState, type MouseEvent } from "react";
 import type { ApartmentDetails } from "@/lib/exterior-preview/apartment-detail";
+import { polygonArea } from "@/lib/exterior-preview/plan-footprint";
 import { focusFootprint, PLAN_HOME } from "@/lib/exterior-preview/apartment-plan-camera";
-import { exteriorPreviewPath, planProofHref } from "@/lib/exterior-preview/plan-proof-address";
+import { exteriorPlanReturn, planProofHref, type PlanEntry } from "@/lib/exterior-preview/plan-proof-address";
 import { ApartmentDetail } from "./apartment-detail";
 import styles from "./floor-plan-proof.module.css";
 import motionStyles from "./selection-motion.module.css";
@@ -42,9 +43,10 @@ function historyOrigin(drawingId: string, unitId: string | null): Origin | null 
     Number.isFinite(origin.scroll?.left) && Number.isFinite(origin.scroll?.top) ? origin : null;
 }
 
-export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, drawing, apartments }: {
+export function FloorPlanProof({ floorId, label, entry, floors, hasGallery, unitIds, drawing, apartments }: {
   floorId: string;
   label: string;
+  entry?: PlanEntry;
   floors: readonly { id: string; label: string }[];
   hasGallery: boolean;
   unitIds: readonly string[];
@@ -70,9 +72,9 @@ export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, dr
     if (image?.complete) setImageState(image.naturalWidth ? "ready" : "error");
   }, []);
 
-  const drawingUrl = planProofHref(floorId, drawing.variant);
-  const facadeUrl = `${exteriorPreviewPath}?floor=${encodeURIComponent(floorId)}`;
-  const hrefForUnit = (id: string) => planProofHref(floorId, drawing.variant, id);
+  const drawingUrl = planProofHref(floorId, drawing.variant, undefined, entry);
+  const exterior = exteriorPlanReturn(floorId, entry);
+  const hrefForUnit = (id: string) => planProofHref(floorId, drawing.variant, id, entry);
   const apartment = apartments.find(unit => unit.id === unitId);
   const addressMatchesDrawing = query.get("floor") === floorId && (query.get("plan") ?? "main") === drawing.variant;
   const activeFlight = flight && addressMatchesDrawing && (
@@ -167,7 +169,7 @@ export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, dr
       const origin = arrival.origin;
       if (origin) {
         viewport.current?.scrollTo({ ...origin.scroll, behavior: "instant" });
-        const href = planProofHref(floorId, drawing.variant, origin.unitId);
+        const href = planProofHref(floorId, drawing.variant, origin.unitId, entry);
         const anchor = proof.current?.querySelector<HTMLAnchorElement | SVGAElement>(
           `[data-plan-origin="${origin.link}"][href="${CSS.escape(href)}"]`);
         if (anchor?.getClientRects().length) {
@@ -177,7 +179,7 @@ export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, dr
       }
       floorTitle.current?.focus();
     }
-  }, [address, drawing.id, drawing.variant, floorId, travelling, unitId]);
+  }, [address, drawing.id, drawing.variant, entry, floorId, travelling, unitId]);
 
   function select(event: MouseEvent<HTMLAnchorElement | SVGAElement>, href: string, nextUnit?: string) {
     if (event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
@@ -214,22 +216,22 @@ export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, dr
       data-phase={travelling?.phase ?? (showingApartment ? "apartment" : "floor")}
       data-motion-reveal={activeFlight?.phase === "reveal" || undefined}>
       <div className={styles.brandBar}>
-        <a className={styles.brand} href={exteriorPreviewPath}>Močire <span>H</span></a>
+        <a className={styles.brand} href={exterior.brandHref}>Močire <span>H</span></a>
         <p className={styles.private}><LockKeyhole aria-hidden="true" /> Privatni pregled</p>
       </div>
       <header className={styles.header}>
         <nav aria-label="Putanja" className={styles.breadcrumb}>
           <ol>
-            <li><a href={facadeUrl}>Pročelje</a></li>
+            <li><a href={exterior.href}>{exterior.label}</a></li>
             <li>{unitId || invalidUnit ? (
               <a href={drawingUrl} onClick={event => select(event, drawingUrl)}>{label}</a>
             ) : <span aria-current="page">{label}</span>}</li>
             {unitId && <li aria-current="page">{unitId}</li>}
           </ol>
         </nav>
-        <a className={styles.back} href={unitId ? drawingUrl : facadeUrl}
+        <a className={styles.back} href={unitId ? drawingUrl : exterior.href}
           onClick={unitId ? event => select(event, drawingUrl) : undefined}><ArrowLeft aria-hidden="true" />
-          {unitId ? "Natrag na etažu" : "Natrag na pročelje"}
+          {unitId ? "Natrag na etažu" : exterior.back}
         </a>
       </header>
 
@@ -246,7 +248,8 @@ export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, dr
       <div className={styles.planNav}>
         <nav className={`${styles.choices} ${styles.levels}`} aria-label="Promijeni etažu">
           {floors.map(floor => (
-            <a key={floor.id} href={planProofHref(floor.id)} aria-current={floorId === floor.id ? "page" : undefined}>
+            <a key={floor.id} href={planProofHref(floor.id, "main", undefined, entry)}
+              aria-current={floorId === floor.id ? "page" : undefined}>
               {floor.label}
             </a>
           ))}
@@ -254,7 +257,7 @@ export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, dr
         {hasGallery && (
           <nav className={styles.choices} aria-label="Vrsta tlocrta">
             {[{ variant: "main", text: "Glavni tlocrt" }, { variant: "gallery", text: "Galerija" }].map(plan => (
-              <a key={plan.variant} href={planProofHref(floorId, plan.variant, unitId ?? undefined)}
+              <a key={plan.variant} href={planProofHref(floorId, plan.variant, unitId ?? undefined, entry)}
                 aria-current={drawing.variant === plan.variant ? "page" : undefined}>{plan.text}</a>
             ))}
           </nav>
@@ -262,8 +265,11 @@ export function FloorPlanProof({ floorId, label, floors, hasGallery, unitIds, dr
       </div>
 
       <div className={styles.journey}>
-      {apartment && <ApartmentDetail key={apartment.id} unit={apartment} floor={label} facadeUrl={facadeUrl}
-        headingRef={title} pending={pending} />}
+      {apartment && <ApartmentDetail key={apartment.id} unit={apartment} floor={label}
+        exteriorUrl={exterior.href} exteriorLabel={`${exterior.label} zgrade H`}
+        headingRef={title} pending={pending}
+        planFootprintPx2={polygonArea(drawing.polygons?.find(p => p.unitId === apartment.id)?.points ?? "")}
+        floorFootprintMaxPx2={Math.max(0, ...(drawing.polygons ?? []).map(p => polygonArea(p.points) ?? 0))} />}
       <section className={styles.board} aria-labelledby="plan-title" data-flight={travelling !== null}>
         <div className={styles.toolbar}>
           <div>

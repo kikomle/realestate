@@ -1,0 +1,6663 @@
+{
+  "schema": "mocire-h.3d-calibration/1",
+  "estimation_flag": "ESTIMATED_FROM_FLOORPLANS_AND_EXTERIOR_RENDERS",
+  "method": "Calibrated px/m from median of 57 L01-L03 unit polygons against sourced PDF NP areas (wall factor 1.13). Floor heights matched to frontal elevation Mocire_H-Zadar_000.jpg.",
+  "px_per_m": 29.5863,
+  "building_m": {
+    "width_x": 64.827,
+    "depth_y": 18.86,
+    "balcony_proj_y": 0.879,
+    "total_height_z": 17.7,
+    "hood_top_z": 18.6,
+    "corridor_y": [
+      8.551,
+      10.241
+    ],
+    "core_x": [
+      28.561,
+      35.151
+    ]
+  },
+  "floors": {
+    "L00": {
+      "z0": 0.0,
+      "z1": 3.1,
+      "label": "Prizemlje"
+    },
+    "L01": {
+      "z0": 3.1,
+      "z1": 6.1,
+      "label": "Etaža 1"
+    },
+    "L02": {
+      "z0": 6.1,
+      "z1": 9.1,
+      "label": "Etaža 2"
+    },
+    "L03": {
+      "z0": 9.1,
+      "z1": 12.1,
+      "label": "Etaža 3"
+    },
+    "L04": {
+      "z0": 12.1,
+      "z1": 17.7,
+      "label": "Etaža 4"
+    }
+  },
+  "unit_count": 94,
+  "units": [
+    {
+      "unit_id": "H 0.1",
+      "floor_id": "L00",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 56.41,
+      "np_total_m2": 85.25,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 32.265,
+        "x1": 41.315,
+        "y0": 0.0,
+        "y1": 8.549,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 32.265,
+        "x1": 41.315,
+        "y0": -4.898,
+        "y1": 8.549
+      },
+      "polygon_m": [
+        [
+          35.141,
+          8.549
+        ],
+        [
+          35.141,
+          0.172
+        ],
+        [
+          32.265,
+          0.172
+        ],
+        [
+          32.265,
+          -1.074
+        ],
+        [
+          33.915,
+          -4.898
+        ],
+        [
+          41.315,
+          -4.898
+        ],
+        [
+          41.315,
+          8.549
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.2",
+      "floor_id": "L00",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 53.38,
+      "np_total_m2": 74.21,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 41.315,
+        "x1": 47.362,
+        "y0": 0.0,
+        "y1": 8.549,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.315,
+        "x1": 47.362,
+        "y0": -4.898,
+        "y1": 8.549
+      },
+      "polygon_m": [
+        [
+          41.315,
+          8.549
+        ],
+        [
+          41.315,
+          -4.898
+        ],
+        [
+          47.362,
+          -4.898
+        ],
+        [
+          47.362,
+          8.549
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.3",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 72.52,
+      "np_total_m2": 101.59,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 47.362,
+        "x1": 55.735,
+        "y0": 0.0,
+        "y1": 8.549,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.362,
+        "x1": 55.735,
+        "y0": -4.898,
+        "y1": 8.549
+      },
+      "polygon_m": [
+        [
+          47.362,
+          8.549
+        ],
+        [
+          47.362,
+          -4.898
+        ],
+        [
+          55.735,
+          -4.898
+        ],
+        [
+          55.735,
+          8.549
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.4",
+      "floor_id": "L00",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 93.72,
+      "np_total_m2": 240.23,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "east"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 55.735,
+        "x1": 64.827,
+        "y0": 0.0,
+        "y1": 9.409,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 55.735,
+        "x1": 74.384,
+        "y0": -4.898,
+        "y1": 9.409
+      },
+      "polygon_m": [
+        [
+          60.514,
+          8.549
+        ],
+        [
+          55.735,
+          8.549
+        ],
+        [
+          55.735,
+          -4.898
+        ],
+        [
+          64.827,
+          -4.898
+        ],
+        [
+          64.827,
+          -4.597
+        ],
+        [
+          64.954,
+          -4.597
+        ],
+        [
+          74.384,
+          -4.597
+        ],
+        [
+          74.384,
+          -3.609
+        ],
+        [
+          74.215,
+          -2.191
+        ],
+        [
+          74.215,
+          -1.461
+        ],
+        [
+          74.046,
+          -0.043
+        ],
+        [
+          73.707,
+          4.941
+        ],
+        [
+          73.242,
+          9.237
+        ],
+        [
+          64.954,
+          9.237
+        ],
+        [
+          64.912,
+          9.237
+        ],
+        [
+          64.827,
+          9.237
+        ],
+        [
+          64.827,
+          9.409
+        ],
+        [
+          60.514,
+          9.409
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.5",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 63.58,
+      "np_total_m2": 176.98,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "east"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 58.78,
+        "x1": 64.827,
+        "y0": 9.409,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 58.78,
+        "x1": 73.2,
+        "y0": 9.409,
+        "y1": 23.586
+      },
+      "polygon_m": [
+        [
+          58.78,
+          10.311
+        ],
+        [
+          60.514,
+          10.311
+        ],
+        [
+          60.514,
+          9.409
+        ],
+        [
+          64.827,
+          9.409
+        ],
+        [
+          64.827,
+          9.58
+        ],
+        [
+          64.912,
+          9.58
+        ],
+        [
+          64.954,
+          9.58
+        ],
+        [
+          73.2,
+          9.58
+        ],
+        [
+          72.735,
+          13.447
+        ],
+        [
+          71.847,
+          23.586
+        ],
+        [
+          64.827,
+          23.586
+        ],
+        [
+          64.827,
+          22.297
+        ],
+        [
+          64.7,
+          22.297
+        ],
+        [
+          58.78,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.6",
+      "floor_id": "L00",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 51.26,
+      "np_total_m2": 66.12,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 52.733,
+        "x1": 58.78,
+        "y0": 10.311,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 52.733,
+        "x1": 58.78,
+        "y0": 10.311,
+        "y1": 22.297
+      },
+      "polygon_m": [
+        [
+          52.733,
+          22.297
+        ],
+        [
+          52.733,
+          10.311
+        ],
+        [
+          58.78,
+          10.311
+        ],
+        [
+          58.78,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.7",
+      "floor_id": "L00",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.1,
+      "np_total_m2": 58.15,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 47.362,
+        "x1": 52.733,
+        "y0": 10.311,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.362,
+        "x1": 52.733,
+        "y0": 10.311,
+        "y1": 22.297
+      },
+      "polygon_m": [
+        [
+          47.362,
+          22.297
+        ],
+        [
+          47.362,
+          10.311
+        ],
+        [
+          52.733,
+          10.311
+        ],
+        [
+          52.733,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.8",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 50.96,
+      "np_total_m2": 65.82,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 41.315,
+        "x1": 47.362,
+        "y0": 10.311,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.315,
+        "x1": 47.362,
+        "y0": 10.311,
+        "y1": 22.297
+      },
+      "polygon_m": [
+        [
+          41.315,
+          22.297
+        ],
+        [
+          41.315,
+          10.311
+        ],
+        [
+          47.362,
+          10.311
+        ],
+        [
+          47.362,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.9",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 51.99,
+      "np_total_m2": 66.85,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 35.141,
+        "x1": 41.315,
+        "y0": 10.311,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 35.141,
+        "x1": 41.315,
+        "y0": 10.311,
+        "y1": 22.297
+      },
+      "polygon_m": [
+        [
+          35.141,
+          22.297
+        ],
+        [
+          35.141,
+          10.311
+        ],
+        [
+          41.315,
+          10.311
+        ],
+        [
+          41.315,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.10",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 75.83,
+      "np_total_m2": 98.38,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 26.134,
+        "x1": 35.141,
+        "y0": 10.311,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 26.134,
+        "x1": 35.141,
+        "y0": 10.311,
+        "y1": 22.297
+      },
+      "polygon_m": [
+        [
+          26.134,
+          22.297
+        ],
+        [
+          26.134,
+          10.311
+        ],
+        [
+          35.141,
+          10.311
+        ],
+        [
+          35.141,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.11",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 70.49,
+      "np_total_m2": 91.23,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 17.634,
+        "x1": 26.134,
+        "y0": 10.311,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.634,
+        "x1": 26.134,
+        "y0": 10.311,
+        "y1": 22.297
+      },
+      "polygon_m": [
+        [
+          17.634,
+          22.297
+        ],
+        [
+          17.634,
+          10.311
+        ],
+        [
+          26.134,
+          10.311
+        ],
+        [
+          26.134,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.12",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 69.89,
+      "np_total_m2": 90.63,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 9.261,
+        "x1": 17.634,
+        "y0": 10.311,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 9.261,
+        "x1": 17.634,
+        "y0": 10.311,
+        "y1": 22.297
+      },
+      "polygon_m": [
+        [
+          9.261,
+          22.297
+        ],
+        [
+          9.261,
+          10.311
+        ],
+        [
+          17.634,
+          10.311
+        ],
+        [
+          17.634,
+          22.297
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.13",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 86.03,
+      "np_total_m2": 170.12,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "west"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 9.261,
+        "y0": 9.409,
+        "y1": 18.86,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": -5.159,
+        "x1": 9.261,
+        "y0": 9.409,
+        "y1": 23.586
+      },
+      "polygon_m": [
+        [
+          0.0,
+          9.409
+        ],
+        [
+          4.356,
+          9.409
+        ],
+        [
+          4.356,
+          10.311
+        ],
+        [
+          9.261,
+          10.311
+        ],
+        [
+          9.261,
+          22.297
+        ],
+        [
+          0.127,
+          22.297
+        ],
+        [
+          0.0,
+          22.297
+        ],
+        [
+          0.0,
+          23.586
+        ],
+        [
+          -1.269,
+          23.414
+        ],
+        [
+          -1.692,
+          23.285
+        ],
+        [
+          -2.706,
+          22.769
+        ],
+        [
+          -3.341,
+          22.297
+        ],
+        [
+          -3.848,
+          21.781
+        ],
+        [
+          -4.44,
+          20.965
+        ],
+        [
+          -4.779,
+          20.278
+        ],
+        [
+          -4.99,
+          19.676
+        ],
+        [
+          -5.159,
+          18.817
+        ],
+        [
+          -5.159,
+          9.58
+        ],
+        [
+          -0.127,
+          9.58
+        ],
+        [
+          -0.085,
+          9.58
+        ],
+        [
+          0.0,
+          9.58
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.14",
+      "floor_id": "L00",
+      "status": "Prodano",
+      "unit_type": "Četverosoban",
+      "listing_area_m2": 116.86,
+      "np_total_m2": 220.36,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "west"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 12.348,
+        "y0": 0.0,
+        "y1": 9.409,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": -5.159,
+        "x1": 12.348,
+        "y0": -4.898,
+        "y1": 9.409
+      },
+      "polygon_m": [
+        [
+          4.356,
+          9.409
+        ],
+        [
+          0.0,
+          9.409
+        ],
+        [
+          0.0,
+          9.237
+        ],
+        [
+          -0.127,
+          9.237
+        ],
+        [
+          -0.127,
+          9.194
+        ],
+        [
+          -5.159,
+          9.237
+        ],
+        [
+          -5.159,
+          0.129
+        ],
+        [
+          -4.821,
+          -1.203
+        ],
+        [
+          -4.186,
+          -2.406
+        ],
+        [
+          -3.51,
+          -3.179
+        ],
+        [
+          -2.876,
+          -3.695
+        ],
+        [
+          -1.607,
+          -4.339
+        ],
+        [
+          -1.015,
+          -4.511
+        ],
+        [
+          -0.127,
+          -4.586
+        ],
+        [
+          -0.127,
+          -4.597
+        ],
+        [
+          0.0,
+          -4.597
+        ],
+        [
+          0.0,
+          -4.898
+        ],
+        [
+          12.348,
+          -4.898
+        ],
+        [
+          12.348,
+          8.549
+        ],
+        [
+          4.356,
+          8.549
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.15",
+      "floor_id": "L00",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 46.86,
+      "np_total_m2": 65.16,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 12.348,
+        "x1": 17.719,
+        "y0": 0.0,
+        "y1": 8.549,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 12.348,
+        "x1": 17.719,
+        "y0": -4.898,
+        "y1": 8.549
+      },
+      "polygon_m": [
+        [
+          12.348,
+          8.549
+        ],
+        [
+          12.348,
+          -4.898
+        ],
+        [
+          17.719,
+          -4.898
+        ],
+        [
+          17.719,
+          8.549
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 0.16",
+      "floor_id": "L00",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 70.45,
+      "np_total_m2": 96.76,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": false,
+      "has_loggia": false,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 17.719,
+        "x1": 25.965,
+        "y0": 0.0,
+        "y1": 8.549,
+        "z0": 0.0,
+        "z1": 3.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.719,
+        "x1": 25.965,
+        "y0": -4.898,
+        "y1": 8.549
+      },
+      "polygon_m": [
+        [
+          17.719,
+          8.549
+        ],
+        [
+          17.719,
+          -4.898
+        ],
+        [
+          24.273,
+          -4.898
+        ],
+        [
+          25.965,
+          -1.074
+        ],
+        [
+          25.965,
+          8.549
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.1",
+      "floor_id": "L01",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 47.18,
+      "np_total_m2": 48.92,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        38.328,
+        41.201
+      ],
+      "building_bbox_m": {
+        "x0": 35.117,
+        "x1": 41.201,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 35.117,
+        "x1": 41.201,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          35.996,
+          -0.068
+        ],
+        [
+          37.551,
+          -0.068
+        ],
+        [
+          37.619,
+          0.0
+        ],
+        [
+          38.295,
+          0.0
+        ],
+        [
+          38.328,
+          -0.879
+        ],
+        [
+          41.201,
+          -0.879
+        ],
+        [
+          41.201,
+          8.551
+        ],
+        [
+          35.117,
+          8.551
+        ],
+        [
+          35.117,
+          3.684
+        ],
+        [
+          35.117,
+          3.65
+        ],
+        [
+          35.117,
+          0.0
+        ],
+        [
+          35.929,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.2",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 46.7,
+      "np_total_m2": 48.52,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        41.201,
+        44.04
+      ],
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          44.04,
+          -0.879
+        ],
+        [
+          44.074,
+          0.0
+        ],
+        [
+          44.818,
+          0.0
+        ],
+        [
+          44.885,
+          -0.068
+        ],
+        [
+          46.44,
+          -0.068
+        ],
+        [
+          46.508,
+          0.0
+        ],
+        [
+          47.218,
+          -0.016
+        ],
+        [
+          47.218,
+          8.551
+        ],
+        [
+          41.201,
+          8.551
+        ],
+        [
+          41.201,
+          -0.879
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.3",
+      "floor_id": "L01",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 62.64,
+      "np_total_m2": 64.16,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        49.955,
+        52.524
+      ],
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 55.566,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 55.566,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          49.516,
+          -0.068
+        ],
+        [
+          49.584,
+          0.0
+        ],
+        [
+          49.888,
+          0.0
+        ],
+        [
+          49.955,
+          -0.068
+        ],
+        [
+          49.955,
+          -0.879
+        ],
+        [
+          52.524,
+          -0.879
+        ],
+        [
+          52.524,
+          -0.068
+        ],
+        [
+          52.592,
+          0.0
+        ],
+        [
+          53.268,
+          0.0
+        ],
+        [
+          53.335,
+          -0.068
+        ],
+        [
+          54.856,
+          -0.068
+        ],
+        [
+          54.958,
+          0.0
+        ],
+        [
+          55.566,
+          -0.014
+        ],
+        [
+          55.566,
+          8.551
+        ],
+        [
+          47.218,
+          8.551
+        ],
+        [
+          47.218,
+          -0.016
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.4",
+      "floor_id": "L01",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 70.67,
+      "np_total_m2": 72.56,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "east"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        58.473,
+        61.379
+      ],
+      "building_bbox_m": {
+        "x0": 55.566,
+        "x1": 64.811,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 55.566,
+        "x1": 64.811,
+        "y0": -0.879,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          57.864,
+          -0.068
+        ],
+        [
+          57.932,
+          0.0
+        ],
+        [
+          58.405,
+          0.0
+        ],
+        [
+          58.473,
+          -0.068
+        ],
+        [
+          58.473,
+          -0.879
+        ],
+        [
+          61.379,
+          -0.879
+        ],
+        [
+          61.413,
+          0.0
+        ],
+        [
+          62.191,
+          0.0
+        ],
+        [
+          62.224,
+          -0.068
+        ],
+        [
+          63.779,
+          -0.068
+        ],
+        [
+          63.847,
+          0.0
+        ],
+        [
+          64.793,
+          0.0
+        ],
+        [
+          64.811,
+          9.396
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          60.23,
+          8.551
+        ],
+        [
+          55.566,
+          8.551
+        ],
+        [
+          55.566,
+          -0.014
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.5",
+      "floor_id": "L01",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 47.0,
+      "np_total_m2": 47.81,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "east"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.83,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.83
+      },
+      "polygon_m": [
+        [
+          60.23,
+          10.241
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          64.811,
+          9.396
+        ],
+        [
+          64.827,
+          18.083
+        ],
+        [
+          64.759,
+          18.826
+        ],
+        [
+          58.574,
+          18.83
+        ],
+        [
+          58.574,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.6",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.46,
+      "np_total_m2": 46.29,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.241,
+        "y1": 18.833,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.241,
+        "y1": 18.833
+      },
+      "polygon_m": [
+        [
+          58.574,
+          10.241
+        ],
+        [
+          58.574,
+          18.83
+        ],
+        [
+          52.524,
+          18.833
+        ],
+        [
+          52.524,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.7",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.83,
+      "np_total_m2": 40.43,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.241,
+        "y1": 18.836,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.241,
+        "y1": 18.836
+      },
+      "polygon_m": [
+        [
+          52.524,
+          10.241
+        ],
+        [
+          52.524,
+          18.833
+        ],
+        [
+          47.218,
+          18.836
+        ],
+        [
+          47.218,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.8",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 44.96,
+      "np_total_m2": 45.79,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.241,
+        "y1": 18.839,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.241,
+        "y1": 18.839
+      },
+      "polygon_m": [
+        [
+          47.218,
+          10.241
+        ],
+        [
+          47.218,
+          18.836
+        ],
+        [
+          41.201,
+          18.839
+        ],
+        [
+          41.201,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.9",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.46,
+      "np_total_m2": 46.27,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.241,
+        "y1": 18.842,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.241,
+        "y1": 18.842
+      },
+      "polygon_m": [
+        [
+          41.201,
+          10.241
+        ],
+        [
+          41.201,
+          18.839
+        ],
+        [
+          35.185,
+          18.842
+        ],
+        [
+          35.185,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.10",
+      "floor_id": "L01",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.38,
+      "np_total_m2": 46.21,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.241,
+        "y1": 18.845,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.241,
+        "y1": 18.845
+      },
+      "polygon_m": [
+        [
+          35.185,
+          10.241
+        ],
+        [
+          35.185,
+          18.842
+        ],
+        [
+          29.169,
+          18.845
+        ],
+        [
+          29.169,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.11",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.36,
+      "np_total_m2": 46.17,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.241,
+        "y1": 18.848,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.241,
+        "y1": 18.848
+      },
+      "polygon_m": [
+        [
+          29.169,
+          10.241
+        ],
+        [
+          29.169,
+          18.845
+        ],
+        [
+          23.152,
+          18.848
+        ],
+        [
+          23.152,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.12",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.87,
+      "np_total_m2": 40.49,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.241,
+        "y1": 18.851,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.241,
+        "y1": 18.851
+      },
+      "polygon_m": [
+        [
+          23.152,
+          10.241
+        ],
+        [
+          23.152,
+          18.848
+        ],
+        [
+          17.812,
+          18.851
+        ],
+        [
+          17.812,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.13",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.87,
+      "np_total_m2": 40.47,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.241,
+        "y1": 18.854,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.241,
+        "y1": 18.854
+      },
+      "polygon_m": [
+        [
+          17.812,
+          10.241
+        ],
+        [
+          17.812,
+          18.851
+        ],
+        [
+          12.506,
+          18.854
+        ],
+        [
+          12.506,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.14",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 44.97,
+      "np_total_m2": 45.8,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.241,
+        "y1": 18.857,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.241,
+        "y1": 18.857
+      },
+      "polygon_m": [
+        [
+          12.506,
+          10.241
+        ],
+        [
+          12.506,
+          18.854
+        ],
+        [
+          6.489,
+          18.857
+        ],
+        [
+          6.489,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.15",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 49.15,
+      "np_total_m2": 49.96,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "west"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          4.563,
+          9.396
+        ],
+        [
+          4.563,
+          10.241
+        ],
+        [
+          6.489,
+          10.241
+        ],
+        [
+          6.489,
+          18.857
+        ],
+        [
+          0.98,
+          18.86
+        ],
+        [
+          0.0,
+          18.792
+        ],
+        [
+          0.0,
+          9.396
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.16",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 72.53,
+      "np_total_m2": 74.23,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "west"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        3.65,
+        6.489
+      ],
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 9.464,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 0.0,
+        "x1": 9.464,
+        "y0": -0.879,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          2.569,
+          -0.068
+        ],
+        [
+          2.603,
+          0.0
+        ],
+        [
+          3.583,
+          0.0
+        ],
+        [
+          3.65,
+          -0.068
+        ],
+        [
+          3.65,
+          -0.879
+        ],
+        [
+          6.489,
+          -0.879
+        ],
+        [
+          6.489,
+          -0.068
+        ],
+        [
+          6.557,
+          0.0
+        ],
+        [
+          7.064,
+          0.0
+        ],
+        [
+          7.132,
+          -0.068
+        ],
+        [
+          8.686,
+          -0.068
+        ],
+        [
+          8.754,
+          0.0
+        ],
+        [
+          9.464,
+          -0.016
+        ],
+        [
+          9.464,
+          8.551
+        ],
+        [
+          4.563,
+          8.551
+        ],
+        [
+          4.563,
+          9.396
+        ],
+        [
+          0.0,
+          9.396
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.946,
+          0.0
+        ],
+        [
+          1.014,
+          -0.068
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.17",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 63.36,
+      "np_total_m2": 64.89,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        12.438,
+        15.041
+      ],
+      "building_bbox_m": {
+        "x0": 9.464,
+        "x1": 17.812,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 9.464,
+        "x1": 17.812,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          11.695,
+          -0.068
+        ],
+        [
+          11.728,
+          0.0
+        ],
+        [
+          12.371,
+          0.0
+        ],
+        [
+          12.438,
+          -0.101
+        ],
+        [
+          12.438,
+          -0.879
+        ],
+        [
+          15.041,
+          -0.879
+        ],
+        [
+          15.074,
+          0.0
+        ],
+        [
+          15.886,
+          0.0
+        ],
+        [
+          15.919,
+          -0.068
+        ],
+        [
+          17.474,
+          -0.068
+        ],
+        [
+          17.542,
+          0.0
+        ],
+        [
+          17.812,
+          0.0
+        ],
+        [
+          17.812,
+          8.551
+        ],
+        [
+          9.464,
+          8.551
+        ],
+        [
+          9.464,
+          -0.016
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.18",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 40.72,
+      "np_total_m2": 42.02,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        20.888,
+        23.152
+      ],
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          18.049,
+          0.0
+        ],
+        [
+          18.116,
+          -0.068
+        ],
+        [
+          19.671,
+          -0.068
+        ],
+        [
+          19.739,
+          0.0
+        ],
+        [
+          20.854,
+          0.0
+        ],
+        [
+          20.888,
+          -0.879
+        ],
+        [
+          23.152,
+          -0.879
+        ],
+        [
+          23.152,
+          8.551
+        ],
+        [
+          17.812,
+          8.551
+        ],
+        [
+          17.812,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 1.19",
+      "floor_id": "L01",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 53.46,
+      "np_total_m2": 54.81,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        23.152,
+        25.383
+      ],
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 3.1,
+        "z1": 6.1
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          25.383,
+          -0.879
+        ],
+        [
+          25.417,
+          0.0
+        ],
+        [
+          26.465,
+          0.0
+        ],
+        [
+          26.532,
+          -0.068
+        ],
+        [
+          28.087,
+          -0.068
+        ],
+        [
+          28.155,
+          0.0
+        ],
+        [
+          29.845,
+          0.0
+        ],
+        [
+          29.912,
+          -0.068
+        ],
+        [
+          31.264,
+          -0.068
+        ],
+        [
+          31.332,
+          0.0
+        ],
+        [
+          32.245,
+          0.0
+        ],
+        [
+          32.245,
+          3.65
+        ],
+        [
+          28.527,
+          3.65
+        ],
+        [
+          28.527,
+          8.551
+        ],
+        [
+          23.152,
+          8.551
+        ],
+        [
+          23.152,
+          -0.879
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.1",
+      "floor_id": "L02",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 56.16,
+      "np_total_m2": 57.9,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        38.328,
+        41.201
+      ],
+      "building_bbox_m": {
+        "x0": 32.245,
+        "x1": 41.201,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 32.245,
+        "x1": 41.201,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          32.684,
+          0.0
+        ],
+        [
+          32.751,
+          -0.068
+        ],
+        [
+          35.929,
+          0.0
+        ],
+        [
+          35.996,
+          -0.068
+        ],
+        [
+          37.551,
+          -0.068
+        ],
+        [
+          37.619,
+          0.0
+        ],
+        [
+          38.295,
+          0.0
+        ],
+        [
+          38.328,
+          -0.879
+        ],
+        [
+          41.201,
+          -0.879
+        ],
+        [
+          41.201,
+          8.551
+        ],
+        [
+          35.117,
+          8.551
+        ],
+        [
+          35.117,
+          3.65
+        ],
+        [
+          32.245,
+          3.65
+        ],
+        [
+          32.245,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.2",
+      "floor_id": "L02",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 46.7,
+      "np_total_m2": 48.52,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        41.201,
+        44.04
+      ],
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          44.04,
+          -0.879
+        ],
+        [
+          44.074,
+          0.0
+        ],
+        [
+          44.818,
+          0.0
+        ],
+        [
+          44.885,
+          -0.068
+        ],
+        [
+          46.44,
+          -0.068
+        ],
+        [
+          46.508,
+          0.0
+        ],
+        [
+          47.218,
+          -0.016
+        ],
+        [
+          47.218,
+          8.551
+        ],
+        [
+          41.201,
+          8.551
+        ],
+        [
+          41.201,
+          -0.879
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.3",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 62.67,
+      "np_total_m2": 64.17,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        49.955,
+        52.524
+      ],
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 55.566,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 55.566,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          49.516,
+          -0.068
+        ],
+        [
+          49.584,
+          0.0
+        ],
+        [
+          49.888,
+          0.0
+        ],
+        [
+          49.955,
+          -0.068
+        ],
+        [
+          49.955,
+          -0.879
+        ],
+        [
+          52.524,
+          -0.879
+        ],
+        [
+          52.524,
+          -0.068
+        ],
+        [
+          52.592,
+          0.0
+        ],
+        [
+          53.268,
+          0.0
+        ],
+        [
+          53.335,
+          -0.068
+        ],
+        [
+          54.856,
+          -0.068
+        ],
+        [
+          54.958,
+          0.0
+        ],
+        [
+          55.566,
+          -0.014
+        ],
+        [
+          55.566,
+          8.551
+        ],
+        [
+          47.218,
+          8.551
+        ],
+        [
+          47.218,
+          -0.016
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.4",
+      "floor_id": "L02",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 70.7,
+      "np_total_m2": 72.43,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "east"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        58.473,
+        61.379
+      ],
+      "building_bbox_m": {
+        "x0": 55.566,
+        "x1": 64.811,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 55.566,
+        "x1": 64.811,
+        "y0": -0.879,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          57.864,
+          -0.068
+        ],
+        [
+          57.932,
+          0.0
+        ],
+        [
+          58.405,
+          0.0
+        ],
+        [
+          58.473,
+          -0.068
+        ],
+        [
+          58.473,
+          -0.879
+        ],
+        [
+          61.379,
+          -0.879
+        ],
+        [
+          61.413,
+          0.0
+        ],
+        [
+          62.191,
+          0.0
+        ],
+        [
+          62.224,
+          -0.068
+        ],
+        [
+          63.779,
+          -0.068
+        ],
+        [
+          63.847,
+          0.0
+        ],
+        [
+          64.793,
+          0.0
+        ],
+        [
+          64.811,
+          9.396
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          60.23,
+          8.551
+        ],
+        [
+          55.566,
+          8.551
+        ],
+        [
+          55.566,
+          -0.014
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.5",
+      "floor_id": "L02",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 47.04,
+      "np_total_m2": 47.85,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "east"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.83,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.83
+      },
+      "polygon_m": [
+        [
+          60.23,
+          10.241
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          64.811,
+          9.396
+        ],
+        [
+          64.827,
+          18.083
+        ],
+        [
+          64.759,
+          18.826
+        ],
+        [
+          58.574,
+          18.83
+        ],
+        [
+          58.574,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.6",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.44,
+      "np_total_m2": 46.27,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.241,
+        "y1": 18.833,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.241,
+        "y1": 18.833
+      },
+      "polygon_m": [
+        [
+          58.574,
+          10.241
+        ],
+        [
+          58.574,
+          18.83
+        ],
+        [
+          52.524,
+          18.833
+        ],
+        [
+          52.524,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.7",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.83,
+      "np_total_m2": 40.43,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.241,
+        "y1": 18.836,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.241,
+        "y1": 18.836
+      },
+      "polygon_m": [
+        [
+          52.524,
+          10.241
+        ],
+        [
+          52.524,
+          18.833
+        ],
+        [
+          47.218,
+          18.836
+        ],
+        [
+          47.218,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.8",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 44.96,
+      "np_total_m2": 45.79,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.241,
+        "y1": 18.839,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.241,
+        "y1": 18.839
+      },
+      "polygon_m": [
+        [
+          47.218,
+          10.241
+        ],
+        [
+          47.218,
+          18.836
+        ],
+        [
+          41.201,
+          18.839
+        ],
+        [
+          41.201,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.9",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.34,
+      "np_total_m2": 46.15,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.241,
+        "y1": 18.842,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.241,
+        "y1": 18.842
+      },
+      "polygon_m": [
+        [
+          41.201,
+          10.241
+        ],
+        [
+          41.201,
+          18.839
+        ],
+        [
+          35.185,
+          18.842
+        ],
+        [
+          35.185,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.10",
+      "floor_id": "L02",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.38,
+      "np_total_m2": 46.21,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.241,
+        "y1": 18.845,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.241,
+        "y1": 18.845
+      },
+      "polygon_m": [
+        [
+          35.185,
+          10.241
+        ],
+        [
+          35.185,
+          18.842
+        ],
+        [
+          29.169,
+          18.845
+        ],
+        [
+          29.169,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.11",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.34,
+      "np_total_m2": 46.15,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.241,
+        "y1": 18.848,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.241,
+        "y1": 18.848
+      },
+      "polygon_m": [
+        [
+          29.169,
+          10.241
+        ],
+        [
+          29.169,
+          18.845
+        ],
+        [
+          23.152,
+          18.848
+        ],
+        [
+          23.152,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.12",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.87,
+      "np_total_m2": 40.49,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.241,
+        "y1": 18.851,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.241,
+        "y1": 18.851
+      },
+      "polygon_m": [
+        [
+          23.152,
+          10.241
+        ],
+        [
+          23.152,
+          18.848
+        ],
+        [
+          17.812,
+          18.851
+        ],
+        [
+          17.812,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.13",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.85,
+      "np_total_m2": 40.45,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.241,
+        "y1": 18.854,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.241,
+        "y1": 18.854
+      },
+      "polygon_m": [
+        [
+          17.812,
+          10.241
+        ],
+        [
+          17.812,
+          18.851
+        ],
+        [
+          12.506,
+          18.854
+        ],
+        [
+          12.506,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.14",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.0,
+      "np_total_m2": 45.83,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.241,
+        "y1": 18.857,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.241,
+        "y1": 18.857
+      },
+      "polygon_m": [
+        [
+          12.506,
+          10.241
+        ],
+        [
+          12.506,
+          18.854
+        ],
+        [
+          6.489,
+          18.857
+        ],
+        [
+          6.489,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.15",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 49.15,
+      "np_total_m2": 49.96,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "west"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          4.563,
+          9.396
+        ],
+        [
+          4.563,
+          10.241
+        ],
+        [
+          6.489,
+          10.241
+        ],
+        [
+          6.489,
+          18.857
+        ],
+        [
+          0.98,
+          18.86
+        ],
+        [
+          0.0,
+          18.792
+        ],
+        [
+          0.0,
+          9.396
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.16",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 72.4,
+      "np_total_m2": 74.1,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "west"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        3.65,
+        6.489
+      ],
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 9.464,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 0.0,
+        "x1": 9.464,
+        "y0": -0.879,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          1.014,
+          -0.068
+        ],
+        [
+          2.569,
+          -0.068
+        ],
+        [
+          2.603,
+          0.0
+        ],
+        [
+          3.583,
+          0.0
+        ],
+        [
+          3.65,
+          -0.068
+        ],
+        [
+          3.65,
+          -0.879
+        ],
+        [
+          6.489,
+          -0.879
+        ],
+        [
+          6.489,
+          -0.068
+        ],
+        [
+          6.557,
+          0.0
+        ],
+        [
+          7.064,
+          0.0
+        ],
+        [
+          7.132,
+          -0.068
+        ],
+        [
+          8.686,
+          -0.068
+        ],
+        [
+          8.754,
+          0.0
+        ],
+        [
+          9.464,
+          -0.016
+        ],
+        [
+          9.464,
+          8.551
+        ],
+        [
+          4.563,
+          8.551
+        ],
+        [
+          4.563,
+          9.396
+        ],
+        [
+          0.0,
+          9.396
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.946,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.17",
+      "floor_id": "L02",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 63.36,
+      "np_total_m2": 64.87,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        12.438,
+        15.041
+      ],
+      "building_bbox_m": {
+        "x0": 9.464,
+        "x1": 17.812,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 9.464,
+        "x1": 17.812,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          11.695,
+          -0.068
+        ],
+        [
+          11.728,
+          0.0
+        ],
+        [
+          12.371,
+          0.0
+        ],
+        [
+          12.438,
+          -0.068
+        ],
+        [
+          12.438,
+          -0.879
+        ],
+        [
+          15.041,
+          -0.879
+        ],
+        [
+          15.074,
+          0.0
+        ],
+        [
+          15.886,
+          0.0
+        ],
+        [
+          15.919,
+          -0.068
+        ],
+        [
+          17.474,
+          -0.068
+        ],
+        [
+          17.542,
+          0.0
+        ],
+        [
+          17.812,
+          0.0
+        ],
+        [
+          17.812,
+          8.551
+        ],
+        [
+          9.464,
+          8.551
+        ],
+        [
+          9.464,
+          -0.016
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.18",
+      "floor_id": "L02",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 40.64,
+      "np_total_m2": 41.94,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        20.888,
+        23.152
+      ],
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          18.049,
+          0.0
+        ],
+        [
+          18.116,
+          -0.068
+        ],
+        [
+          19.671,
+          -0.068
+        ],
+        [
+          19.739,
+          0.0
+        ],
+        [
+          20.82,
+          0.0
+        ],
+        [
+          20.888,
+          -0.068
+        ],
+        [
+          20.888,
+          -0.879
+        ],
+        [
+          23.152,
+          -0.879
+        ],
+        [
+          23.152,
+          8.551
+        ],
+        [
+          17.812,
+          8.551
+        ],
+        [
+          17.812,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 2.19",
+      "floor_id": "L02",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 53.34,
+      "np_total_m2": 54.69,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        23.152,
+        25.383
+      ],
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 6.1,
+        "z1": 9.1
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          25.383,
+          -0.879
+        ],
+        [
+          25.417,
+          0.0
+        ],
+        [
+          26.465,
+          0.0
+        ],
+        [
+          26.532,
+          -0.068
+        ],
+        [
+          28.087,
+          -0.068
+        ],
+        [
+          28.155,
+          0.0
+        ],
+        [
+          29.845,
+          0.0
+        ],
+        [
+          29.912,
+          -0.068
+        ],
+        [
+          31.264,
+          -0.068
+        ],
+        [
+          31.332,
+          0.0
+        ],
+        [
+          32.245,
+          0.0
+        ],
+        [
+          32.245,
+          3.65
+        ],
+        [
+          28.527,
+          3.65
+        ],
+        [
+          28.527,
+          8.551
+        ],
+        [
+          23.152,
+          8.551
+        ],
+        [
+          23.152,
+          -0.879
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.1",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 56.02,
+      "np_total_m2": 57.76,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        38.328,
+        41.201
+      ],
+      "building_bbox_m": {
+        "x0": 32.245,
+        "x1": 41.201,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 32.245,
+        "x1": 41.201,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          32.684,
+          0.0
+        ],
+        [
+          32.751,
+          -0.068
+        ],
+        [
+          35.861,
+          0.0
+        ],
+        [
+          35.929,
+          -0.068
+        ],
+        [
+          37.483,
+          -0.068
+        ],
+        [
+          37.551,
+          0.0
+        ],
+        [
+          38.295,
+          0.0
+        ],
+        [
+          38.328,
+          -0.879
+        ],
+        [
+          41.201,
+          -0.879
+        ],
+        [
+          41.201,
+          8.551
+        ],
+        [
+          35.117,
+          8.551
+        ],
+        [
+          35.117,
+          3.65
+        ],
+        [
+          32.245,
+          3.65
+        ],
+        [
+          32.245,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.2",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 46.76,
+      "np_total_m2": 48.58,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        41.201,
+        44.04
+      ],
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          44.04,
+          -0.879
+        ],
+        [
+          44.074,
+          0.0
+        ],
+        [
+          44.818,
+          0.0
+        ],
+        [
+          44.885,
+          -0.068
+        ],
+        [
+          46.44,
+          -0.068
+        ],
+        [
+          46.508,
+          0.0
+        ],
+        [
+          47.218,
+          -0.016
+        ],
+        [
+          47.218,
+          8.551
+        ],
+        [
+          41.201,
+          8.551
+        ],
+        [
+          41.201,
+          -0.879
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.3",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 62.72,
+      "np_total_m2": 64.22,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        49.955,
+        52.524
+      ],
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 55.566,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 55.566,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          49.516,
+          -0.068
+        ],
+        [
+          49.584,
+          0.0
+        ],
+        [
+          49.888,
+          0.0
+        ],
+        [
+          49.955,
+          -0.068
+        ],
+        [
+          49.955,
+          -0.879
+        ],
+        [
+          52.524,
+          -0.879
+        ],
+        [
+          52.524,
+          -0.068
+        ],
+        [
+          52.592,
+          0.0
+        ],
+        [
+          53.268,
+          0.0
+        ],
+        [
+          53.335,
+          -0.068
+        ],
+        [
+          54.89,
+          -0.068
+        ],
+        [
+          54.958,
+          0.0
+        ],
+        [
+          55.566,
+          -0.014
+        ],
+        [
+          55.566,
+          8.551
+        ],
+        [
+          47.218,
+          8.551
+        ],
+        [
+          47.218,
+          -0.016
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.4",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 70.83,
+      "np_total_m2": 72.56,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "east"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        58.473,
+        61.379
+      ],
+      "building_bbox_m": {
+        "x0": 55.566,
+        "x1": 64.811,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 55.566,
+        "x1": 64.811,
+        "y0": -0.879,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          57.864,
+          -0.068
+        ],
+        [
+          57.932,
+          0.0
+        ],
+        [
+          58.405,
+          0.0
+        ],
+        [
+          58.473,
+          -0.068
+        ],
+        [
+          58.473,
+          -0.879
+        ],
+        [
+          61.379,
+          -0.879
+        ],
+        [
+          61.413,
+          0.0
+        ],
+        [
+          62.191,
+          0.0
+        ],
+        [
+          62.224,
+          -0.068
+        ],
+        [
+          63.779,
+          -0.068
+        ],
+        [
+          63.847,
+          0.0
+        ],
+        [
+          64.793,
+          0.0
+        ],
+        [
+          64.811,
+          9.396
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          60.23,
+          8.551
+        ],
+        [
+          55.566,
+          8.551
+        ],
+        [
+          55.566,
+          -0.014
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.5",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 46.96,
+      "np_total_m2": 47.77,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "east"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.83,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.83
+      },
+      "polygon_m": [
+        [
+          60.23,
+          10.241
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          64.811,
+          9.396
+        ],
+        [
+          64.827,
+          18.083
+        ],
+        [
+          64.759,
+          18.826
+        ],
+        [
+          58.574,
+          18.83
+        ],
+        [
+          58.574,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.6",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.43,
+      "np_total_m2": 46.26,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.241,
+        "y1": 18.833,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.241,
+        "y1": 18.833
+      },
+      "polygon_m": [
+        [
+          58.574,
+          10.241
+        ],
+        [
+          58.574,
+          18.83
+        ],
+        [
+          52.524,
+          18.833
+        ],
+        [
+          52.524,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.7",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.83,
+      "np_total_m2": 40.43,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.241,
+        "y1": 18.836,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.241,
+        "y1": 18.836
+      },
+      "polygon_m": [
+        [
+          52.524,
+          10.241
+        ],
+        [
+          52.524,
+          18.833
+        ],
+        [
+          47.218,
+          18.836
+        ],
+        [
+          47.218,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.8",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 44.96,
+      "np_total_m2": 45.79,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.241,
+        "y1": 18.839,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.241,
+        "y1": 18.839
+      },
+      "polygon_m": [
+        [
+          47.218,
+          10.241
+        ],
+        [
+          47.218,
+          18.836
+        ],
+        [
+          41.201,
+          18.839
+        ],
+        [
+          41.201,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.9",
+      "floor_id": "L03",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.34,
+      "np_total_m2": 46.15,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.241,
+        "y1": 18.842,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.241,
+        "y1": 18.842
+      },
+      "polygon_m": [
+        [
+          41.201,
+          10.241
+        ],
+        [
+          41.201,
+          18.839
+        ],
+        [
+          35.185,
+          18.842
+        ],
+        [
+          35.185,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.10",
+      "floor_id": "L03",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.38,
+      "np_total_m2": 46.21,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.241,
+        "y1": 18.845,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.241,
+        "y1": 18.845
+      },
+      "polygon_m": [
+        [
+          35.185,
+          10.241
+        ],
+        [
+          35.185,
+          18.842
+        ],
+        [
+          29.169,
+          18.845
+        ],
+        [
+          29.169,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.11",
+      "floor_id": "L03",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 45.34,
+      "np_total_m2": 46.15,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.241,
+        "y1": 18.848,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.241,
+        "y1": 18.848
+      },
+      "polygon_m": [
+        [
+          29.169,
+          10.241
+        ],
+        [
+          29.169,
+          18.845
+        ],
+        [
+          23.152,
+          18.848
+        ],
+        [
+          23.152,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.12",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.87,
+      "np_total_m2": 40.49,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.241,
+        "y1": 18.851,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.241,
+        "y1": 18.851
+      },
+      "polygon_m": [
+        [
+          23.152,
+          10.241
+        ],
+        [
+          23.152,
+          18.848
+        ],
+        [
+          17.812,
+          18.851
+        ],
+        [
+          17.812,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.13",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 39.83,
+      "np_total_m2": 40.43,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.241,
+        "y1": 18.854,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.241,
+        "y1": 18.854
+      },
+      "polygon_m": [
+        [
+          17.812,
+          10.241
+        ],
+        [
+          17.812,
+          18.851
+        ],
+        [
+          12.506,
+          18.854
+        ],
+        [
+          12.506,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.14",
+      "floor_id": "L03",
+      "status": "Slobodno",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 44.96,
+      "np_total_m2": 45.79,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.241,
+        "y1": 18.857,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.241,
+        "y1": 18.857
+      },
+      "polygon_m": [
+        [
+          12.506,
+          10.241
+        ],
+        [
+          12.506,
+          18.854
+        ],
+        [
+          6.489,
+          18.857
+        ],
+        [
+          6.489,
+          10.241
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.15",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Dvosoban",
+      "listing_area_m2": 49.07,
+      "np_total_m2": 49.88,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "west"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          4.563,
+          9.396
+        ],
+        [
+          4.563,
+          10.241
+        ],
+        [
+          6.489,
+          10.241
+        ],
+        [
+          6.489,
+          18.857
+        ],
+        [
+          0.98,
+          18.86
+        ],
+        [
+          0.0,
+          18.792
+        ],
+        [
+          0.0,
+          9.396
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.16",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 72.41,
+      "np_total_m2": 74.11,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "west"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        3.65,
+        6.489
+      ],
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 9.464,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 0.0,
+        "x1": 9.464,
+        "y0": -0.879,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          1.014,
+          -0.068
+        ],
+        [
+          2.569,
+          -0.068
+        ],
+        [
+          2.603,
+          0.0
+        ],
+        [
+          3.583,
+          0.0
+        ],
+        [
+          3.65,
+          -0.068
+        ],
+        [
+          3.65,
+          -0.879
+        ],
+        [
+          6.489,
+          -0.879
+        ],
+        [
+          6.489,
+          -0.068
+        ],
+        [
+          6.557,
+          0.0
+        ],
+        [
+          7.064,
+          0.0
+        ],
+        [
+          7.132,
+          -0.068
+        ],
+        [
+          8.686,
+          -0.068
+        ],
+        [
+          8.754,
+          0.0
+        ],
+        [
+          9.464,
+          -0.016
+        ],
+        [
+          9.464,
+          8.551
+        ],
+        [
+          4.563,
+          8.551
+        ],
+        [
+          4.563,
+          9.396
+        ],
+        [
+          0.0,
+          9.396
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.946,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.17",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 63.36,
+      "np_total_m2": 64.87,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        12.438,
+        15.041
+      ],
+      "building_bbox_m": {
+        "x0": 9.464,
+        "x1": 17.812,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 9.464,
+        "x1": 17.812,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          11.695,
+          -0.068
+        ],
+        [
+          11.728,
+          0.0
+        ],
+        [
+          12.371,
+          0.0
+        ],
+        [
+          12.438,
+          -0.101
+        ],
+        [
+          12.438,
+          -0.879
+        ],
+        [
+          15.041,
+          -0.879
+        ],
+        [
+          15.074,
+          0.0
+        ],
+        [
+          15.886,
+          0.0
+        ],
+        [
+          15.919,
+          -0.068
+        ],
+        [
+          16.798,
+          -0.068
+        ],
+        [
+          16.866,
+          0.0
+        ],
+        [
+          17.812,
+          0.0
+        ],
+        [
+          17.812,
+          8.551
+        ],
+        [
+          9.464,
+          8.551
+        ],
+        [
+          9.464,
+          -0.016
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.18",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 40.72,
+      "np_total_m2": 42.05,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        20.888,
+        23.152
+      ],
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          18.725,
+          0.0
+        ],
+        [
+          18.792,
+          -0.068
+        ],
+        [
+          20.82,
+          0.0
+        ],
+        [
+          20.888,
+          -0.068
+        ],
+        [
+          20.888,
+          -0.879
+        ],
+        [
+          23.152,
+          -0.879
+        ],
+        [
+          23.152,
+          8.551
+        ],
+        [
+          17.812,
+          8.551
+        ],
+        [
+          17.812,
+          0.0
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 3.19",
+      "floor_id": "L03",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 53.44,
+      "np_total_m2": 54.79,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        23.152,
+        25.383
+      ],
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": 0.0,
+        "y1": 8.551,
+        "z0": 9.1,
+        "z1": 12.1
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": -0.879,
+        "y1": 8.551
+      },
+      "polygon_m": [
+        [
+          25.383,
+          -0.879
+        ],
+        [
+          25.417,
+          0.0
+        ],
+        [
+          26.465,
+          0.0
+        ],
+        [
+          26.532,
+          -0.068
+        ],
+        [
+          28.087,
+          -0.068
+        ],
+        [
+          28.155,
+          0.0
+        ],
+        [
+          29.845,
+          0.0
+        ],
+        [
+          29.912,
+          -0.068
+        ],
+        [
+          31.264,
+          -0.068
+        ],
+        [
+          31.332,
+          0.0
+        ],
+        [
+          32.245,
+          0.0
+        ],
+        [
+          32.245,
+          3.65
+        ],
+        [
+          28.527,
+          3.65
+        ],
+        [
+          28.527,
+          8.551
+        ],
+        [
+          23.152,
+          8.551
+        ],
+        [
+          23.152,
+          -0.879
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.1",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Peterosoban",
+      "listing_area_m2": 114.25,
+      "np_total_m2": 123.82,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        38.43,
+        41.201
+      ],
+      "building_bbox_m": {
+        "x0": 32.245,
+        "x1": 41.201,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 32.245,
+        "x1": 41.201,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          34.306,
+          0.135
+        ],
+        [
+          34.34,
+          0.203
+        ],
+        [
+          35.151,
+          0.203
+        ],
+        [
+          35.185,
+          -0.034
+        ],
+        [
+          35.692,
+          0.068
+        ],
+        [
+          35.76,
+          0.135
+        ],
+        [
+          37.821,
+          0.101
+        ],
+        [
+          38.43,
+          -0.068
+        ],
+        [
+          38.43,
+          -0.913
+        ],
+        [
+          41.201,
+          -0.913
+        ],
+        [
+          41.201,
+          8.585
+        ],
+        [
+          35.117,
+          8.585
+        ],
+        [
+          35.117,
+          3.65
+        ],
+        [
+          32.245,
+          3.65
+        ],
+        [
+          32.245,
+          0.175
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.2",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 84.51,
+      "np_total_m2": 94.29,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        41.201,
+        44.007
+      ],
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          44.007,
+          -0.913
+        ],
+        [
+          44.04,
+          0.203
+        ],
+        [
+          44.378,
+          0.203
+        ],
+        [
+          44.446,
+          -0.034
+        ],
+        [
+          44.953,
+          0.068
+        ],
+        [
+          45.021,
+          0.135
+        ],
+        [
+          47.218,
+          0.135
+        ],
+        [
+          47.218,
+          8.585
+        ],
+        [
+          41.201,
+          8.585
+        ],
+        [
+          41.201,
+          -0.913
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.3",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 73.93,
+      "np_total_m2": 81.66,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        50.023,
+        52.49
+      ],
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          49.415,
+          0.135
+        ],
+        [
+          49.482,
+          0.068
+        ],
+        [
+          50.023,
+          -0.068
+        ],
+        [
+          50.023,
+          -0.913
+        ],
+        [
+          52.49,
+          -0.913
+        ],
+        [
+          52.524,
+          -0.034
+        ],
+        [
+          52.524,
+          8.585
+        ],
+        [
+          47.218,
+          8.585
+        ],
+        [
+          47.218,
+          0.135
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.4",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 84.83,
+      "np_total_m2": 94.19,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        55.735,
+        58.574
+      ],
+      "building_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          53.065,
+          0.101
+        ],
+        [
+          54.248,
+          0.135
+        ],
+        [
+          55.16,
+          0.101
+        ],
+        [
+          55.701,
+          -0.034
+        ],
+        [
+          55.735,
+          -0.913
+        ],
+        [
+          58.574,
+          -0.913
+        ],
+        [
+          58.574,
+          8.585
+        ],
+        [
+          52.524,
+          8.585
+        ],
+        [
+          52.524,
+          -0.034
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.5",
+      "floor_id": "L04",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 91.05,
+      "np_total_m2": 97.43,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "east"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        58.574,
+        61.312
+      ],
+      "building_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": -0.913,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          61.312,
+          -0.913
+        ],
+        [
+          61.312,
+          -0.068
+        ],
+        [
+          61.447,
+          0.0
+        ],
+        [
+          61.853,
+          0.068
+        ],
+        [
+          61.92,
+          0.135
+        ],
+        [
+          64.692,
+          0.135
+        ],
+        [
+          64.692,
+          2.028
+        ],
+        [
+          64.759,
+          2.129
+        ],
+        [
+          64.827,
+          2.603
+        ],
+        [
+          64.624,
+          2.636
+        ],
+        [
+          64.624,
+          9.396
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          60.23,
+          8.585
+        ],
+        [
+          58.574,
+          8.585
+        ],
+        [
+          58.574,
+          -0.913
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.6",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 90.4,
+      "np_total_m2": 94.54,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "east"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 58.574,
+        "x1": 64.827,
+        "y0": 9.396,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          60.23,
+          10.275
+        ],
+        [
+          60.23,
+          9.396
+        ],
+        [
+          64.624,
+          9.396
+        ],
+        [
+          64.624,
+          16.224
+        ],
+        [
+          64.827,
+          16.257
+        ],
+        [
+          64.827,
+          16.393
+        ],
+        [
+          64.692,
+          16.832
+        ],
+        [
+          64.658,
+          18.725
+        ],
+        [
+          61.92,
+          18.725
+        ],
+        [
+          61.346,
+          18.86
+        ],
+        [
+          61.312,
+          18.623
+        ],
+        [
+          58.574,
+          18.64
+        ],
+        [
+          58.574,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.7",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 83.8,
+      "np_total_m2": 91.13,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 52.524,
+        "x1": 58.574,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          58.574,
+          10.275
+        ],
+        [
+          58.574,
+          18.64
+        ],
+        [
+          55.769,
+          18.657
+        ],
+        [
+          55.701,
+          18.86
+        ],
+        [
+          55.16,
+          18.725
+        ],
+        [
+          53.099,
+          18.725
+        ],
+        [
+          52.524,
+          18.86
+        ],
+        [
+          52.524,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.8",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 73.41,
+      "np_total_m2": 79.33,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 47.218,
+        "x1": 52.524,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          52.524,
+          10.275
+        ],
+        [
+          52.524,
+          18.86
+        ],
+        [
+          52.456,
+          18.623
+        ],
+        [
+          50.023,
+          18.623
+        ],
+        [
+          49.989,
+          18.86
+        ],
+        [
+          49.415,
+          18.725
+        ],
+        [
+          47.218,
+          18.725
+        ],
+        [
+          47.218,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.9",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 83.24,
+      "np_total_m2": 90.88,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 41.201,
+        "x1": 47.218,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          47.218,
+          10.275
+        ],
+        [
+          47.218,
+          18.725
+        ],
+        [
+          44.987,
+          18.725
+        ],
+        [
+          44.412,
+          18.86
+        ],
+        [
+          44.378,
+          18.623
+        ],
+        [
+          41.201,
+          18.623
+        ],
+        [
+          41.201,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.10",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 83.98,
+      "np_total_m2": 91.38,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 35.185,
+        "x1": 41.201,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          41.201,
+          10.275
+        ],
+        [
+          41.201,
+          18.623
+        ],
+        [
+          37.99,
+          18.623
+        ],
+        [
+          37.957,
+          18.86
+        ],
+        [
+          37.382,
+          18.725
+        ],
+        [
+          35.185,
+          18.725
+        ],
+        [
+          35.185,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.11",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 83.7,
+      "np_total_m2": 91.34,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 29.169,
+        "x1": 35.185,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          35.185,
+          10.275
+        ],
+        [
+          35.185,
+          18.725
+        ],
+        [
+          32.954,
+          18.725
+        ],
+        [
+          32.38,
+          18.86
+        ],
+        [
+          32.346,
+          18.623
+        ],
+        [
+          29.169,
+          18.623
+        ],
+        [
+          29.169,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.12",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 83.94,
+      "np_total_m2": 91.21,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 29.169,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          29.169,
+          10.275
+        ],
+        [
+          29.169,
+          18.623
+        ],
+        [
+          25.924,
+          18.623
+        ],
+        [
+          25.89,
+          18.86
+        ],
+        [
+          25.316,
+          18.725
+        ],
+        [
+          23.152,
+          18.725
+        ],
+        [
+          23.152,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.13",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 75.99,
+      "np_total_m2": 79.29,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          23.152,
+          10.275
+        ],
+        [
+          23.152,
+          18.725
+        ],
+        [
+          20.888,
+          18.725
+        ],
+        [
+          20.347,
+          18.86
+        ],
+        [
+          20.347,
+          18.691
+        ],
+        [
+          20.28,
+          18.623
+        ],
+        [
+          17.812,
+          18.623
+        ],
+        [
+          17.812,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.14",
+      "floor_id": "L04",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 73.45,
+      "np_total_m2": 79.33,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 12.506,
+        "x1": 17.812,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          17.812,
+          10.275
+        ],
+        [
+          17.812,
+          18.623
+        ],
+        [
+          15.311,
+          18.623
+        ],
+        [
+          15.277,
+          18.86
+        ],
+        [
+          14.703,
+          18.725
+        ],
+        [
+          12.506,
+          18.725
+        ],
+        [
+          12.506,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.15",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 83.23,
+      "np_total_m2": 90.82,
+      "primary_side": "north",
+      "facades": [
+        "north"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.275,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.506,
+        "y0": 10.275,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          12.506,
+          10.275
+        ],
+        [
+          12.506,
+          18.725
+        ],
+        [
+          10.275,
+          18.725
+        ],
+        [
+          9.7,
+          18.86
+        ],
+        [
+          9.667,
+          18.623
+        ],
+        [
+          6.489,
+          18.623
+        ],
+        [
+          6.489,
+          10.275
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.16",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 94.51,
+      "np_total_m2": 98.64,
+      "primary_side": "north",
+      "facades": [
+        "north",
+        "west"
+      ],
+      "has_balcony": false,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": false,
+      "balcony_span_x": null,
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": -0.034,
+        "x1": 6.489,
+        "y0": 9.396,
+        "y1": 18.86
+      },
+      "polygon_m": [
+        [
+          -0.034,
+          16.393
+        ],
+        [
+          -0.034,
+          16.257
+        ],
+        [
+          0.203,
+          16.224
+        ],
+        [
+          0.203,
+          13.824
+        ],
+        [
+          0.135,
+          13.79
+        ],
+        [
+          0.135,
+          12.878
+        ],
+        [
+          0.203,
+          12.844
+        ],
+        [
+          0.203,
+          9.396
+        ],
+        [
+          4.563,
+          9.396
+        ],
+        [
+          4.563,
+          10.275
+        ],
+        [
+          6.489,
+          10.275
+        ],
+        [
+          6.489,
+          18.623
+        ],
+        [
+          3.515,
+          18.623
+        ],
+        [
+          3.448,
+          18.691
+        ],
+        [
+          3.448,
+          18.86
+        ],
+        [
+          2.907,
+          18.725
+        ],
+        [
+          0.101,
+          18.691
+        ],
+        [
+          0.101,
+          16.832
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.17",
+      "floor_id": "L04",
+      "status": "Prodano",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 94.89,
+      "np_total_m2": 101.17,
+      "primary_side": "south",
+      "facades": [
+        "south",
+        "west"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": false,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        3.684,
+        6.489
+      ],
+      "building_bbox_m": {
+        "x0": 0.0,
+        "x1": 6.489,
+        "y0": 0.0,
+        "y1": 9.396,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": -0.034,
+        "x1": 6.489,
+        "y0": -0.913,
+        "y1": 9.396
+      },
+      "polygon_m": [
+        [
+          0.135,
+          5.07
+        ],
+        [
+          0.203,
+          5.002
+        ],
+        [
+          0.203,
+          2.636
+        ],
+        [
+          -0.034,
+          2.603
+        ],
+        [
+          0.101,
+          2.028
+        ],
+        [
+          0.101,
+          0.135
+        ],
+        [
+          2.907,
+          0.101
+        ],
+        [
+          3.448,
+          -0.034
+        ],
+        [
+          3.448,
+          0.169
+        ],
+        [
+          3.684,
+          0.203
+        ],
+        [
+          3.684,
+          -0.913
+        ],
+        [
+          6.489,
+          -0.913
+        ],
+        [
+          6.489,
+          8.585
+        ],
+        [
+          4.563,
+          8.585
+        ],
+        [
+          4.563,
+          9.396
+        ],
+        [
+          0.203,
+          9.396
+        ],
+        [
+          0.203,
+          5.982
+        ],
+        [
+          0.135,
+          5.949
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.18",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Trosoban",
+      "listing_area_m2": 83.69,
+      "np_total_m2": 93.22,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        6.489,
+        9.261
+      ],
+      "building_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.438,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 6.489,
+        "x1": 12.438,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          9.261,
+          -0.913
+        ],
+        [
+          9.295,
+          0.203
+        ],
+        [
+          9.633,
+          0.203
+        ],
+        [
+          9.667,
+          -0.034
+        ],
+        [
+          10.174,
+          0.068
+        ],
+        [
+          10.241,
+          0.135
+        ],
+        [
+          12.438,
+          0.118
+        ],
+        [
+          12.438,
+          8.585
+        ],
+        [
+          6.489,
+          8.585
+        ],
+        [
+          6.489,
+          -0.913
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.19",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Četverosoban",
+      "listing_area_m2": 74.98,
+      "np_total_m2": 82.52,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        15.649,
+        17.812
+      ],
+      "building_bbox_m": {
+        "x0": 12.438,
+        "x1": 17.812,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 12.438,
+        "x1": 17.812,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          14.669,
+          0.101
+        ],
+        [
+          15.21,
+          -0.034
+        ],
+        [
+          15.277,
+          0.203
+        ],
+        [
+          15.615,
+          0.203
+        ],
+        [
+          15.649,
+          -0.913
+        ],
+        [
+          17.812,
+          -0.913
+        ],
+        [
+          17.812,
+          8.585
+        ],
+        [
+          12.438,
+          8.585
+        ],
+        [
+          12.438,
+          0.118
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.20",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Četverosoban",
+      "listing_area_m2": 73.9,
+      "np_total_m2": 81.68,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        17.812,
+        20.009
+      ],
+      "building_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 17.812,
+        "x1": 23.152,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          20.009,
+          -0.913
+        ],
+        [
+          20.009,
+          0.203
+        ],
+        [
+          20.449,
+          0.203
+        ],
+        [
+          20.516,
+          -0.034
+        ],
+        [
+          21.023,
+          0.068
+        ],
+        [
+          21.091,
+          0.135
+        ],
+        [
+          23.152,
+          0.135
+        ],
+        [
+          23.152,
+          8.585
+        ],
+        [
+          17.812,
+          8.585
+        ],
+        [
+          17.812,
+          -0.913
+        ]
+      ]
+    },
+    {
+      "unit_id": "H 4.21",
+      "floor_id": "L04",
+      "status": "Slobodno",
+      "unit_type": "Četverosoban",
+      "listing_area_m2": 101.22,
+      "np_total_m2": 110.94,
+      "primary_side": "south",
+      "facades": [
+        "south"
+      ],
+      "has_balcony": true,
+      "has_loggia": true,
+      "has_terrace": true,
+      "has_south_balcony": true,
+      "balcony_span_x": [
+        26.059,
+        28.527
+      ],
+      "building_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": 0.0,
+        "y1": 8.585,
+        "z0": 12.1,
+        "z1": 17.7
+      },
+      "raw_bbox_m": {
+        "x0": 23.152,
+        "x1": 32.245,
+        "y0": -0.913,
+        "y1": 8.585
+      },
+      "polygon_m": [
+        [
+          25.18,
+          0.135
+        ],
+        [
+          25.248,
+          0.068
+        ],
+        [
+          25.755,
+          -0.034
+        ],
+        [
+          25.789,
+          0.203
+        ],
+        [
+          26.059,
+          0.203
+        ],
+        [
+          26.059,
+          -0.913
+        ],
+        [
+          28.527,
+          -0.913
+        ],
+        [
+          28.56,
+          0.203
+        ],
+        [
+          29.845,
+          0.203
+        ],
+        [
+          29.912,
+          0.135
+        ],
+        [
+          30.757,
+          0.135
+        ],
+        [
+          30.825,
+          0.203
+        ],
+        [
+          32.245,
+          0.175
+        ],
+        [
+          32.245,
+          3.65
+        ],
+        [
+          28.527,
+          3.65
+        ],
+        [
+          28.527,
+          8.585
+        ],
+        [
+          23.152,
+          8.585
+        ],
+        [
+          23.152,
+          0.135
+        ]
+      ]
+    }
+  ]
+}

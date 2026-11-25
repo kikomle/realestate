@@ -132,7 +132,7 @@ test("recovers from an invalid floor and uses the allowlisted WebP fallback", as
   await page.route("**/exterior-preview/media/*.avif", request => request.abort());
   await page.goto(`${route}?view=facade&floor=INVALID`);
   await expect(page).toHaveURL(/floor=INVALID$/);
-  await expect(page.getByText("Etaža iz poveznice nije pronađena. Odaberite je s popisa ili se vratite na pregled.", { exact: true })).toBeVisible();
+  await expect(page.getByText("Etaža iz poveznice nije pronađena. Odaberite je s popisa ili se vratite na prilaz.", { exact: true })).toBeVisible();
   await assertImage(page, "facade");
   const image = page.getByRole("img", { name: /glavno pročelje/i });
   expect(await image.evaluate((img: HTMLImageElement) => img.currentSrc)).toMatch(/\.webp$/);
@@ -164,7 +164,7 @@ test("paints the real arrival and opens a floor without client scripts", async (
     const chooser = page.getByRole("navigation", { name: "Odabir etaže zgrade H" });
     await expect(chooser.getByRole("link")).toHaveCount(5);
     await chooser.getByRole("link", { name: "Etaža 2" }).click();
-    await expect(page).toHaveURL("/exterior-preview/plans?floor=L02");
+    await expect(page).toHaveURL("/exterior-preview/plans?floor=L02&via=overview");
     await page.getByRole("navigation", { name: "Stanovi na etaži" })
       .getByRole("link", { name: /^H 2\.1(?:\s|$)/ }).click();
     await expect(page.getByRole("heading", { name: "H 2.1", exact: true })).toBeVisible();

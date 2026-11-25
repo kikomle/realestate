@@ -98,24 +98,26 @@ for (const { unit, floor, plan } of sourceCases) {
   });
 }
 
-test("Pregled links directly to each interactive floor and Back restores the overview", async ({ page, hasTouch }) => {
+test("Prilaz links directly to each interactive floor and Back restores the approach", async ({ page, hasTouch }) => {
   test.setTimeout(60_000);
   const clean = monitor(page);
   await page.goto(`${exterior}?view=facade`);
-  await page.getByRole("button", { name: "Pregled", exact: true }).click();
+  await page.getByRole("button", { name: "Prilaz", exact: true }).click();
   await expect(page).toHaveURL(pathIs(exterior));
   const chooser = page.getByRole("navigation", { name: "Odabir etaže zgrade H" });
   await expect(chooser.getByRole("link")).toHaveCount(floors.length);
   await expect(page.locator("[data-band-id]")).toHaveCount(0);
   for (const floor of floors) {
     const option = chooser.getByRole("link", { name: floor.label, exact: true });
-    await expect(option).toHaveAttribute("href", floorPath(floor.floor_id));
+    const plan = `${floorPath(floor.floor_id)}&via=overview`;
+    await expect(option).toHaveAttribute("href", plan);
     if (hasTouch) await option.tap();
-    else await option.press("Enter");
-    await expect(page).toHaveURL(pathIs(floorPath(floor.floor_id)));
+    else await option.click();
+    await expect(page).toHaveURL(pathIs(plan));
     await expect(floorView(page)).toHaveAttribute("data-image-id", floor.floor_id);
     await expect(cards(page).getByRole("link")).toHaveCount(floor.unit_ids.length);
-    await page.goBack({ waitUntil: "domcontentloaded" });
+    if (floor.floor_id === "L01") await page.getByRole("link", { name: "Natrag na prilaz" }).click();
+    else await page.goBack({ waitUntil: "domcontentloaded" });
     await expect(page).toHaveURL(pathIs(exterior));
   }
   clean();
@@ -195,7 +197,7 @@ test("invalid routes do not substitute another unit or plan", async ({ page, req
   await expect(page).toHaveURL(pathIs(`${exterior}?floor=L99`));
   await expect(page.getByText(/Etaža iz poveznice nije pronađena/, { exact: false }).first()).toBeVisible();
   await expect(page.getByRole("link", { name: "Provjeri tlocrt" })).toHaveCount(0);
-  await page.getByRole("button", { name: "Vrati se na pregled" }).click();
+  await page.getByRole("button", { name: "Vrati se na prilaz" }).click();
   await expect(page).toHaveURL(pathIs(exterior));
 });
 

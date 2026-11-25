@@ -29,9 +29,13 @@ reports/qa/*.zip
 *.blend1
 *.blend2
 assets/blender/renders/
+assets/blender/cc0/cars/
+assets/blender/cc0/trees/
 
 # Private Močire source snapshots, artwork, and registrations
 assets/source/**/raw/
+assets/source/mocire-zadar-h/construction/
+assets/source/mocire-zadar-j1-j2/
 assets/source/mocire-zadar-h/inventory.json
 assets/source/mocire-zadar-h/stage2-manifest.json
 assets/geometry/apartments.json

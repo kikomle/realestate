@@ -40,12 +40,13 @@
             </picture>
             <svg class="overlay" id="overlaySvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" aria-label="Privremeno označene etaže" data-overlay-group="exterior-floors" hidden></svg>
           </div>
+          <div class="plan-reveal" id="planReveal" aria-hidden="true" hidden></div>
           <div class="loading-message" id="imageMessage" role="status" hidden></div>
         </section>
 
         <div class="rail" id="floorPanel" data-available="false">
           <div class="rail-header">
-            <h2>Etaže</h2>
+            <h2 id="floorPickerTitle">Etaže</h2>
             <span>Pročelje</span>
           </div>
           <ol class="floor-list" id="floorListRail" aria-label="Popis etaža"></ol>

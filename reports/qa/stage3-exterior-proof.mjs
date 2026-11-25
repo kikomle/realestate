@@ -5,6 +5,7 @@ const html = document.documentElement;
 const scene = id('scene');
 const canvas = id('canvasContainer');
 const overlay = id('overlaySvg');
+const planReveal = id('planReveal');
 const facade = id('imgFacade');
 const arrival = id('imgArrival');
 const facadePicture = facade.closest('picture');
@@ -27,8 +28,13 @@ let facadeRevealed = false;
 let drag;
 let suppressClick = false;
 let initialFrame = true;
+let planFlight = null;
 
 const camera = previewCamera(id('transformStage'), motion, publishSettlement);
+
+function bandsAvailable() {
+  return route.view === 'facade' && shownImage === 'facade' && facadeRevealed && registration !== null;
+}
 
 function currentGeometry() {
   return registration?.floors.find(row => row.floor_id === route.floorId) ?? null;
@@ -68,7 +74,8 @@ function fromUrl() {
     const valid = ids.length === 1 && floors.has(ids[0]);
     return { view: 'facade', floorId: valid ? ids[0] : null, invalid: !valid && floors.size > 0 };
   }
-  return { view: params.get('view') === 'facade' ? 'facade' : 'arrival', floorId: null, invalid: false };
+  const view = params.get('view') === 'facade' ? 'facade' : 'arrival';
+  return { view, floorId: null, invalid: false };
 }
 
 function href(view, floorId) {
@@ -81,6 +88,7 @@ function href(view, floorId) {
 }
 
 function move(view, floorId = null) {
+  clearPlanFlight();
   const url = href(view, floorId);
   if (url !== location.pathname + location.search + location.hash) history.pushState(null, '', url);
   showRoute(fromUrl(), 1.14);
@@ -92,19 +100,97 @@ function selectFloor(floorId) {
   return true;
 }
 
-function floorPlanHref(floorId) {
+function floorPlanHref(floorId, view = route.view) {
   const url = new URL('http://127.0.0.1:3103/exterior-preview/plans');
   url.searchParams.set('floor', floorId);
+  url.searchParams.set('via', `review-${view}`);
   return url.href;
+}
+
+function clearPlanFlight() {
+  if (!planFlight) return;
+  const flight = planFlight;
+  planFlight = null;
+  clearTimeout(flight.timeout);
+  clearTimeout(flight.delay);
+  flight.timeline?.kill();
+  planReveal.hidden = true;
+  planReveal.replaceChildren();
+  delete scene.dataset.planFlight;
+}
+
+function openPlan(floorId) {
+  const floor = floors.get(floorId);
+  if (!floor || planFlight?.committed || planFlight?.floorId === floorId) return;
+  if (planFlight) {
+    clearPlanFlight();
+    showRoute(fromUrl(), 0);
+  }
+  const url = floorPlanHref(floorId);
+  const gsap = globalThis.gsap;
+  if (motion.matches || !gsap || !floor.plans.some(plan => plan.variant === 'main' && plan.image_id === floorId)) {
+    location.assign(url);
+    return;
+  }
+
+  // Only the separate review can use estimated façade bands. A list choice
+  // without matching art/geometry starts on the plan, not a made-up target.
+  const focus = bandsAvailable()
+    ? registration?.floors.find(row => row.floor_id === floorId)?.focus : null;
+  const flight = { floorId, focus, committed: false };
+  planFlight = flight;
+  const startedAt = performance.now();
+  function commit() {
+    if (planFlight !== flight || flight.committed) return;
+    flight.committed = true;
+    clearTimeout(flight.timeout);
+    clearTimeout(flight.delay);
+    location.assign(url);
+  }
+  flight.commit = commit;
+
+  id('inspectorContent').textContent = `Otvaranje tlocrta: ${floor.label}.`;
+  floorLinks.get(floorId)?.setAttribute('aria-current', 'true');
+  if (focus) {
+    scene.dataset.planFlight = 'facade-zoom';
+    bands.get(floorId).dataset.selected = 'true';
+    camera.frame('facade', focus, .68);
+  } else {
+    camera.stop();
+  }
+
+  const image = new Image();
+  image.alt = '';
+  image.src = `/assets/plan-${floorId}.webp`;
+  flight.timeout = setTimeout(commit, 1000);
+  image.decode().then(() => {
+    if (planFlight !== flight || flight.committed) return;
+    clearTimeout(flight.timeout);
+    const wait = focus ? Math.max(0, 490 - (performance.now() - startedAt)) : 0;
+    flight.delay = setTimeout(() => {
+      if (planFlight !== flight || flight.committed) return;
+      const { x, y, scale, viewportWidth: width, viewportHeight: height } = camera.snapshot();
+      const offsetX = focus ? (x + focus[0] * scale - width / 2) * .55 : 0;
+      const offsetY = focus ? (y + focus[1] * scale - height / 2) * .55 : 0;
+      planReveal.replaceChildren(image);
+      gsap.set(planReveal, { opacity: 0 });
+      planReveal.hidden = false;
+      scene.dataset.planFlight = 'plan-reveal';
+      flight.timeline = gsap.timeline({ onComplete: commit })
+        .to(planReveal, { opacity: 1, duration: .3, ease: 'power1.inOut' }, 0)
+        .fromTo(image, { x: offsetX, y: offsetY, scale: .58 },
+          { x: 0, y: 0, scale: 1, duration: .43, ease: 'power2.out' }, 0);
+    }, wait);
+  }, commit);
 }
 
 function activateBand(floorId) {
   if (!isPlanReview) {
     selectFloor(floorId);
-  } else if (floors.has(floorId)) {
+  } else {
     // This is a navigation from a separate local review, not an approval of the
     // estimated registration. The interactive floor route validates the ID again.
-    location.assign(floorPlanHref(floorId));
+    openPlan(floorId);
   }
 }
 
@@ -123,18 +209,27 @@ function setHover(next) {
 }
 
 function updateOverlay() {
-  const hidden = !(facadeRevealed && registration && route.view === 'facade');
+  const hidden = !bandsAvailable();
   overlay.toggleAttribute('hidden', hidden);
   if (hidden) overlay.setAttribute('aria-hidden', 'true');
   else overlay.removeAttribute('aria-hidden');
 }
 
+function panelActionView() {
+  return route.view === 'facade' ? 'arrival' : 'facade';
+}
+
+function activeViewLink() {
+  return id(route.view === 'facade' ? 'facadeLink' : 'arrivalLink');
+}
+
 function updatePanel() {
   const floor = floors.get(route.floorId);
   const isFacade = route.view === 'facade';
+  id('floorPickerTitle').textContent = isPlanReview && !isFacade ? 'Odaberite etažu' : 'Etaže';
   const note = panel.querySelector('.rail-note');
   note.textContent = floors.size === 0 ? (ready ? 'Popis etaža nije dostupan.' : 'Učitavanje popisa etaža…') :
-    isPlanReview && !isFacade ? 'Odaberite etažu za otvaranje tlocrta.' :
+    isPlanReview && !isFacade ? 'Odabir otvara interaktivni tlocrt.' :
       registration ? (isPlanReview ? 'Položaji su procjene prema slici, a ne potvrđene oznake.' : 'Položaji na pročelju nisu potvrđeni.') :
         'Oznake na pročelju nisu dostupne.';
   id('panelIndex').textContent = floor ? floor.floor_id.slice(1) : 'H';
@@ -143,18 +238,20 @@ function updatePanel() {
   id('inspectorContent').textContent = route.invalid ? 'Tražena etaža nije pronađena. Odaberite etažu s popisa.' :
     floor ? (currentGeometry()?.status === 'unmapped' ? 'Prizemlje je zaklonjeno i nije označeno na pročelju.' :
       currentGeometry() ? 'Položaj etaže na pročelju nije potvrđen.' : 'Oznaka ove etaže na pročelju nije dostupna.') :
-      isFacade ? (isPlanReview ? 'Kliknite etažu na pročelju ili na popisu da otvorite tlocrt i odaberete stan.' :
-        'Odaberite etažu na pročelju ili s popisa. Povucite prikaz za pomak.') :
-        isPlanReview ? 'Odaberite etažu s popisa ili otvorite pogled na pročelje.' : 'Pogled s prilaza i pročelje zgrade H.';
-  id('panelAction').href = href(isFacade ? 'arrival' : 'facade', null);
-  const action = isFacade ? 'Povratak na prilaz' : 'Istraži etaže';
+       isFacade ? (isPlanReview ? 'Kliknite etažu na zgradi ili je odaberite s popisa.' :
+         'Odaberite etažu na pročelju ili s popisa. Povucite prikaz za pomak.') :
+         isPlanReview ? 'Odaberite etažu za zumiranje i otvaranje tlocrta.' : 'Pogled s prilaza i pročelje zgrade H.';
+  id('panelAction').href = href(panelActionView(), null);
+  const action = isFacade ? 'Povratak na prilaz' : isPlanReview ? 'Pogled na pročelje' : 'Istraži etaže';
   id('panelAction').firstElementChild.textContent = action;
   id('panelAction').setAttribute('aria-label', action);
-  for (const [view, node] of [['arrival', id('arrivalLink')], ['facade', id('facadeLink')]]) {
-    if (route.view === view) node.setAttribute('aria-current', 'page');
+  const activeLink = activeViewLink();
+  for (const node of [id('arrivalLink'), id('facadeLink')]) {
+    if (node === activeLink) node.setAttribute('aria-current', 'page');
     else node.removeAttribute('aria-current');
   }
   for (const [floorId, node] of floorLinks) {
+    if (isPlanReview) node.href = floorPlanHref(floorId);
     if (floorId === route.floorId) node.setAttribute('aria-current', 'true');
     else node.removeAttribute('aria-current');
   }
@@ -170,7 +267,7 @@ function showMessage() {
   if (route.view === 'facade' && assets.facade !== 'ready') {
     text = assets.facade === 'error' ? 'Pročelje nije dostupno. Etaže i dalje možete odabrati s popisa.' : 'Učitavanje pročelja…';
   } else if (route.view === 'arrival' && assets.arrival !== 'ready') {
-    text = assets.arrival === 'error' ? 'Pogled s prilaza nije dostupan. Odaberite pročelje.' : 'Učitavanje prikaza…';
+    text = assets.arrival === 'error' ? 'Pogled s prilaza nije dostupan. Etaže i dalje možete odabrati s popisa.' : 'Učitavanje prikaza…';
   }
   message.textContent = text;
   message.hidden = !text;
@@ -181,7 +278,7 @@ function sizeCamera() {
 }
 
 function frameCamera(duration) {
-  const focus = shownImage === 'facade' ? currentGeometry()?.focus : null;
+  const focus = shownImage === 'facade' ? planFlight?.focus ?? currentGeometry()?.focus : null;
   camera.frame(shownImage, focus, duration);
 }
 
@@ -218,7 +315,7 @@ function showRoute(next, duration = 0) {
     }
   }
   updateOverlay();
-  if (svgHadFocus && overlay.hasAttribute('hidden')) id(route.view === 'arrival' ? 'arrivalLink' : 'facadeLink').focus();
+  if (svgHadFocus && overlay.hasAttribute('hidden')) activeViewLink().focus();
   sizeCamera();
   frameCamera(duration);
 }
@@ -292,7 +389,7 @@ function drawFloorList() {
     code.textContent = floorId.slice(1);
     link.append(code, floor.label);
     floorLinks.set(floorId, link);
-    if (!isPlanReview) wireLink(link, () => selectFloor(floorId));
+    wireLink(link, () => isPlanReview ? openPlan(floorId) : selectFloor(floorId));
     hoverEvents(link, floorId);
     li.append(link);
     floorList.append(li);
@@ -367,13 +464,13 @@ async function loadFloorData() {
   ready = true;
   const address = fromUrl();
   // Keep floor bookmarks from the previous read-only review usable.
-  if (isPlanReview && address.floorId) location.replace(floorPlanHref(address.floorId));
+  if (isPlanReview && address.floorId) location.replace(floorPlanHref(address.floorId, address.view));
   else showRoute(address, 0);
 }
 
 // Defer to vertical page scrolling and native pinch zoom on touch screens.
 canvas.addEventListener('pointerdown', event => {
-  if (shownImage !== 'facade' || !event.isPrimary || event.button !== 0) return;
+  if (planFlight || shownImage !== 'facade' || !event.isPrimary || event.button !== 0) return;
   suppressClick = false;
   drag = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false, pose: null };
 });
@@ -413,17 +510,32 @@ overlay.addEventListener('click', event => {
 wireLink(id('arrivalLink'), () => move('arrival'));
 wireLink(id('overviewLink'), () => move('arrival'));
 wireLink(id('facadeLink'), () => move('facade'));
-wireLink(id('panelAction'), () => move(route.view === 'facade' ? 'arrival' : 'facade'));
+wireLink(id('panelAction'), () => move(panelActionView()));
 if (isPlanReview) {
-  id('arrivalLink').textContent = 'Pregled';
   id('arrivalLink').href = id('overviewLink').href = href('arrival', null);
   id('facadeLink').href = href('facade', null);
 }
-id('btnResetView').addEventListener('click', () => move('facade'));
-id('btnZoomIn').addEventListener('click', () => camera.zoom(1.19));
-id('btnZoomOut').addEventListener('click', () => camera.zoom(1 / 1.19));
-window.addEventListener('popstate', () => showRoute(fromUrl(), 1.14));
-motion.addEventListener('change', () => frameCamera(0));
+id('btnResetView').addEventListener('click', () => move(isPlanReview ? route.view : 'facade'));
+id('btnZoomIn').addEventListener('click', () => { if (!planFlight) camera.zoom(1.19); });
+id('btnZoomOut').addEventListener('click', () => { if (!planFlight) camera.zoom(1 / 1.19); });
+window.addEventListener('popstate', () => {
+  clearPlanFlight();
+  showRoute(fromUrl(), 1.14);
+});
+window.addEventListener('pageshow', event => {
+  if (!event.persisted) return;
+  clearPlanFlight();
+  showRoute(fromUrl(), 0);
+});
+window.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !planFlight || planFlight.committed) return;
+  clearPlanFlight();
+  showRoute(fromUrl(), .22);
+});
+motion.addEventListener('change', () => {
+  if (motion.matches && planFlight) planFlight.commit();
+  else frameCamera(0);
+});
 
 for (const [name, img] of [['arrival', arrival], ['facade', facade]]) {
   img.addEventListener('load', () => settleImage(name, img));

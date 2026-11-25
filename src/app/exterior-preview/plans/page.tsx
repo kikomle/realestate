@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { FloorPlanProof } from "@/components/exterior-preview/floor-plan-proof";
-import { planProofPath } from "@/lib/exterior-preview/plan-proof-address";
+import { planProofPath, readPlanEntry } from "@/lib/exterior-preview/plan-proof-address";
 import { isLocalPreviewRequest, localPreviewEnabled } from "../local-access";
 import { readFloorApartments } from "./apartment-source";
 import { loadProofFloors, readPlanPolygons } from "./plan-source";
@@ -35,6 +35,7 @@ export default async function FloorPlanProofPage({ searchParams }: PageProps) {
       key={plan.image_id}
       floorId={floor.floor_id}
       label={floor.label}
+      entry={readPlanEntry(query.via)}
       floors={proofFloors.map(({ floor_id, label }) => ({ id: floor_id, label }))}
       hasGallery={floor.plans.some(item => item.variant === "gallery")}
       unitIds={floor.unit_ids}

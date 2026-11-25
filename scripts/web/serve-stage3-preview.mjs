@@ -45,6 +45,18 @@ for (const view of ['arrival', 'facade']) {
   }
 }
 
+// The transition can show only the same pinned main plans as the private Next
+// route. The request never chooses a file path, variant, or arbitrary image ID.
+const planDirectory = resolve(sourceRoot, 'raw/stage2/webp');
+const { floors } = JSON.parse(await readFile(floorInventoryPath, 'utf8'));
+for (const floor of floors) {
+  const plan = floor.plans.find(item => item.variant === 'main' && item.image_id === floor.floor_id);
+  if (!/^L0[0-4]$/.test(floor.floor_id) || !plan || !/^[a-f0-9]{64}$/.test(plan.optimized_sha256)) continue;
+  const file = resolve(root, plan.private_plan);
+  if (!file.startsWith(`${planDirectory}${sep}`) || !/^floor-[\w-]+\.webp$/.test(file.slice(planDirectory.length + 1))) continue;
+  allow.set(`/assets/plan-${floor.floor_id}.webp`, [file, 'image/webp', plan.optimized_sha256]);
+}
+
 const headers = {
   'Cache-Control': 'no-store',
   'Content-Security-Policy': "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",

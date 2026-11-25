@@ -38,12 +38,15 @@ function Schedule({ unit }: { unit: ApartmentDetails }) {
   );
 }
 
-export function ApartmentDetail({ unit, floor, facadeUrl, headingRef, pending }: {
+export function ApartmentDetail({ unit, floor, exteriorUrl, exteriorLabel, headingRef, pending, planFootprintPx2, floorFootprintMaxPx2 }: {
   unit: ApartmentDetails;
   floor: string;
-  facadeUrl: string;
+  exteriorUrl: string;
+  exteriorLabel: string;
   headingRef: Ref<HTMLHeadingElement>;
   pending: boolean;
+  planFootprintPx2?: number | null;
+  floorFootprintMaxPx2?: number | null;
 }) {
   return (
     <article className={styles.detail} aria-labelledby="apartment-title" data-apartment-detail hidden={pending}>
@@ -55,6 +58,17 @@ export function ApartmentDetail({ unit, floor, facadeUrl, headingRef, pending }:
           <dt>Obračunska površina</dt>
           <dd data-listing-area>{unit.listingArea} m²</dd>
         </dl>
+        {planFootprintPx2 != null && (
+          <dl className={styles.area} data-plan-footprint>
+            <dt>Prikaz na tlocrtu etaže (slikovni otisak)</dt>
+            <dd>{new Intl.NumberFormat("hr-HR", { maximumFractionDigits: 0 }).format(Math.round(planFootprintPx2))} px²
+              {floorFootprintMaxPx2 && floorFootprintMaxPx2 > 0 && (
+                <span> · {Math.round((planFootprintPx2 / floorFootprintMaxPx2) * 100)} % najvećeg stana na etaži</span>
+              )}
+            </dd>
+            <dd className={styles.finePrint}>Samo slikovni otisak na izvornom nacrtu; nije mjera ni procjena stvarne površine.</dd>
+          </dl>
+        )}
         {unit.status && (
           <div className={styles.availability}>
             <span className={styles.status} data-source-status data-available={unit.status.label === "Slobodno"}>{unit.status.label}</span>
@@ -93,8 +107,8 @@ export function ApartmentDetail({ unit, floor, facadeUrl, headingRef, pending }:
         <Schedule unit={unit} />
       </section>
 
-      <a className={styles.context} href={facadeUrl}>
-        <span>Pročelje zgrade H <ArrowUpRight aria-hidden="true" /></span>
+      <a className={styles.context} href={exteriorUrl}>
+        <span>{exteriorLabel} <ArrowUpRight aria-hidden="true" /></span>
       </a>
     </article>
   );
